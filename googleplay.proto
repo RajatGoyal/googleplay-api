@@ -743,7 +743,7 @@ message DocV2 {
   optional string backendUrl = 19;
   optional string purchaseDetailsUrl = 20;
   optional bool detailsReusable = 21;
-  optional string subtitle = 22;
+  optional string promoText = 27;
 }
 message EncryptedSubscriberInfo {
   optional string data = 1;
