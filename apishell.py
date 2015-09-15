@@ -20,4 +20,9 @@ from googleplay import GooglePlayAPI
 
 api = GooglePlayAPI(ANDROID_ID)
 api.login(GOOGLE_LOGIN, GOOGLE_PASSWORD, AUTH_TOKEN)
-code.interact(BANNER, local=locals())
+
+try:
+    from IPython import embed
+    embed()
+except:
+    code.interact(BANNER, local=locals())
