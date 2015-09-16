@@ -251,6 +251,15 @@ class GooglePlayAPI(object):
             path += "&dfil=1"
         message = self.executeRequestApi2(path)
         return message.payload.reviewResponse
+
+    def recommend(self, packageName, nb_results=None, offset=None):
+        path = "rec?c=3&doc=%s&rt=1" % (packageName,)
+        if (nb_results is not None):
+            path += "&n=%d" % int(nb_results)
+        if (offset is not None):
+            path += "&o=%d" % int(offset)
+        message = self.executeRequestApi2(path)
+        return message.payload.listResponse
     
     def download(self, packageName, versionCode, offerType=1):
         """Download an app and return its raw data (APK file).
