@@ -13,7 +13,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='googleplay.proto',
   package='',
-  serialized_pb='\n\x10googleplay.proto\"\x19\n\x17\x41\x63kNotificationResponse\"\x8b\x03\n\x16\x41ndroidAppDeliveryData\x12\x14\n\x0c\x64ownloadSize\x18\x01 \x01(\x03\x12\x11\n\tsignature\x18\x02 \x01(\t\x12\x13\n\x0b\x64ownloadUrl\x18\x03 \x01(\t\x12(\n\x0e\x61\x64\x64itionalFile\x18\x04 \x03(\x0b\x32\x10.AppFileMetadata\x12\'\n\x12\x64ownloadAuthCookie\x18\x05 \x03(\x0b\x32\x0b.HttpCookie\x12\x15\n\rforwardLocked\x18\x06 \x01(\x08\x12\x15\n\rrefundTimeout\x18\x07 \x01(\x03\x12\x17\n\x0fserverInitiated\x18\x08 \x01(\x08\x12%\n\x1dpostInstallRefundWindowMillis\x18\t \x01(\x03\x12\x1c\n\x14immediateStartNeeded\x18\n \x01(\x08\x12\'\n\tpatchData\x18\x0b \x01(\x0b\x32\x14.AndroidAppPatchData\x12+\n\x10\x65ncryptionParams\x18\x0c \x01(\x0b\x32\x11.EncryptionParams\"\x85\x01\n\x13\x41ndroidAppPatchData\x12\x17\n\x0f\x62\x61seVersionCode\x18\x01 \x01(\x05\x12\x15\n\rbaseSignature\x18\x02 \x01(\t\x12\x13\n\x0b\x64ownloadUrl\x18\x03 \x01(\t\x12\x13\n\x0bpatchFormat\x18\x04 \x01(\x05\x12\x14\n\x0cmaxPatchSize\x18\x05 \x01(\x03\"[\n\x0f\x41ppFileMetadata\x12\x10\n\x08\x66ileType\x18\x01 \x01(\x05\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0c\n\x04size\x18\x03 \x01(\x03\x12\x13\n\x0b\x64ownloadUrl\x18\x04 \x01(\t\"K\n\x10\x45ncryptionParams\x12\x0f\n\x07version\x18\x01 \x01(\x05\x12\x15\n\rencryptionKey\x18\x02 \x01(\t\x12\x0f\n\x07hmacKey\x18\x03 \x01(\t\")\n\nHttpCookie\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xad\x02\n\x07\x41\x64\x64ress\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0c\x61\x64\x64ressLine1\x18\x02 \x01(\t\x12\x14\n\x0c\x61\x64\x64ressLine2\x18\x03 \x01(\t\x12\x0c\n\x04\x63ity\x18\x04 \x01(\t\x12\r\n\x05state\x18\x05 \x01(\t\x12\x12\n\npostalCode\x18\x06 \x01(\t\x12\x15\n\rpostalCountry\x18\x07 \x01(\t\x12\x19\n\x11\x64\x65pendentLocality\x18\x08 \x01(\t\x12\x13\n\x0bsortingCode\x18\t \x01(\t\x12\x14\n\x0clanguageCode\x18\n \x01(\t\x12\x13\n\x0bphoneNumber\x18\x0b \x01(\t\x12\x11\n\tisReduced\x18\x0c \x01(\x08\x12\x11\n\tfirstName\x18\r \x01(\t\x12\x10\n\x08lastName\x18\x0e \x01(\t\x12\r\n\x05\x65mail\x18\x0f \x01(\t\"J\n\nBookAuthor\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x17\n\x0f\x64\x65precatedQuery\x18\x02 \x01(\t\x12\x15\n\x05\x64ocid\x18\x03 \x01(\x0b\x32\x06.Docid\"\xc3\x03\n\x0b\x42ookDetails\x12\x1d\n\x07subject\x18\x03 \x03(\x0b\x32\x0c.BookSubject\x12\x11\n\tpublisher\x18\x04 \x01(\t\x12\x17\n\x0fpublicationDate\x18\x05 \x01(\t\x12\x0c\n\x04isbn\x18\x06 \x01(\t\x12\x15\n\rnumberOfPages\x18\x07 \x01(\x05\x12\x10\n\x08subtitle\x18\x08 \x01(\t\x12\x1b\n\x06\x61uthor\x18\t \x03(\x0b\x32\x0b.BookAuthor\x12\x11\n\treaderUrl\x18\n \x01(\t\x12\x17\n\x0f\x64ownloadEpubUrl\x18\x0b \x01(\t\x12\x16\n\x0e\x64ownloadPdfUrl\x18\x0c \x01(\t\x12\x17\n\x0f\x61\x63sEpubTokenUrl\x18\r \x01(\t\x12\x16\n\x0e\x61\x63sPdfTokenUrl\x18\x0e \x01(\t\x12\x15\n\repubAvailable\x18\x0f \x01(\x08\x12\x14\n\x0cpdfAvailable\x18\x10 \x01(\x08\x12\x16\n\x0e\x61\x62outTheAuthor\x18\x11 \x01(\t\x12+\n\nidentifier\x18\x12 \x03(\n2\x17.BookDetails.Identifier\x1a.\n\nIdentifier\x12\x0c\n\x04type\x18\x13 \x01(\x05\x12\x12\n\nidentifier\x18\x14 \x01(\t\"=\n\x0b\x42ookSubject\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05query\x18\x02 \x01(\t\x12\x11\n\tsubjectId\x18\x03 \x01(\t\"+\n\nBrowseLink\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07\x64\x61taUrl\x18\x03 \x01(\t\"w\n\x0e\x42rowseResponse\x12\x13\n\x0b\x63ontentsUrl\x18\x01 \x01(\t\x12\x10\n\x08promoUrl\x18\x02 \x01(\t\x12\x1d\n\x08\x63\x61tegory\x18\x03 \x03(\x0b\x32\x0b.BrowseLink\x12\x1f\n\nbreadcrumb\x18\x04 \x03(\x0b\x32\x0b.BrowseLink\"\x8f\x02\n\x10\x41\x64\x64ressChallenge\x12\x1c\n\x14responseAddressParam\x18\x01 \x01(\t\x12\x1f\n\x17responseCheckboxesParam\x18\x02 \x01(\t\x12\r\n\x05title\x18\x03 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x04 \x01(\t\x12\x1f\n\x08\x63heckbox\x18\x05 \x03(\x0b\x32\r.FormCheckbox\x12\x19\n\x07\x61\x64\x64ress\x18\x06 \x01(\x0b\x32\x08.Address\x12.\n\x0f\x65rrorInputField\x18\x07 \x03(\x0b\x32\x15.InputValidationError\x12\x11\n\terrorHtml\x18\x08 \x01(\t\x12\x15\n\rrequiredField\x18\t \x03(\x05\"\xef\x01\n\x17\x41uthenticationChallenge\x12\x1a\n\x12\x61uthenticationType\x18\x01 \x01(\x05\x12\'\n\x1fresponseAuthenticationTypeParam\x18\x02 \x01(\t\x12\x1f\n\x17responseRetryCountParam\x18\x03 \x01(\t\x12\x15\n\rpinHeaderText\x18\x04 \x01(\t\x12\x1e\n\x16pinDescriptionTextHtml\x18\x05 \x01(\t\x12\x16\n\x0egaiaHeaderText\x18\x06 \x01(\t\x12\x1f\n\x17gaiaDescriptionTextHtml\x18\x07 \x01(\t\"\x81\t\n\x0b\x42uyResponse\x12\x37\n\x10purchaseResponse\x18\x01 \x01(\x0b\x32\x1d.PurchaseNotificationResponse\x12/\n\x0c\x63heckoutinfo\x18\x02 \x01(\n2\x19.BuyResponse.CheckoutInfo\x12\x16\n\x0e\x63ontinueViaUrl\x18\x08 \x01(\t\x12\x19\n\x11purchaseStatusUrl\x18\t \x01(\t\x12\x19\n\x11\x63heckoutServiceId\x18\x0c \x01(\t\x12\x1d\n\x15\x63heckoutTokenRequired\x18\r \x01(\x08\x12\x17\n\x0f\x62\x61seCheckoutUrl\x18\x0e \x01(\t\x12\x17\n\x0ftosCheckboxHtml\x18% \x03(\t\x12\x1a\n\x12iabPermissionError\x18& \x01(\x05\x12\x37\n\x16purchaseStatusResponse\x18\' \x01(\x0b\x32\x17.PurchaseStatusResponse\x12\x16\n\x0epurchaseCookie\x18. \x01(\t\x12\x1d\n\tchallenge\x18\x31 \x01(\x0b\x32\n.Challenge\x1a\xdc\x05\n\x0c\x43heckoutInfo\x12\x17\n\x04item\x18\x03 \x01(\x0b\x32\t.LineItem\x12\x1a\n\x07subItem\x18\x04 \x03(\x0b\x32\t.LineItem\x12@\n\x0e\x63heckoutoption\x18\x05 \x03(\n2(.BuyResponse.CheckoutInfo.CheckoutOption\x12\x1d\n\x15\x64\x65precatedCheckoutUrl\x18\n \x01(\t\x12\x18\n\x10\x61\x64\x64InstrumentUrl\x18\x0b \x01(\t\x12\x12\n\nfooterHtml\x18\x14 \x03(\t\x12 \n\x18\x65ligibleInstrumentFamily\x18\x1f \x03(\x05\x12\x14\n\x0c\x66ootnoteHtml\x18$ \x03(\t\x12\'\n\x12\x65ligibleInstrument\x18, \x03(\x0b\x32\x0b.Instrument\x1a\xa6\x03\n\x0e\x43heckoutOption\x12\x15\n\rformOfPayment\x18\x06 \x01(\t\x12\x1b\n\x13\x65ncodedAdjustedCart\x18\x07 \x01(\t\x12\x14\n\x0cinstrumentId\x18\x0f \x01(\t\x12\x17\n\x04item\x18\x10 \x03(\x0b\x32\t.LineItem\x12\x1a\n\x07subItem\x18\x11 \x03(\x0b\x32\t.LineItem\x12\x18\n\x05total\x18\x12 \x01(\x0b\x32\t.LineItem\x12\x12\n\nfooterHtml\x18\x13 \x03(\t\x12\x18\n\x10instrumentFamily\x18\x1d \x01(\x05\x12.\n&deprecatedInstrumentInapplicableReason\x18\x1e \x03(\x05\x12\x1a\n\x12selectedInstrument\x18  \x01(\x08\x12\x1a\n\x07summary\x18! \x01(\x0b\x32\t.LineItem\x12\x14\n\x0c\x66ootnoteHtml\x18# \x03(\t\x12\x1f\n\ninstrument\x18+ \x01(\x0b\x32\x0b.Instrument\x12\x16\n\x0epurchaseCookie\x18- \x01(\t\x12\x16\n\x0e\x64isabledReason\x18\x30 \x03(\t\"s\n\tChallenge\x12+\n\x10\x61\x64\x64ressChallenge\x18\x01 \x01(\x0b\x32\x11.AddressChallenge\x12\x39\n\x17\x61uthenticationChallenge\x18\x02 \x01(\x0b\x32\x18.AuthenticationChallenge\"F\n\x0c\x46ormCheckbox\x12\x13\n\x0b\x64\x65scription\x18\x01 \x01(\t\x12\x0f\n\x07\x63hecked\x18\x02 \x01(\x08\x12\x10\n\x08required\x18\x03 \x01(\x08\"\\\n\x08LineItem\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x15\n\x05offer\x18\x03 \x01(\x0b\x32\x06.Offer\x12\x16\n\x06\x61mount\x18\x04 \x01(\x0b\x32\x06.Money\"F\n\x05Money\x12\x0e\n\x06micros\x18\x01 \x01(\x03\x12\x14\n\x0c\x63urrencyCode\x18\x02 \x01(\t\x12\x17\n\x0f\x66ormattedAmount\x18\x03 \x01(\t\"\x80\x01\n\x1cPurchaseNotificationResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x1d\n\tdebugInfo\x18\x02 \x01(\x0b\x32\n.DebugInfo\x12\x1d\n\x15localizedErrorMessage\x18\x03 \x01(\t\x12\x12\n\npurchaseId\x18\x04 \x01(\t\"\xf9\x01\n\x16PurchaseStatusResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x11\n\tstatusMsg\x18\x02 \x01(\t\x12\x13\n\x0bstatusTitle\x18\x03 \x01(\t\x12\x14\n\x0c\x62riefMessage\x18\x04 \x01(\t\x12\x0f\n\x07infoUrl\x18\x05 \x01(\t\x12%\n\rlibraryUpdate\x18\x06 \x01(\x0b\x32\x0e.LibraryUpdate\x12\'\n\x12rejectedInstrument\x18\x07 \x01(\x0b\x32\x0b.Instrument\x12\x30\n\x0f\x61ppDeliveryData\x18\x08 \x01(\x0b\x32\x17.AndroidAppDeliveryData\"\xa2\x01\n\x17\x43heckInstrumentResponse\x12\x1e\n\x16userHasValidInstrument\x18\x01 \x01(\x08\x12\x1d\n\x15\x63heckoutTokenRequired\x18\x02 \x01(\x08\x12\x1f\n\ninstrument\x18\x04 \x03(\x0b\x32\x0b.Instrument\x12\'\n\x12\x65ligibleInstrument\x18\x05 \x03(\x0b\x32\x0b.Instrument\"Q\n\x17UpdateInstrumentRequest\x12\x1f\n\ninstrument\x18\x01 \x01(\x0b\x32\x0b.Instrument\x12\x15\n\rcheckoutToken\x18\x02 \x01(\t\"\xd4\x01\n\x18UpdateInstrumentResponse\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0cinstrumentId\x18\x02 \x01(\t\x12\x17\n\x0fuserMessageHtml\x18\x03 \x01(\t\x12.\n\x0f\x65rrorInputField\x18\x04 \x03(\x0b\x32\x15.InputValidationError\x12\x1d\n\x15\x63heckoutTokenRequired\x18\x05 \x01(\x08\x12*\n\rredeemedOffer\x18\x06 \x01(\x0b\x32\x13.RedeemedPromoOffer\"0\n\x1bInitiateAssociationResponse\x12\x11\n\tuserToken\x18\x01 \x01(\t\"n\n\x19VerifyAssociationResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12 \n\x0e\x62illingAddress\x18\x02 \x01(\x0b\x32\x08.Address\x12\x1f\n\ncarrierTos\x18\x03 \x01(\x0b\x32\x0b.CarrierTos\"\xcc\x01\n\x17\x41\x64\x64\x43reditCardPromoOffer\x12\x12\n\nheaderText\x18\x01 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x02 \x01(\t\x12\x15\n\x05image\x18\x03 \x01(\x0b\x32\x06.Image\x12\x1c\n\x14introductoryTextHtml\x18\x04 \x01(\t\x12\x12\n\nofferTitle\x18\x05 \x01(\t\x12\x1b\n\x13noActionDescription\x18\x06 \x01(\t\x12\x1e\n\x16termsAndConditionsHtml\x18\x07 \x01(\t\"K\n\x13\x41vailablePromoOffer\x12\x34\n\x12\x61\x64\x64\x43reditCardOffer\x18\x01 \x01(\x0b\x32\x18.AddCreditCardPromoOffer\"\x92\x01\n\x17\x43heckPromoOfferResponse\x12,\n\x0e\x61vailableOffer\x18\x01 \x03(\x0b\x32\x14.AvailablePromoOffer\x12*\n\rredeemedOffer\x18\x02 \x01(\x0b\x32\x13.RedeemedPromoOffer\x12\x1d\n\x15\x63heckoutTokenRequired\x18\x03 \x01(\x08\"X\n\x12RedeemedPromoOffer\x12\x12\n\nheaderText\x18\x01 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x02 \x01(\t\x12\x15\n\x05image\x18\x03 \x01(\x0b\x32\x06.Image\"<\n\x05\x44ocid\x12\x14\n\x0c\x62\x61\x63kendDocid\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\x0f\n\x07\x62\x61\x63kend\x18\x03 \x01(\x05\">\n\x07Install\x12\x11\n\tandroidId\x18\x01 \x01(\x06\x12\x0f\n\x07version\x18\x02 \x01(\x05\x12\x0f\n\x07\x62undled\x18\x03 \x01(\x08\"\x80\x03\n\x05Offer\x12\x0e\n\x06micros\x18\x01 \x01(\x03\x12\x14\n\x0c\x63urrencyCode\x18\x02 \x01(\t\x12\x17\n\x0f\x66ormattedAmount\x18\x03 \x01(\t\x12\x1e\n\x0e\x63onvertedPrice\x18\x04 \x03(\x0b\x32\x06.Offer\x12\x1c\n\x14\x63heckoutFlowRequired\x18\x05 \x01(\x08\x12\x17\n\x0f\x66ullPriceMicros\x18\x06 \x01(\x03\x12\x1b\n\x13\x66ormattedFullAmount\x18\x07 \x01(\t\x12\x11\n\tofferType\x18\x08 \x01(\x05\x12!\n\x0brentalTerms\x18\t \x01(\x0b\x32\x0c.RentalTerms\x12\x12\n\nonSaleDate\x18\n \x01(\x03\x12\x16\n\x0epromotionLabel\x18\x0b \x03(\t\x12-\n\x11subscriptionTerms\x18\x0c \x01(\x0b\x32\x12.SubscriptionTerms\x12\x15\n\rformattedName\x18\r \x01(\t\x12\x1c\n\x14\x66ormattedDescription\x18\x0e \x01(\t\"\xb1\x01\n\rOwnershipInfo\x12\x1f\n\x17initiationTimestampMsec\x18\x01 \x01(\x03\x12\x1f\n\x17validUntilTimestampMsec\x18\x02 \x01(\x03\x12\x14\n\x0c\x61utoRenewing\x18\x03 \x01(\x08\x12\"\n\x1arefundTimeoutTimestampMsec\x18\x04 \x01(\x03\x12$\n\x1cpostDeliveryRefundWindowMsec\x18\x05 \x01(\x03\"H\n\x0bRentalTerms\x12\x1a\n\x12grantPeriodSeconds\x18\x01 \x01(\x05\x12\x1d\n\x15\x61\x63tivatePeriodSeconds\x18\x02 \x01(\x05\"[\n\x11SubscriptionTerms\x12$\n\x0frecurringPeriod\x18\x01 \x01(\x0b\x32\x0b.TimePeriod\x12 \n\x0btrialPeriod\x18\x02 \x01(\x0b\x32\x0b.TimePeriod\")\n\nTimePeriod\x12\x0c\n\x04unit\x18\x01 \x01(\x05\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\"G\n\x12\x42illingAddressSpec\x12\x1a\n\x12\x62illingAddressType\x18\x01 \x01(\x05\x12\x15\n\rrequiredField\x18\x02 \x03(\x05\">\n\x19\x43\x61rrierBillingCredentials\x12\r\n\x05value\x18\x01 \x01(\t\x12\x12\n\nexpiration\x18\x02 \x01(\x03\"\xa9\x02\n\x18\x43\x61rrierBillingInstrument\x12\x15\n\rinstrumentKey\x18\x01 \x01(\t\x12\x13\n\x0b\x61\x63\x63ountType\x18\x02 \x01(\t\x12\x14\n\x0c\x63urrencyCode\x18\x03 \x01(\t\x12\x18\n\x10transactionLimit\x18\x04 \x01(\x03\x12\x1c\n\x14subscriberIdentifier\x18\x05 \x01(\t\x12\x39\n\x17\x65ncryptedSubscriberInfo\x18\x06 \x01(\x0b\x32\x18.EncryptedSubscriberInfo\x12/\n\x0b\x63redentials\x18\x07 \x01(\x0b\x32\x1a.CarrierBillingCredentials\x12\'\n\x12\x61\x63\x63\x65ptedCarrierTos\x18\x08 \x01(\x0b\x32\x0b.CarrierTos\"\xca\x01\n\x1e\x43\x61rrierBillingInstrumentStatus\x12\x1f\n\ncarrierTos\x18\x01 \x01(\x0b\x32\x0b.CarrierTos\x12\x1b\n\x13\x61ssociationRequired\x18\x02 \x01(\x08\x12\x18\n\x10passwordRequired\x18\x03 \x01(\x08\x12.\n\x15\x63\x61rrierPasswordPrompt\x18\x04 \x01(\x0b\x32\x0f.PasswordPrompt\x12\x12\n\napiVersion\x18\x05 \x01(\x05\x12\x0c\n\x04name\x18\x06 \x01(\t\"\x8e\x01\n\nCarrierTos\x12 \n\x06\x64\x63\x62Tos\x18\x01 \x01(\x0b\x32\x10.CarrierTosEntry\x12 \n\x06piiTos\x18\x02 \x01(\x0b\x32\x10.CarrierTosEntry\x12\x1d\n\x15needsDcbTosAcceptance\x18\x03 \x01(\x08\x12\x1d\n\x15needsPiiTosAcceptance\x18\x04 \x01(\x08\"/\n\x0f\x43\x61rrierTosEntry\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\t\"\xa2\x01\n\x14\x43reditCardInstrument\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x14\n\x0c\x65scrowHandle\x18\x02 \x01(\t\x12\x12\n\nlastDigits\x18\x03 \x01(\t\x12\x17\n\x0f\x65xpirationMonth\x18\x04 \x01(\x05\x12\x16\n\x0e\x65xpirationYear\x18\x05 \x01(\x05\x12!\n\x0e\x65scrowEfeParam\x18\x06 \x03(\x0b\x32\t.EfeParam\"&\n\x08\x45\x66\x65Param\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\t\"@\n\x14InputValidationError\x12\x12\n\ninputField\x18\x01 \x01(\x05\x12\x14\n\x0c\x65rrorMessage\x18\x02 \x01(\t\"\xc2\x02\n\nInstrument\x12\x14\n\x0cinstrumentId\x18\x01 \x01(\t\x12 \n\x0e\x62illingAddress\x18\x02 \x01(\x0b\x32\x08.Address\x12)\n\ncreditCard\x18\x03 \x01(\x0b\x32\x15.CreditCardInstrument\x12\x31\n\x0e\x63\x61rrierBilling\x18\x04 \x01(\x0b\x32\x19.CarrierBillingInstrument\x12/\n\x12\x62illingAddressSpec\x18\x05 \x01(\x0b\x32\x13.BillingAddressSpec\x12\x18\n\x10instrumentFamily\x18\x06 \x01(\x05\x12=\n\x14\x63\x61rrierBillingStatus\x18\x07 \x01(\x0b\x32\x1f.CarrierBillingInstrumentStatus\x12\x14\n\x0c\x64isplayTitle\x18\x08 \x01(\t\";\n\x0ePasswordPrompt\x12\x0e\n\x06prompt\x18\x01 \x01(\t\x12\x19\n\x11\x66orgotPasswordUrl\x18\x02 \x01(\t\"\x92\x01\n\x11\x43ontainerMetadata\x12\x11\n\tbrowseUrl\x18\x01 \x01(\t\x12\x13\n\x0bnextPageUrl\x18\x02 \x01(\t\x12\x11\n\trelevance\x18\x03 \x01(\x01\x12\x18\n\x10\x65stimatedResults\x18\x04 \x01(\x03\x12\x17\n\x0f\x61nalyticsCookie\x18\x05 \x01(\t\x12\x0f\n\x07ordered\x18\x06 \x01(\x08\"\x15\n\x13\x46lagContentResponse\"i\n\tDebugInfo\x12\x0f\n\x07message\x18\x01 \x03(\t\x12!\n\x06timing\x18\x02 \x03(\n2\x11.DebugInfo.Timing\x1a(\n\x06Timing\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x10\n\x08timeInMs\x18\x04 \x01(\x01\"T\n\x10\x44\x65liveryResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x30\n\x0f\x61ppDeliveryData\x18\x02 \x01(\x0b\x32\x17.AndroidAppDeliveryData\"\'\n\x10\x42ulkDetailsEntry\x12\x13\n\x03\x64oc\x18\x01 \x01(\x0b\x32\x06.DocV2\"=\n\x12\x42ulkDetailsRequest\x12\r\n\x05\x64ocid\x18\x01 \x03(\t\x12\x18\n\x10includeChildDocs\x18\x02 \x01(\x08\"7\n\x13\x42ulkDetailsResponse\x12 \n\x05\x65ntry\x18\x01 \x03(\x0b\x32\x11.BulkDetailsEntry\"\x89\x01\n\x0f\x44\x65tailsResponse\x12\x15\n\x05\x64ocV1\x18\x01 \x01(\x0b\x32\x06.DocV1\x12\x17\n\x0f\x61nalyticsCookie\x18\x02 \x01(\t\x12\x1b\n\nuserReview\x18\x03 \x01(\x0b\x32\x07.Review\x12\x15\n\x05\x64ocV2\x18\x04 \x01(\x0b\x32\x06.DocV2\x12\x12\n\nfooterHtml\x18\x05 \x01(\t\"\xb5\x03\n\x18\x44\x65viceConfigurationProto\x12\x13\n\x0btouchScreen\x18\x01 \x01(\x05\x12\x10\n\x08keyboard\x18\x02 \x01(\x05\x12\x12\n\nnavigation\x18\x03 \x01(\x05\x12\x14\n\x0cscreenLayout\x18\x04 \x01(\x05\x12\x17\n\x0fhasHardKeyboard\x18\x05 \x01(\x08\x12\x1c\n\x14hasFiveWayNavigation\x18\x06 \x01(\x08\x12\x15\n\rscreenDensity\x18\x07 \x01(\x05\x12\x13\n\x0bglEsVersion\x18\x08 \x01(\x05\x12\x1b\n\x13systemSharedLibrary\x18\t \x03(\t\x12\x1e\n\x16systemAvailableFeature\x18\n \x03(\t\x12\x16\n\x0enativePlatform\x18\x0b \x03(\t\x12\x13\n\x0bscreenWidth\x18\x0c \x01(\x05\x12\x14\n\x0cscreenHeight\x18\r \x01(\x05\x12\x1d\n\x15systemSupportedLocale\x18\x0e \x03(\t\x12\x13\n\x0bglExtension\x18\x0f \x03(\t\x12\x13\n\x0b\x64\x65viceClass\x18\x10 \x01(\x05\x12\x1c\n\x14maxApkDownloadSizeMb\x18\x11 \x01(\x05\"\xff\x03\n\x08\x44ocument\x12\x15\n\x05\x64ocid\x18\x01 \x01(\x0b\x32\x06.Docid\x12\x1a\n\nfetchDocid\x18\x02 \x01(\x0b\x32\x06.Docid\x12\x1b\n\x0bsampleDocid\x18\x03 \x01(\x0b\x32\x06.Docid\x12\r\n\x05title\x18\x04 \x01(\t\x12\x0b\n\x03url\x18\x05 \x01(\t\x12\x0f\n\x07snippet\x18\x06 \x03(\t\x12\x1f\n\x0fpriceDeprecated\x18\x07 \x01(\x0b\x32\x06.Offer\x12#\n\x0c\x61vailability\x18\t \x01(\x0b\x32\r.Availability\x12\x15\n\x05image\x18\n \x03(\x0b\x32\x06.Image\x12\x18\n\x05\x63hild\x18\x0b \x03(\x0b\x32\t.Document\x12)\n\x0f\x61ggregateRating\x18\r \x01(\x0b\x32\x10.AggregateRating\x12\x15\n\x05offer\x18\x0e \x03(\x0b\x32\x06.Offer\x12*\n\x11translatedSnippet\x18\x0f \x03(\x0b\x32\x0f.TranslatedText\x12)\n\x0f\x64ocumentVariant\x18\x10 \x03(\x0b\x32\x10.DocumentVariant\x12\x12\n\ncategoryId\x18\x11 \x03(\t\x12\x1d\n\ndecoration\x18\x12 \x03(\x0b\x32\t.Document\x12\x19\n\x06parent\x18\x13 \x03(\x0b\x32\t.Document\x12\x18\n\x10privacyPolicyUrl\x18\x14 \x01(\t\"\x81\x02\n\x0f\x44ocumentVariant\x12\x15\n\rvariationType\x18\x01 \x01(\x05\x12\x13\n\x04rule\x18\x02 \x01(\x0b\x32\x05.Rule\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0f\n\x07snippet\x18\x04 \x03(\t\x12\x15\n\rrecentChanges\x18\x05 \x01(\t\x12(\n\x0f\x61utoTranslation\x18\x06 \x03(\x0b\x32\x0f.TranslatedText\x12\x15\n\x05offer\x18\x07 \x03(\x0b\x32\x06.Offer\x12\x11\n\tchannelId\x18\t \x01(\x03\x12\x18\n\x05\x63hild\x18\n \x03(\x0b\x32\t.Document\x12\x1d\n\ndecoration\x18\x0b \x03(\x0b\x32\t.Document\"\xba\x02\n\x05Image\x12\x11\n\timageType\x18\x01 \x01(\x05\x12#\n\tdimension\x18\x02 \x01(\n2\x10.Image.Dimension\x12\x10\n\x08imageUrl\x18\x05 \x01(\t\x12\x18\n\x10\x61ltTextLocalized\x18\x06 \x01(\t\x12\x11\n\tsecureUrl\x18\x07 \x01(\t\x12\x1a\n\x12positionInSequence\x18\x08 \x01(\x05\x12\x1e\n\x16supportsFifeUrlOptions\x18\t \x01(\x08\x12!\n\x08\x63itation\x18\n \x01(\n2\x0f.Image.Citation\x1a*\n\tDimension\x12\r\n\x05width\x18\x03 \x01(\x05\x12\x0e\n\x06height\x18\x04 \x01(\x05\x1a/\n\x08\x43itation\x12\x16\n\x0etitleLocalized\x18\x0b \x01(\t\x12\x0b\n\x03url\x18\x0c \x01(\t\"J\n\x0eTranslatedText\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x14\n\x0csourceLocale\x18\x02 \x01(\t\x12\x14\n\x0ctargetLocale\x18\x03 \x01(\t\"@\n\x05\x42\x61\x64ge\x12\r\n\x05title\x18\x01 \x01(\t\x12\x15\n\x05image\x18\x02 \x03(\x0b\x32\x06.Image\x12\x11\n\tbrowseUrl\x18\x03 \x01(\t\"-\n\x13\x43ontainerWithBanner\x12\x16\n\x0e\x63olorThemeArgb\x18\x01 \x01(\t\">\n\x0c\x44\x65\x61lOfTheDay\x12\x16\n\x0e\x66\x65\x61turedHeader\x18\x01 \x01(\t\x12\x16\n\x0e\x63olorThemeArgb\x18\x02 \x01(\t\"\x8e\x01\n\x18\x45\x64itorialSeriesContainer\x12\x13\n\x0bseriesTitle\x18\x01 \x01(\t\x12\x16\n\x0eseriesSubtitle\x18\x02 \x01(\t\x12\x14\n\x0c\x65pisodeTitle\x18\x03 \x01(\t\x12\x17\n\x0f\x65pisodeSubtitle\x18\x04 \x01(\t\x12\x16\n\x0e\x63olorThemeArgb\x18\x05 \x01(\t\"\x13\n\x04Link\x12\x0b\n\x03uri\x18\x01 \x01(\t\"i\n\x0bPlusOneData\x12\x11\n\tsetByUser\x18\x01 \x01(\x08\x12\r\n\x05total\x18\x02 \x01(\x03\x12\x14\n\x0c\x63irclesTotal\x18\x03 \x01(\x03\x12\"\n\rcirclesPeople\x18\x04 \x03(\x0b\x32\x0b.PlusPerson\":\n\nPlusPerson\x12\x13\n\x0b\x64isplayName\x18\x02 \x01(\t\x12\x17\n\x0fprofileImageUrl\x18\x04 \x01(\t\"r\n\x0bPromotedDoc\x12\r\n\x05title\x18\x01 \x01(\t\x12\x10\n\x08subtitle\x18\x02 \x01(\t\x12\x15\n\x05image\x18\x03 \x03(\x0b\x32\x06.Image\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x04 \x01(\t\x12\x12\n\ndetailsUrl\x18\x05 \x01(\t\"G\n\x06Reason\x12\x13\n\x0b\x62riefReason\x18\x01 \x01(\t\x12\x16\n\x0e\x64\x65tailedReason\x18\x02 \x01(\t\x12\x10\n\x08uniqueId\x18\x03 \x01(\t\"^\n\x0fSectionMetadata\x12\x0e\n\x06header\x18\x01 \x01(\t\x12\x0f\n\x07listUrl\x18\x02 \x01(\t\x12\x11\n\tbrowseUrl\x18\x03 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x04 \x01(\t\"\xd5\x01\n\rSeriesAntenna\x12\x13\n\x0bseriesTitle\x18\x01 \x01(\t\x12\x16\n\x0eseriesSubtitle\x18\x02 \x01(\t\x12\x14\n\x0c\x65pisodeTitle\x18\x03 \x01(\t\x12\x17\n\x0f\x65pisodeSubtitle\x18\x04 \x01(\t\x12\x16\n\x0e\x63olorThemeArgb\x18\x05 \x01(\t\x12\'\n\rsectionTracks\x18\x06 \x01(\x0b\x32\x10.SectionMetadata\x12\'\n\rsectionAlbums\x18\x07 \x01(\x0b\x32\x10.SectionMetadata\"\x8f\x04\n\x08Template\x12%\n\rseriesAntenna\x18\x01 \x01(\x0b\x32\x0e.SeriesAntenna\x12%\n\x0etileGraphic2X1\x18\x02 \x01(\x0b\x32\r.TileTemplate\x12%\n\x0etileGraphic4X2\x18\x03 \x01(\x0b\x32\r.TileTemplate\x12\x31\n\x1atileGraphicColoredTitle2X1\x18\x04 \x01(\x0b\x32\r.TileTemplate\x12\x33\n\x1ctileGraphicUpperLeftTitle2X1\x18\x05 \x01(\x0b\x32\r.TileTemplate\x12\x35\n\x1etileDetailsReflectedGraphic2X2\x18\x06 \x01(\x0b\x32\r.TileTemplate\x12\'\n\x10tileFourBlock4X2\x18\x07 \x01(\x0b\x32\r.TileTemplate\x12\x31\n\x13\x63ontainerWithBanner\x18\x08 \x01(\x0b\x32\x14.ContainerWithBanner\x12#\n\x0c\x64\x65\x61lOfTheDay\x18\t \x01(\x0b\x32\r.DealOfTheDay\x12\x31\n\x1atileGraphicColoredTitle4X2\x18\n \x01(\x0b\x32\r.TileTemplate\x12;\n\x18\x65\x64itorialSeriesContainer\x18\x0b \x01(\x0b\x32\x19.EditorialSeriesContainer\"=\n\x0cTileTemplate\x12\x16\n\x0e\x63olorThemeArgb\x18\x01 \x01(\t\x12\x15\n\rcolorTextArgb\x18\x02 \x01(\t\"#\n\x07Warning\x12\x18\n\x10localizedMessage\x18\x01 \x01(\t\"c\n\x0c\x41lbumDetails\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1e\n\x07\x64\x65tails\x18\x02 \x01(\x0b\x32\r.MusicDetails\x12%\n\rdisplayArtist\x18\x03 \x01(\x0b\x32\x0e.ArtistDetails\"\x8e\x03\n\nAppDetails\x12\x15\n\rdeveloperName\x18\x01 \x01(\t\x12\x1a\n\x12majorVersionNumber\x18\x02 \x01(\x05\x12\x13\n\x0bversionCode\x18\x03 \x01(\x05\x12\x15\n\rversionString\x18\x04 \x01(\t\x12\r\n\x05title\x18\x05 \x01(\t\x12\x13\n\x0b\x61ppCategory\x18\x07 \x03(\t\x12\x15\n\rcontentRating\x18\x08 \x01(\x05\x12\x18\n\x10installationSize\x18\t \x01(\x03\x12\x12\n\npermission\x18\n \x03(\t\x12\x16\n\x0e\x64\x65veloperEmail\x18\x0b \x01(\t\x12\x18\n\x10\x64\x65veloperWebsite\x18\x0c \x01(\t\x12\x14\n\x0cnumDownloads\x18\r \x01(\t\x12\x13\n\x0bpackageName\x18\x0e \x01(\t\x12\x19\n\x11recentChangesHtml\x18\x0f \x01(\t\x12\x12\n\nuploadDate\x18\x10 \x01(\t\x12\x1b\n\x04\x66ile\x18\x11 \x03(\x0b\x32\r.FileMetadata\x12\x0f\n\x07\x61ppType\x18\x12 \x01(\t\"^\n\rArtistDetails\x12\x12\n\ndetailsUrl\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12+\n\rexternalLinks\x18\x03 \x01(\x0b\x32\x14.ArtistExternalLinks\"b\n\x13\x41rtistExternalLinks\x12\x12\n\nwebsiteUrl\x18\x01 \x03(\t\x12\x1c\n\x14googlePlusProfileUrl\x18\x02 \x01(\t\x12\x19\n\x11youtubeChannelUrl\x18\x03 \x01(\t\"\xc6\x03\n\x0f\x44ocumentDetails\x12\x1f\n\nappDetails\x18\x01 \x01(\x0b\x32\x0b.AppDetails\x12#\n\x0c\x61lbumDetails\x18\x02 \x01(\x0b\x32\r.AlbumDetails\x12%\n\rartistDetails\x18\x03 \x01(\x0b\x32\x0e.ArtistDetails\x12!\n\x0bsongDetails\x18\x04 \x01(\x0b\x32\x0c.SongDetails\x12!\n\x0b\x62ookDetails\x18\x05 \x01(\x0b\x32\x0c.BookDetails\x12#\n\x0cvideoDetails\x18\x06 \x01(\x0b\x32\r.VideoDetails\x12\x31\n\x13subscriptionDetails\x18\x07 \x01(\x0b\x32\x14.SubscriptionDetails\x12)\n\x0fmagazineDetails\x18\x08 \x01(\x0b\x32\x10.MagazineDetails\x12%\n\rtvShowDetails\x18\t \x01(\x0b\x32\x0e.TvShowDetails\x12)\n\x0ftvSeasonDetails\x18\n \x01(\x0b\x32\x10.TvSeasonDetails\x12+\n\x10tvEpisodeDetails\x18\x0b \x01(\x0b\x32\x11.TvEpisodeDetails\"C\n\x0c\x46ileMetadata\x12\x10\n\x08\x66ileType\x18\x01 \x01(\x05\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0c\n\x04size\x18\x03 \x01(\x03\"\x94\x01\n\x0fMagazineDetails\x12\x18\n\x10parentDetailsUrl\x18\x01 \x01(\t\x12)\n!deviceAvailabilityDescriptionHtml\x18\x02 \x01(\t\x12\x16\n\x0epsvDescription\x18\x03 \x01(\t\x12$\n\x1c\x64\x65liveryFrequencyDescription\x18\x04 \x01(\t\"\xbb\x01\n\x0cMusicDetails\x12\x11\n\tcensoring\x18\x01 \x01(\x05\x12\x13\n\x0b\x64urationSec\x18\x02 \x01(\x05\x12\x1b\n\x13originalReleaseDate\x18\x03 \x01(\t\x12\r\n\x05label\x18\x04 \x01(\t\x12\x1e\n\x06\x61rtist\x18\x05 \x03(\x0b\x32\x0e.ArtistDetails\x12\r\n\x05genre\x18\x06 \x03(\t\x12\x13\n\x0breleaseDate\x18\x07 \x01(\t\x12\x13\n\x0breleaseType\x18\x08 \x03(\x05\"\x9e\x01\n\x0bSongDetails\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1e\n\x07\x64\x65tails\x18\x02 \x01(\x0b\x32\r.MusicDetails\x12\x11\n\talbumName\x18\x03 \x01(\t\x12\x13\n\x0btrackNumber\x18\x04 \x01(\x05\x12\x12\n\npreviewUrl\x18\x05 \x01(\t\x12%\n\rdisplayArtist\x18\x06 \x01(\x0b\x32\x0e.ArtistDetails\"1\n\x13SubscriptionDetails\x12\x1a\n\x12subscriptionPeriod\x18\x01 \x01(\x05\"e\n\x07Trailer\x12\x11\n\ttrailerId\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\x14\n\x0cthumbnailUrl\x18\x03 \x01(\t\x12\x10\n\x08watchUrl\x18\x04 \x01(\t\x12\x10\n\x08\x64uration\x18\x05 \x01(\t\"W\n\x10TvEpisodeDetails\x12\x18\n\x10parentDetailsUrl\x18\x01 \x01(\t\x12\x14\n\x0c\x65pisodeIndex\x18\x02 \x01(\x05\x12\x13\n\x0breleaseDate\x18\x03 \x01(\t\"j\n\x0fTvSeasonDetails\x12\x18\n\x10parentDetailsUrl\x18\x01 \x01(\t\x12\x13\n\x0bseasonIndex\x18\x02 \x01(\x05\x12\x13\n\x0breleaseDate\x18\x03 \x01(\t\x12\x13\n\x0b\x62roadcaster\x18\x04 \x01(\t\"]\n\rTvShowDetails\x12\x13\n\x0bseasonCount\x18\x01 \x01(\x05\x12\x11\n\tstartYear\x18\x02 \x01(\x05\x12\x0f\n\x07\x65ndYear\x18\x03 \x01(\x05\x12\x13\n\x0b\x62roadcaster\x18\x04 \x01(\t\"?\n\x0bVideoCredit\x12\x12\n\ncreditType\x18\x01 \x01(\x05\x12\x0e\n\x06\x63redit\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x03(\t\"\xdb\x01\n\x0cVideoDetails\x12\x1c\n\x06\x63redit\x18\x01 \x03(\x0b\x32\x0c.VideoCredit\x12\x10\n\x08\x64uration\x18\x02 \x01(\t\x12\x13\n\x0breleaseDate\x18\x03 \x01(\t\x12\x15\n\rcontentRating\x18\x04 \x01(\t\x12\r\n\x05likes\x18\x05 \x01(\x03\x12\x10\n\x08\x64islikes\x18\x06 \x01(\x03\x12\r\n\x05genre\x18\x07 \x03(\t\x12\x19\n\x07trailer\x18\x08 \x03(\x0b\x32\x08.Trailer\x12$\n\nrentalTerm\x18\t \x03(\x0b\x32\x10.VideoRentalTerm\"\xa0\x01\n\x0fVideoRentalTerm\x12\x11\n\tofferType\x18\x01 \x01(\x05\x12\x19\n\x11offerAbbreviation\x18\x02 \x01(\t\x12\x14\n\x0crentalHeader\x18\x03 \x01(\t\x12#\n\x04term\x18\x04 \x03(\n2\x15.VideoRentalTerm.Term\x1a$\n\x04Term\x12\x0e\n\x06header\x18\x05 \x01(\t\x12\x0c\n\x04\x62ody\x18\x06 \x01(\t\"\xf9\x01\n\x06\x42ucket\x12\x18\n\x08\x64ocument\x18\x01 \x03(\x0b\x32\x06.DocV1\x12\x13\n\x0bmultiCorpus\x18\x02 \x01(\x08\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0f\n\x07iconUrl\x18\x04 \x01(\t\x12\x17\n\x0f\x66ullContentsUrl\x18\x05 \x01(\t\x12\x11\n\trelevance\x18\x06 \x01(\x01\x12\x18\n\x10\x65stimatedResults\x18\x07 \x01(\x03\x12\x17\n\x0f\x61nalyticsCookie\x18\x08 \x01(\t\x12\x1b\n\x13\x66ullContentsListUrl\x18\t \x01(\t\x12\x13\n\x0bnextPageUrl\x18\n \x01(\t\x12\x0f\n\x07ordered\x18\x0b \x01(\x08\"<\n\x0cListResponse\x12\x17\n\x06\x62ucket\x18\x01 \x03(\x0b\x32\x07.Bucket\x12\x13\n\x03\x64oc\x18\x02 \x03(\x0b\x32\x06.DocV2\"\x94\x03\n\x05\x44ocV1\x12\x1c\n\tfinskyDoc\x18\x01 \x01(\x0b\x32\t.Document\x12\r\n\x05\x64ocid\x18\x02 \x01(\t\x12\x12\n\ndetailsUrl\x18\x03 \x01(\t\x12\x12\n\nreviewsUrl\x18\x04 \x01(\t\x12\x16\n\x0erelatedListUrl\x18\x05 \x01(\t\x12\x15\n\rmoreByListUrl\x18\x06 \x01(\t\x12\x10\n\x08shareUrl\x18\x07 \x01(\t\x12\x0f\n\x07\x63reator\x18\x08 \x01(\t\x12!\n\x07\x64\x65tails\x18\t \x01(\x0b\x32\x10.DocumentDetails\x12\x17\n\x0f\x64\x65scriptionHtml\x18\n \x01(\t\x12\x18\n\x10relatedBrowseUrl\x18\x0b \x01(\t\x12\x17\n\x0fmoreByBrowseUrl\x18\x0c \x01(\t\x12\x15\n\rrelatedHeader\x18\r \x01(\t\x12\x14\n\x0cmoreByHeader\x18\x0e \x01(\t\x12\r\n\x05title\x18\x0f \x01(\t\x12!\n\x0bplusOneData\x18\x10 \x01(\x0b\x32\x0c.PlusOneData\x12\x16\n\x0ewarningMessage\x18\x11 \x01(\t\"\xcd\x04\n\x0b\x41nnotations\x12(\n\x0esectionRelated\x18\x01 \x01(\x0b\x32\x10.SectionMetadata\x12\'\n\rsectionMoreBy\x18\x02 \x01(\x0b\x32\x10.SectionMetadata\x12!\n\x0bplusOneData\x18\x03 \x01(\x0b\x32\x0c.PlusOneData\x12\x19\n\x07warning\x18\x04 \x03(\x0b\x32\x08.Warning\x12+\n\x11sectionBodyOfWork\x18\x05 \x01(\x0b\x32\x10.SectionMetadata\x12,\n\x12sectionCoreContent\x18\x06 \x01(\x0b\x32\x10.SectionMetadata\x12\x1b\n\x08template\x18\x07 \x01(\x0b\x32\t.Template\x12\x1f\n\x0f\x62\x61\x64geForCreator\x18\x08 \x03(\x0b\x32\x06.Badge\x12\x1b\n\x0b\x62\x61\x64geForDoc\x18\t \x03(\x0b\x32\x06.Badge\x12\x13\n\x04link\x18\n \x01(\x0b\x32\x05.Link\x12*\n\x10sectionCrossSell\x18\x0b \x01(\x0b\x32\x10.SectionMetadata\x12/\n\x15sectionRelatedDocType\x18\x0c \x01(\x0b\x32\x10.SectionMetadata\x12!\n\x0bpromotedDoc\x18\r \x03(\x0b\x32\x0c.PromotedDoc\x12\x11\n\tofferNote\x18\x0e \x01(\t\x12\x1c\n\x0csubscription\x18\x10 \x03(\x0b\x32\x06.DocV2\x12\x17\n\x06reason\x18\x11 \x01(\x0b\x32\x07.Reason\x12\x18\n\x10privacyPolicyUrl\x18\x12 \x01(\t\"\xa9\x04\n\x05\x44ocV2\x12\r\n\x05\x64ocid\x18\x01 \x01(\t\x12\x14\n\x0c\x62\x61\x63kendDocid\x18\x02 \x01(\t\x12\x0f\n\x07\x64ocType\x18\x03 \x01(\x05\x12\x11\n\tbackendId\x18\x04 \x01(\x05\x12\r\n\x05title\x18\x05 \x01(\t\x12\x0f\n\x07\x63reator\x18\x06 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x07 \x01(\t\x12\x15\n\x05offer\x18\x08 \x03(\x0b\x32\x06.Offer\x12#\n\x0c\x61vailability\x18\t \x01(\x0b\x32\r.Availability\x12\x15\n\x05image\x18\n \x03(\x0b\x32\x06.Image\x12\x15\n\x05\x63hild\x18\x0b \x03(\x0b\x32\x06.DocV2\x12-\n\x11\x63ontainerMetadata\x18\x0c \x01(\x0b\x32\x12.ContainerMetadata\x12!\n\x07\x64\x65tails\x18\r \x01(\x0b\x32\x10.DocumentDetails\x12)\n\x0f\x61ggregateRating\x18\x0e \x01(\x0b\x32\x10.AggregateRating\x12!\n\x0b\x61nnotations\x18\x0f \x01(\x0b\x32\x0c.Annotations\x12\x12\n\ndetailsUrl\x18\x10 \x01(\t\x12\x10\n\x08shareUrl\x18\x11 \x01(\t\x12\x12\n\nreviewsUrl\x18\x12 \x01(\t\x12\x12\n\nbackendUrl\x18\x13 \x01(\t\x12\x1a\n\x12purchaseDetailsUrl\x18\x14 \x01(\t\x12\x17\n\x0f\x64\x65tailsReusable\x18\x15 \x01(\x08\x12\x11\n\tpromoText\x18\x1b \x01(\t\"\x99\x01\n\x17\x45ncryptedSubscriberInfo\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\x12\x14\n\x0c\x65ncryptedKey\x18\x02 \x01(\t\x12\x11\n\tsignature\x18\x03 \x01(\t\x12\x12\n\ninitVector\x18\x04 \x01(\t\x12\x18\n\x10googleKeyVersion\x18\x05 \x01(\x05\x12\x19\n\x11\x63\x61rrierKeyVersion\x18\x06 \x01(\x05\"\xbd\x03\n\x0c\x41vailability\x12\x13\n\x0brestriction\x18\x05 \x01(\x05\x12\x11\n\tofferType\x18\x06 \x01(\x05\x12\x13\n\x04rule\x18\x07 \x01(\x0b\x32\x05.Rule\x12X\n perdeviceavailabilityrestriction\x18\t \x03(\n2..Availability.PerDeviceAvailabilityRestriction\x12\x18\n\x10\x61vailableIfOwned\x18\r \x01(\x08\x12\x19\n\x07install\x18\x0e \x03(\x0b\x32\x08.Install\x12)\n\nfilterInfo\x18\x10 \x01(\x0b\x32\x15.FilterEvaluationInfo\x12%\n\rownershipInfo\x18\x11 \x01(\x0b\x32\x0e.OwnershipInfo\x1a\x8e\x01\n PerDeviceAvailabilityRestriction\x12\x11\n\tandroidId\x18\n \x01(\x06\x12\x19\n\x11\x64\x65viceRestriction\x18\x0b \x01(\x05\x12\x11\n\tchannelId\x18\x0c \x01(\x03\x12)\n\nfilterInfo\x18\x0f \x01(\x0b\x32\x15.FilterEvaluationInfo\"?\n\x14\x46ilterEvaluationInfo\x12\'\n\x0eruleEvaluation\x18\x01 \x03(\x0b\x32\x0f.RuleEvaluation\"\xd4\x01\n\x04Rule\x12\x0e\n\x06negate\x18\x01 \x01(\x08\x12\x10\n\x08operator\x18\x02 \x01(\x05\x12\x0b\n\x03key\x18\x03 \x01(\x05\x12\x11\n\tstringArg\x18\x04 \x03(\t\x12\x0f\n\x07longArg\x18\x05 \x03(\x03\x12\x11\n\tdoubleArg\x18\x06 \x03(\x01\x12\x16\n\x07subrule\x18\x07 \x03(\x0b\x32\x05.Rule\x12\x14\n\x0cresponseCode\x18\x08 \x01(\x05\x12\x0f\n\x07\x63omment\x18\t \x01(\t\x12\x15\n\rstringArgHash\x18\n \x03(\x06\x12\x10\n\x08\x63onstArg\x18\x0b \x03(\x05\"\x8d\x01\n\x0eRuleEvaluation\x12\x13\n\x04rule\x18\x01 \x01(\x0b\x32\x05.Rule\x12\x19\n\x11\x61\x63tualStringValue\x18\x02 \x03(\t\x12\x17\n\x0f\x61\x63tualLongValue\x18\x03 \x03(\x03\x12\x17\n\x0f\x61\x63tualBoolValue\x18\x04 \x03(\x08\x12\x19\n\x11\x61\x63tualDoubleValue\x18\x05 \x03(\x01\"v\n\x11LibraryAppDetails\x12\x17\n\x0f\x63\x65rtificateHash\x18\x02 \x01(\t\x12\"\n\x1arefundTimeoutTimestampMsec\x18\x03 \x01(\x03\x12$\n\x1cpostDeliveryRefundWindowMsec\x18\x04 \x01(\x03\"\xc4\x01\n\x0fLibraryMutation\x12\x15\n\x05\x64ocid\x18\x01 \x01(\x0b\x32\x06.Docid\x12\x11\n\tofferType\x18\x02 \x01(\x05\x12\x14\n\x0c\x64ocumentHash\x18\x03 \x01(\x03\x12\x0f\n\x07\x64\x65leted\x18\x04 \x01(\x08\x12&\n\nappDetails\x18\x05 \x01(\x0b\x32\x12.LibraryAppDetails\x12\x38\n\x13subscriptionDetails\x18\x06 \x01(\x0b\x32\x1b.LibrarySubscriptionDetails\"\x95\x01\n\x1aLibrarySubscriptionDetails\x12\x1f\n\x17initiationTimestampMsec\x18\x01 \x01(\x03\x12\x1f\n\x17validUntilTimestampMsec\x18\x02 \x01(\x03\x12\x14\n\x0c\x61utoRenewing\x18\x03 \x01(\x08\x12\x1f\n\x17trialUntilTimestampMsec\x18\x04 \x01(\x03\"\x8c\x01\n\rLibraryUpdate\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x0e\n\x06\x63orpus\x18\x02 \x01(\x05\x12\x13\n\x0bserverToken\x18\x03 \x01(\x0c\x12\"\n\x08mutation\x18\x04 \x03(\x0b\x32\x10.LibraryMutation\x12\x0f\n\x07hasMore\x18\x05 \x01(\x08\x12\x11\n\tlibraryId\x18\x06 \x01(\t\"c\n\x12\x43lientLibraryState\x12\x0e\n\x06\x63orpus\x18\x01 \x01(\x05\x12\x13\n\x0bserverToken\x18\x02 \x01(\x0c\x12\x13\n\x0bhashCodeSum\x18\x03 \x01(\x03\x12\x13\n\x0blibrarySize\x18\x04 \x01(\x05\"F\n\x19LibraryReplicationRequest\x12)\n\x0clibraryState\x18\x01 \x03(\x0b\x32\x13.ClientLibraryState\"<\n\x1aLibraryReplicationResponse\x12\x1e\n\x06update\x18\x01 \x03(\x0b\x32\x0e.LibraryUpdate\"l\n\rClickLogEvent\x12\x11\n\teventTime\x18\x01 \x01(\x03\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x0e\n\x06listId\x18\x03 \x01(\t\x12\x13\n\x0breferrerUrl\x18\x04 \x01(\t\x12\x16\n\x0ereferrerListId\x18\x05 \x01(\t\"0\n\nLogRequest\x12\"\n\nclickEvent\x18\x01 \x03(\x0b\x32\x0e.ClickLogEvent\"\r\n\x0bLogResponse\"B\n\x1a\x41ndroidAppNotificationData\x12\x13\n\x0bversionCode\x18\x01 \x01(\x05\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\"M\n\x15InAppNotificationData\x12\x17\n\x0f\x63heckoutOrderId\x18\x01 \x01(\t\x12\x1b\n\x13inAppNotificationId\x18\x02 \x01(\t\"#\n\x10LibraryDirtyData\x12\x0f\n\x07\x62\x61\x63kend\x18\x01 \x01(\x05\"\x97\x04\n\x0cNotification\x12\x18\n\x10notificationType\x18\x01 \x01(\x05\x12\x11\n\ttimestamp\x18\x03 \x01(\x03\x12\x15\n\x05\x64ocid\x18\x04 \x01(\x0b\x32\x06.Docid\x12\x10\n\x08\x64ocTitle\x18\x05 \x01(\t\x12\x11\n\tuserEmail\x18\x06 \x01(\t\x12,\n\x07\x61ppData\x18\x07 \x01(\x0b\x32\x1b.AndroidAppNotificationData\x12\x30\n\x0f\x61ppDeliveryData\x18\x08 \x01(\x0b\x32\x17.AndroidAppDeliveryData\x12\x31\n\x13purchaseRemovalData\x18\t \x01(\x0b\x32\x14.PurchaseRemovalData\x12\x33\n\x14userNotificationData\x18\n \x01(\x0b\x32\x15.UserNotificationData\x12\x35\n\x15inAppNotificationData\x18\x0b \x01(\x0b\x32\x16.InAppNotificationData\x12\x33\n\x14purchaseDeclinedData\x18\x0c \x01(\x0b\x32\x15.PurchaseDeclinedData\x12\x16\n\x0enotificationId\x18\r \x01(\t\x12%\n\rlibraryUpdate\x18\x0e \x01(\x0b\x32\x0e.LibraryUpdate\x12+\n\x10libraryDirtyData\x18\x0f \x01(\x0b\x32\x11.LibraryDirtyData\"@\n\x14PurchaseDeclinedData\x12\x0e\n\x06reason\x18\x01 \x01(\x05\x12\x18\n\x10showNotification\x18\x02 \x01(\x08\"(\n\x13PurchaseRemovalData\x12\x11\n\tmalicious\x18\x01 \x01(\x08\"\x88\x01\n\x14UserNotificationData\x12\x19\n\x11notificationTitle\x18\x01 \x01(\t\x12\x18\n\x10notificationText\x18\x02 \x01(\t\x12\x12\n\ntickerText\x18\x03 \x01(\t\x12\x13\n\x0b\x64ialogTitle\x18\x04 \x01(\t\x12\x12\n\ndialogText\x18\x05 \x01(\t\"\x11\n\x0fPlusOneResponse\"\x1e\n\x1cRateSuggestedContentResponse\"\xa7\x02\n\x0f\x41ggregateRating\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x12\n\nstarRating\x18\x02 \x01(\x02\x12\x14\n\x0cratingsCount\x18\x03 \x01(\x04\x12\x16\n\x0eoneStarRatings\x18\x04 \x01(\x04\x12\x16\n\x0etwoStarRatings\x18\x05 \x01(\x04\x12\x18\n\x10threeStarRatings\x18\x06 \x01(\x04\x12\x17\n\x0f\x66ourStarRatings\x18\x07 \x01(\x04\x12\x17\n\x0f\x66iveStarRatings\x18\x08 \x01(\x04\x12\x15\n\rthumbsUpCount\x18\t \x01(\x04\x12\x17\n\x0fthumbsDownCount\x18\n \x01(\x04\x12\x14\n\x0c\x63ommentCount\x18\x0b \x01(\x04\x12\x1a\n\x12\x62\x61yesianMeanRating\x18\x0c \x01(\x01\"c\n\x0e\x44irectPurchase\x12\x12\n\ndetailsUrl\x18\x01 \x01(\t\x12\x15\n\rpurchaseDocid\x18\x02 \x01(\t\x12\x13\n\x0bparentDocid\x18\x03 \x01(\t\x12\x11\n\tofferType\x18\x04 \x01(\x05\"\x89\x01\n\x13ResolveLinkResponse\x12\x12\n\ndetailsUrl\x18\x01 \x01(\t\x12\x11\n\tbrowseUrl\x18\x02 \x01(\t\x12\x11\n\tsearchUrl\x18\x03 \x01(\t\x12\'\n\x0e\x64irectPurchase\x18\x04 \x01(\x0b\x32\x0f.DirectPurchase\x12\x0f\n\x07homeUrl\x18\x05 \x01(\t\"\xb5\t\n\x07Payload\x12#\n\x0clistResponse\x18\x01 \x01(\x0b\x32\r.ListResponse\x12)\n\x0f\x64\x65tailsResponse\x18\x02 \x01(\x0b\x32\x10.DetailsResponse\x12\'\n\x0ereviewResponse\x18\x03 \x01(\x0b\x32\x0f.ReviewResponse\x12!\n\x0b\x62uyResponse\x18\x04 \x01(\x0b\x32\x0c.BuyResponse\x12\'\n\x0esearchResponse\x18\x05 \x01(\x0b\x32\x0f.SearchResponse\x12!\n\x0btocResponse\x18\x06 \x01(\x0b\x32\x0c.TocResponse\x12\'\n\x0e\x62rowseResponse\x18\x07 \x01(\x0b\x32\x0f.BrowseResponse\x12\x37\n\x16purchaseStatusResponse\x18\x08 \x01(\x0b\x32\x17.PurchaseStatusResponse\x12;\n\x18updateInstrumentResponse\x18\t \x01(\x0b\x32\x19.UpdateInstrumentResponse\x12!\n\x0blogResponse\x18\n \x01(\x0b\x32\x0c.LogResponse\x12\x39\n\x17\x63heckInstrumentResponse\x18\x0b \x01(\x0b\x32\x18.CheckInstrumentResponse\x12)\n\x0fplusOneResponse\x18\x0c \x01(\x0b\x32\x10.PlusOneResponse\x12\x31\n\x13\x66lagContentResponse\x18\r \x01(\x0b\x32\x14.FlagContentResponse\x12\x39\n\x17\x61\x63kNotificationResponse\x18\x0e \x01(\x0b\x32\x18.AckNotificationResponse\x12\x41\n\x1binitiateAssociationResponse\x18\x0f \x01(\x0b\x32\x1c.InitiateAssociationResponse\x12=\n\x19verifyAssociationResponse\x18\x10 \x01(\x0b\x32\x1a.VerifyAssociationResponse\x12?\n\x1alibraryReplicationResponse\x18\x11 \x01(\x0b\x32\x1b.LibraryReplicationResponse\x12\'\n\x0erevokeResponse\x18\x12 \x01(\x0b\x32\x0f.RevokeResponse\x12\x31\n\x13\x62ulkDetailsResponse\x18\x13 \x01(\x0b\x32\x14.BulkDetailsResponse\x12\x31\n\x13resolveLinkResponse\x18\x14 \x01(\x0b\x32\x14.ResolveLinkResponse\x12+\n\x10\x64\x65liveryResponse\x18\x15 \x01(\x0b\x32\x11.DeliveryResponse\x12-\n\x11\x61\x63\x63\x65ptTosResponse\x18\x16 \x01(\x0b\x32\x12.AcceptTosResponse\x12\x43\n\x1crateSuggestedContentResponse\x18\x17 \x01(\x0b\x32\x1d.RateSuggestedContentResponse\x12\x39\n\x17\x63heckPromoOfferResponse\x18\x18 \x01(\x0b\x32\x18.CheckPromoOfferResponse\"U\n\x08PreFetch\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x10\n\x08response\x18\x02 \x01(\x0c\x12\x0c\n\x04\x65tag\x18\x03 \x01(\t\x12\x0b\n\x03ttl\x18\x04 \x01(\x03\x12\x0f\n\x07softTtl\x18\x05 \x01(\x03\"\x91\x01\n\x0fResponseWrapper\x12\x19\n\x07payload\x18\x01 \x01(\x0b\x32\x08.Payload\x12!\n\x08\x63ommands\x18\x02 \x01(\x0b\x32\x0f.ServerCommands\x12\x1b\n\x08preFetch\x18\x03 \x03(\x0b\x32\t.PreFetch\x12#\n\x0cnotification\x18\x04 \x03(\x0b\x32\r.Notification\"]\n\x0eServerCommands\x12\x12\n\nclearCache\x18\x01 \x01(\x08\x12\x1b\n\x13\x64isplayErrorMessage\x18\x02 \x01(\t\x12\x1a\n\x12logErrorStacktrace\x18\x03 \x01(\t\"D\n\x12GetReviewsResponse\x12\x17\n\x06review\x18\x01 \x03(\x0b\x32\x07.Review\x12\x15\n\rmatchingCount\x18\x02 \x01(\x03\"\xf3\x01\n\x06Review\x12\x12\n\nauthorName\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x0e\n\x06source\x18\x03 \x01(\t\x12\x17\n\x0f\x64ocumentVersion\x18\x04 \x01(\t\x12\x15\n\rtimestampMsec\x18\x05 \x01(\x03\x12\x12\n\nstarRating\x18\x06 \x01(\x05\x12\r\n\x05title\x18\x07 \x01(\t\x12\x0f\n\x07\x63omment\x18\x08 \x01(\t\x12\x11\n\tcommentId\x18\t \x01(\t\x12\x12\n\ndeviceName\x18\x13 \x01(\t\x12\x11\n\treplyText\x18\x1d \x01(\t\x12\x1a\n\x12replyTimestampMsec\x18\x1e \x01(\x03\"O\n\x0eReviewResponse\x12(\n\x0bgetResponse\x18\x01 \x01(\x0b\x32\x13.GetReviewsResponse\x12\x13\n\x0bnextPageUrl\x18\x02 \x01(\t\"7\n\x0eRevokeResponse\x12%\n\rlibraryUpdate\x18\x01 \x01(\x0b\x32\x0e.LibraryUpdate\"g\n\rRelatedSearch\x12\x11\n\tsearchUrl\x18\x01 \x01(\t\x12\x0e\n\x06header\x18\x02 \x01(\t\x12\x11\n\tbackendId\x18\x03 \x01(\x05\x12\x0f\n\x07\x64ocType\x18\x04 \x01(\x05\x12\x0f\n\x07\x63urrent\x18\x05 \x01(\x08\"\xac\x01\n\x0eSearchResponse\x12\x15\n\roriginalQuery\x18\x01 \x01(\t\x12\x16\n\x0esuggestedQuery\x18\x02 \x01(\t\x12\x16\n\x0e\x61ggregateQuery\x18\x03 \x01(\x08\x12\x17\n\x06\x62ucket\x18\x04 \x03(\x0b\x32\x07.Bucket\x12\x13\n\x03\x64oc\x18\x05 \x03(\x0b\x32\x06.DocV2\x12%\n\rrelatedSearch\x18\x06 \x03(\x0b\x32\x0e.RelatedSearch\"X\n\x0e\x43orpusMetadata\x12\x0f\n\x07\x62\x61\x63kend\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\nlandingUrl\x18\x03 \x01(\t\x12\x13\n\x0blibraryName\x18\x04 \x01(\t\"#\n\x0b\x45xperiments\x12\x14\n\x0c\x65xperimentId\x18\x01 \x03(\t\"\x8c\x02\n\x0bTocResponse\x12\x1f\n\x06\x63orpus\x18\x01 \x03(\x0b\x32\x0f.CorpusMetadata\x12\x1c\n\x14tosVersionDeprecated\x18\x02 \x01(\x05\x12\x12\n\ntosContent\x18\x03 \x01(\t\x12\x0f\n\x07homeUrl\x18\x04 \x01(\t\x12!\n\x0b\x65xperiments\x18\x05 \x01(\x0b\x32\x0c.Experiments\x12&\n\x1etosCheckboxTextMarketingEmails\x18\x06 \x01(\t\x12\x10\n\x08tosToken\x18\x07 \x01(\t\x12#\n\x0cuserSettings\x18\x08 \x01(\x0b\x32\r.UserSettings\x12\x17\n\x0ficonOverrideUrl\x18\t \x01(\t\"9\n\x0cUserSettings\x12)\n!tosCheckboxMarketingEmailsOptedIn\x18\x01 \x01(\x08\"\x13\n\x11\x41\x63\x63\x65ptTosResponse\"~\n\x1c\x41\x63kNotificationsRequestProto\x12\x16\n\x0enotificationId\x18\x01 \x03(\t\x12*\n\rsignatureHash\x18\x02 \x01(\x0b\x32\x13.SignatureHashProto\x12\x1a\n\x12nackNotificationId\x18\x03 \x03(\t\"\x1f\n\x1d\x41\x63kNotificationsResponseProto\"\x9f\x01\n\x0c\x41\x64\x64ressProto\x12\x10\n\x08\x61\x64\x64ress1\x18\x01 \x01(\t\x12\x10\n\x08\x61\x64\x64ress2\x18\x02 \x01(\t\x12\x0c\n\x04\x63ity\x18\x03 \x01(\t\x12\r\n\x05state\x18\x04 \x01(\t\x12\x12\n\npostalCode\x18\x05 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x06 \x01(\t\x12\x0c\n\x04name\x18\x07 \x01(\t\x12\x0c\n\x04type\x18\x08 \x01(\t\x12\r\n\x05phone\x18\t \x01(\t\"*\n\x0c\x41ppDataProto\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"<\n\x12\x41ppSuggestionProto\x12&\n\tassetInfo\x18\x01 \x01(\x0b\x32\x13.ExternalAssetProto\"Q\n\x14\x41ssetIdentifierProto\x12\x13\n\x0bpackageName\x18\x01 \x01(\t\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0f\n\x07\x61ssetId\x18\x03 \x01(\t\"\x8c\x03\n\x12\x41ssetsRequestProto\x12\x11\n\tassetType\x18\x01 \x01(\x05\x12\r\n\x05query\x18\x02 \x01(\t\x12\x12\n\ncategoryId\x18\x03 \x01(\t\x12\x0f\n\x07\x61ssetId\x18\x04 \x03(\t\x12\x1e\n\x16retrieveVendingHistory\x18\x05 \x01(\x08\x12\x1c\n\x14retrieveExtendedInfo\x18\x06 \x01(\x08\x12\x11\n\tsortOrder\x18\x07 \x01(\x05\x12\x12\n\nstartIndex\x18\x08 \x01(\x03\x12\x12\n\nnumEntries\x18\t \x01(\x03\x12\x12\n\nviewFilter\x18\n \x01(\x05\x12\x13\n\x0brankingType\x18\x0b \x01(\t\x12\x1e\n\x16retrieveCarrierChannel\x18\x0c \x01(\x08\x12\x1e\n\x16pendingDownloadAssetId\x18\r \x03(\t\x12!\n\x19reconstructVendingHistory\x18\x0e \x01(\x08\x12\x19\n\x11unfilteredResults\x18\x0f \x01(\x08\x12\x0f\n\x07\x62\x61\x64geId\x18\x10 \x03(\t\"\xd0\x01\n\x13\x41ssetsResponseProto\x12\"\n\x05\x61sset\x18\x01 \x03(\x0b\x32\x13.ExternalAssetProto\x12\x17\n\x0fnumTotalEntries\x18\x02 \x01(\x03\x12\x16\n\x0e\x63orrectedQuery\x18\x03 \x01(\t\x12%\n\x08\x61ltAsset\x18\x04 \x03(\x0b\x32\x13.ExternalAssetProto\x12\x1b\n\x13numCorrectedEntries\x18\x05 \x01(\x03\x12\x0e\n\x06header\x18\x06 \x01(\t\x12\x10\n\x08listType\x18\x07 \x01(\x05\"\xbb\x01\n\x18\x42illingEventRequestProto\x12\x11\n\teventType\x18\x01 \x01(\x05\x12\x1b\n\x13\x62illingParametersId\x18\x02 \x01(\t\x12\x15\n\rresultSuccess\x18\x03 \x01(\x08\x12\x15\n\rclientMessage\x18\x04 \x01(\t\x12\x41\n\x11\x63\x61rrierInstrument\x18\x05 \x01(\x0b\x32&.ExternalCarrierBillingInstrumentProto\"\x1b\n\x19\x42illingEventResponseProto\"\xbc\x03\n\x15\x42illingParameterProto\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06mncMcc\x18\x03 \x03(\t\x12\x12\n\nbackendUrl\x18\x04 \x03(\t\x12\x0e\n\x06iconId\x18\x05 \x01(\t\x12\x1d\n\x15\x62illingInstrumentType\x18\x06 \x01(\x05\x12\x15\n\rapplicationId\x18\x07 \x01(\t\x12\x0e\n\x06tosUrl\x18\x08 \x01(\t\x12\x1d\n\x15instrumentTosRequired\x18\t \x01(\x08\x12\x12\n\napiVersion\x18\n \x01(\x05\x12)\n!perTransactionCredentialsRequired\x18\x0b \x01(\x08\x12\x32\n*sendSubscriberIdWithCarrierBillingRequests\x18\x0c \x01(\x08\x12\x1f\n\x17\x64\x65viceAssociationMethod\x18\r \x01(\x05\x12\x1f\n\x17userTokenRequestMessage\x18\x0e \x01(\t\x12\x1f\n\x17userTokenRequestAddress\x18\x0f \x01(\t\x12\x1a\n\x12passphraseRequired\x18\x10 \x01(\x08\"Q\n\x1e\x43\x61rrierBillingCredentialsProto\x12\x13\n\x0b\x63redentials\x18\x01 \x01(\t\x12\x1a\n\x12\x63redentialsTimeout\x18\x02 \x01(\x03\"\xff\x01\n\rCategoryProto\x12\x11\n\tassetType\x18\x02 \x01(\x05\x12\x12\n\ncategoryId\x18\x03 \x01(\t\x12\x17\n\x0f\x63\x61tegoryDisplay\x18\x04 \x01(\t\x12\x18\n\x10\x63\x61tegorySubtitle\x18\x05 \x01(\t\x12\x19\n\x11promotedAssetsNew\x18\x06 \x03(\t\x12\x1a\n\x12promotedAssetsHome\x18\x07 \x03(\t\x12%\n\rsubCategories\x18\x08 \x03(\x0b\x32\x0e.CategoryProto\x12\x1a\n\x12promotedAssetsPaid\x18\t \x03(\t\x12\x1a\n\x12promotedAssetsFree\x18\n \x03(\t\":\n!CheckForNotificationsRequestProto\x12\x15\n\ralarmDuration\x18\x01 \x01(\x03\"$\n\"CheckForNotificationsResponseProto\"S\n\x18\x43heckLicenseRequestProto\x12\x13\n\x0bpackageName\x18\x01 \x01(\t\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\r\n\x05nonce\x18\x03 \x01(\x03\"X\n\x19\x43heckLicenseResponseProto\x12\x14\n\x0cresponseCode\x18\x01 \x01(\x05\x12\x12\n\nsignedData\x18\x02 \x01(\t\x12\x11\n\tsignature\x18\x03 \x01(\t\"\x87\x01\n\x14\x43ommentsRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x12\n\nstartIndex\x18\x02 \x01(\x03\x12\x12\n\nnumEntries\x18\x03 \x01(\x03\x12\x1f\n\x17shouldReturnSelfComment\x18\x04 \x01(\x08\x12\x15\n\rassetReferrer\x18\x05 \x01(\t\"\x84\x01\n\x15\x43ommentsResponseProto\x12&\n\x07\x63omment\x18\x01 \x03(\x0b\x32\x15.ExternalCommentProto\x12\x17\n\x0fnumTotalEntries\x18\x02 \x01(\x03\x12*\n\x0bselfComment\x18\x03 \x01(\x0b\x32\x15.ExternalCommentProto\"\xc0\x03\n\x17\x43ontentSyncRequestProto\x12\x13\n\x0bincremental\x18\x01 \x01(\x08\x12\x45\n\x11\x61ssetinstallstate\x18\x02 \x03(\n2*.ContentSyncRequestProto.AssetInstallState\x12\x35\n\tsystemapp\x18\n \x03(\n2\".ContentSyncRequestProto.SystemApp\x12\x1a\n\x12sideloadedAppCount\x18\x0e \x01(\x05\x1a\xa5\x01\n\x11\x41ssetInstallState\x12\x0f\n\x07\x61ssetId\x18\x03 \x01(\t\x12\x12\n\nassetState\x18\x04 \x01(\x05\x12\x13\n\x0binstallTime\x18\x05 \x01(\x03\x12\x15\n\runinstallTime\x18\x06 \x01(\x03\x12\x13\n\x0bpackageName\x18\x07 \x01(\t\x12\x13\n\x0bversionCode\x18\x08 \x01(\x05\x12\x15\n\rassetReferrer\x18\t \x01(\t\x1aN\n\tSystemApp\x12\x13\n\x0bpackageName\x18\x0b \x01(\t\x12\x13\n\x0bversionCode\x18\x0c \x01(\x05\x12\x17\n\x0f\x63\x65rtificateHash\x18\r \x03(\t\"7\n\x18\x43ontentSyncResponseProto\x12\x1b\n\x13numUpdatesAvailable\x18\x01 \x01(\x05\"D\n\x10\x44\x61taMessageProto\x12\x10\n\x08\x63\x61tegory\x18\x01 \x01(\t\x12\x1e\n\x07\x61ppData\x18\x03 \x03(\x0b\x32\r.AppDataProto\"P\n\x11\x44ownloadInfoProto\x12\x0f\n\x07\x61pkSize\x18\x01 \x01(\x03\x12*\n\x0e\x61\x64\x64itionalFile\x18\x02 \x03(\x0b\x32\x12.FileMetadataProto\"\xe6\n\n\x12\x45xternalAssetProto\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\x11\n\tassetType\x18\x03 \x01(\x05\x12\r\n\x05owner\x18\x04 \x01(\t\x12\x0f\n\x07version\x18\x05 \x01(\t\x12\r\n\x05price\x18\x06 \x01(\t\x12\x15\n\raverageRating\x18\x07 \x01(\t\x12\x12\n\nnumRatings\x18\x08 \x01(\x03\x12\x44\n\x13purchaseinformation\x18\t \x01(\n2\'.ExternalAssetProto.PurchaseInformation\x12\x36\n\x0c\x65xtendedinfo\x18\x0c \x01(\n2 .ExternalAssetProto.ExtendedInfo\x12\x0f\n\x07ownerId\x18\x16 \x01(\t\x12\x13\n\x0bpackageName\x18\x18 \x01(\t\x12\x13\n\x0bversionCode\x18\x19 \x01(\x05\x12\x14\n\x0c\x62undledAsset\x18\x1d \x01(\x08\x12\x15\n\rpriceCurrency\x18  \x01(\t\x12\x13\n\x0bpriceMicros\x18! \x01(\x03\x12\x14\n\x0c\x66ilterReason\x18# \x01(\t\x12\x19\n\x11\x61\x63tualSellerPrice\x18( \x01(\t\x12%\n\x08\x61ppBadge\x18/ \x03(\x0b\x32\x13.ExternalBadgeProto\x12\'\n\nownerBadge\x18\x30 \x03(\x0b\x32\x13.ExternalBadgeProto\x1a\x7f\n\x13PurchaseInformation\x12\x14\n\x0cpurchaseTime\x18\n \x01(\x03\x12\x19\n\x11refundTimeoutTime\x18\x0b \x01(\x03\x12\x19\n\x11refundStartPolicy\x18- \x01(\x05\x12\x1c\n\x14refundWindowDuration\x18. \x01(\x03\x1a\xca\x05\n\x0c\x45xtendedInfo\x12\x13\n\x0b\x64\x65scription\x18\r \x01(\t\x12\x15\n\rdownloadCount\x18\x0e \x01(\x03\x12\x1f\n\x17\x61pplicationPermissionId\x18\x0f \x03(\t\x12 \n\x18requiredInstallationSize\x18\x10 \x01(\x03\x12\x13\n\x0bpackageName\x18\x11 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\x12 \x01(\t\x12\x15\n\rforwardLocked\x18\x13 \x01(\x08\x12\x14\n\x0c\x63ontactEmail\x18\x14 \x01(\t\x12\x1b\n\x13\x65verInstalledByUser\x18\x15 \x01(\x08\x12\x1b\n\x13\x64ownloadCountString\x18\x17 \x01(\t\x12\x14\n\x0c\x63ontactPhone\x18\x1a \x01(\t\x12\x16\n\x0e\x63ontactWebsite\x18\x1b \x01(\t\x12\x1e\n\x16nextPurchaseRefundable\x18\x1c \x01(\x08\x12\x16\n\x0enumScreenshots\x18\x1e \x01(\x05\x12\x1e\n\x16promotionalDescription\x18\x1f \x01(\t\x12\x18\n\x10serverAssetState\x18\" \x01(\x05\x12\x1a\n\x12\x63ontentRatingLevel\x18$ \x01(\x05\x12\x1b\n\x13\x63ontentRatingString\x18% \x01(\t\x12\x15\n\rrecentChanges\x18& \x01(\t\x12M\n\x11packagedependency\x18\' \x03(\n22.ExternalAssetProto.ExtendedInfo.PackageDependency\x12\x11\n\tvideoLink\x18+ \x01(\t\x12(\n\x0c\x64ownloadInfo\x18\x31 \x01(\x0b\x32\x12.DownloadInfoProto\x1a\x41\n\x11PackageDependency\x12\x13\n\x0bpackageName\x18) \x01(\t\x12\x17\n\x0fskipPermissions\x18* \x01(\x08\"5\n\x17\x45xternalBadgeImageProto\x12\r\n\x05usage\x18\x01 \x01(\x05\x12\x0b\n\x03url\x18\x02 \x01(\t\"\x8a\x01\n\x12\x45xternalBadgeProto\x12\x16\n\x0elocalizedTitle\x18\x01 \x01(\t\x12\x1c\n\x14localizedDescription\x18\x02 \x01(\t\x12,\n\nbadgeImage\x18\x03 \x03(\x0b\x32\x18.ExternalBadgeImageProto\x12\x10\n\x08searchId\x18\x04 \x01(\t\"\xe0\x02\n%ExternalCarrierBillingInstrumentProto\x12\x15\n\rinstrumentKey\x18\x01 \x01(\t\x12\x1c\n\x14subscriberIdentifier\x18\x02 \x01(\t\x12\x13\n\x0b\x61\x63\x63ountType\x18\x03 \x01(\t\x12\x1a\n\x12subscriberCurrency\x18\x04 \x01(\t\x12\x18\n\x10transactionLimit\x18\x05 \x01(\x04\x12\x16\n\x0esubscriberName\x18\x06 \x01(\t\x12\x10\n\x08\x61\x64\x64ress1\x18\x07 \x01(\t\x12\x10\n\x08\x61\x64\x64ress2\x18\x08 \x01(\t\x12\x0c\n\x04\x63ity\x18\t \x01(\t\x12\r\n\x05state\x18\n \x01(\t\x12\x12\n\npostalCode\x18\x0b \x01(\t\x12\x0f\n\x07\x63ountry\x18\x0c \x01(\t\x12\x39\n\x17\x65ncryptedSubscriberInfo\x18\r \x01(\x0b\x32\x18.EncryptedSubscriberInfo\"r\n\x14\x45xternalCommentProto\x12\x0c\n\x04\x62ody\x18\x01 \x01(\t\x12\x0e\n\x06rating\x18\x02 \x01(\x05\x12\x13\n\x0b\x63reatorName\x18\x03 \x01(\t\x12\x14\n\x0c\x63reationTime\x18\x04 \x01(\x03\x12\x11\n\tcreatorId\x18\x05 \x01(\t\"\xfb\x01\n\x12\x45xternalCreditCard\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x12\n\nlastDigits\x18\x02 \x01(\t\x12\x0f\n\x07\x65xpYear\x18\x03 \x01(\x05\x12\x10\n\x08\x65xpMonth\x18\x04 \x01(\x05\x12\x12\n\npersonName\x18\x05 \x01(\t\x12\x13\n\x0b\x63ountryCode\x18\x06 \x01(\t\x12\x12\n\npostalCode\x18\x07 \x01(\t\x12\x13\n\x0bmakeDefault\x18\x08 \x01(\x08\x12\x10\n\x08\x61\x64\x64ress1\x18\t \x01(\t\x12\x10\n\x08\x61\x64\x64ress2\x18\n \x01(\t\x12\x0c\n\x04\x63ity\x18\x0b \x01(\t\x12\r\n\x05state\x18\x0c \x01(\t\x12\r\n\x05phone\x18\r \x01(\t\"\xb5\x01\n\x1d\x45xternalPaypalInstrumentProto\x12\x15\n\rinstrumentKey\x18\x01 \x01(\t\x12\x16\n\x0epreapprovalKey\x18\x02 \x01(\t\x12\x13\n\x0bpaypalEmail\x18\x03 \x01(\t\x12$\n\rpaypalAddress\x18\x04 \x01(\x0b\x32\r.AddressProto\x12*\n\"multiplePaypalInstrumentsSupported\x18\x05 \x01(\x08\"]\n\x11\x46ileMetadataProto\x12\x10\n\x08\x66ileType\x18\x01 \x01(\x05\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0c\n\x04size\x18\x03 \x01(\x03\x12\x13\n\x0b\x64ownloadUrl\x18\x04 \x01(\t\"Z\n\x1dGetAddressSnippetRequestProto\x12\x39\n\x17\x65ncryptedSubscriberInfo\x18\x01 \x01(\x0b\x32\x18.EncryptedSubscriberInfo\"8\n\x1eGetAddressSnippetResponseProto\x12\x16\n\x0e\x61\x64\x64ressSnippet\x18\x01 \x01(\t\"B\n\x14GetAssetRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x19\n\x11\x64irectDownloadKey\x18\x02 \x01(\t\"\xda\x03\n\x15GetAssetResponseProto\x12\x39\n\x0cinstallasset\x18\x01 \x01(\n2#.GetAssetResponseProto.InstallAsset\x12*\n\x0e\x61\x64\x64itionalFile\x18\x0f \x03(\x0b\x32\x12.FileMetadataProto\x1a\xd9\x02\n\x0cInstallAsset\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\x12\x11\n\tassetName\x18\x03 \x01(\t\x12\x11\n\tassetType\x18\x04 \x01(\t\x12\x14\n\x0c\x61ssetPackage\x18\x05 \x01(\t\x12\x0f\n\x07\x62lobUrl\x18\x06 \x01(\t\x12\x16\n\x0e\x61ssetSignature\x18\x07 \x01(\t\x12\x11\n\tassetSize\x18\x08 \x01(\x03\x12\x1b\n\x13refundTimeoutMillis\x18\t \x01(\x03\x12\x15\n\rforwardLocked\x18\n \x01(\x08\x12\x0f\n\x07secured\x18\x0b \x01(\x08\x12\x13\n\x0bversionCode\x18\x0c \x01(\x05\x12\x1e\n\x16\x64ownloadAuthCookieName\x18\r \x01(\t\x12\x1f\n\x17\x64ownloadAuthCookieValue\x18\x0e \x01(\t\x12%\n\x1dpostInstallRefundWindowMillis\x18\x10 \x01(\x03\"\x1c\n\x1aGetCarrierInfoRequestProto\"\xb8\x01\n\x1bGetCarrierInfoResponseProto\x12\x1d\n\x15\x63\x61rrierChannelEnabled\x18\x01 \x01(\x08\x12\x17\n\x0f\x63\x61rrierLogoIcon\x18\x02 \x01(\x0c\x12\x15\n\rcarrierBanner\x18\x03 \x01(\x0c\x12\x17\n\x0f\x63\x61rrierSubtitle\x18\x04 \x01(\t\x12\x14\n\x0c\x63\x61rrierTitle\x18\x05 \x01(\t\x12\x1b\n\x13\x63\x61rrierImageDensity\x18\x06 \x01(\x05\"6\n\x19GetCategoriesRequestProto\x12\x19\n\x11prefetchPromoData\x18\x01 \x01(\x08\"@\n\x1aGetCategoriesResponseProto\x12\"\n\ncategories\x18\x01 \x03(\x0b\x32\x0e.CategoryProto\"\xbb\x01\n\x14GetImageRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x12\n\nimageUsage\x18\x03 \x01(\x05\x12\x0f\n\x07imageId\x18\x04 \x01(\t\x12\x1b\n\x13screenPropertyWidth\x18\x05 \x01(\x05\x12\x1c\n\x14screenPropertyHeight\x18\x06 \x01(\x05\x12\x1d\n\x15screenPropertyDensity\x18\x07 \x01(\x05\x12\x13\n\x0bproductType\x18\x08 \x01(\x05\"@\n\x15GetImageResponseProto\x12\x11\n\timageData\x18\x01 \x01(\x0c\x12\x14\n\x0cimageDensity\x18\x02 \x01(\x05\"\xf4\x01\n\x1dGetMarketMetadataRequestProto\x12\x17\n\x0flastRequestTime\x18\x01 \x01(\x03\x12\x36\n\x13\x64\x65viceConfiguration\x18\x02 \x01(\x0b\x32\x19.DeviceConfigurationProto\x12\x15\n\rdeviceRoaming\x18\x03 \x01(\x08\x12\x1b\n\x13marketSignatureHash\x18\x04 \x03(\t\x12\x15\n\rcontentRating\x18\x05 \x01(\x05\x12\x17\n\x0f\x64\x65viceModelName\x18\x06 \x01(\t\x12\x1e\n\x16\x64\x65viceManufacturerName\x18\x07 \x01(\t\"\xb7\x02\n\x1eGetMarketMetadataResponseProto\x12\x1f\n\x17latestClientVersionCode\x18\x01 \x01(\x05\x12\x17\n\x0flatestClientUrl\x18\x02 \x01(\t\x12\x17\n\x0fpaidAppsEnabled\x18\x03 \x01(\x08\x12\x30\n\x10\x62illingParameter\x18\x04 \x03(\x0b\x32\x16.BillingParameterProto\x12\x1a\n\x12\x63ommentPostEnabled\x18\x05 \x01(\x08\x12\x1c\n\x14\x62illingEventsEnabled\x18\x06 \x01(\x08\x12\x16\n\x0ewarningMessage\x18\x07 \x01(\t\x12\x1b\n\x13inAppBillingEnabled\x18\x08 \x01(\x08\x12!\n\x19inAppBillingMaxApiVersion\x18\t \x01(\x05\"1\n\x1cGetSubCategoriesRequestProto\x12\x11\n\tassetType\x18\x01 \x01(\x05\"\xa2\x01\n\x1dGetSubCategoriesResponseProto\x12?\n\x0bsubcategory\x18\x01 \x03(\n2*.GetSubCategoriesResponseProto.SubCategory\x1a@\n\x0bSubCategory\x12\x1a\n\x12subCategoryDisplay\x18\x02 \x01(\t\x12\x15\n\rsubCategoryId\x18\x03 \x01(\t\"\xb0\x01\n$InAppPurchaseInformationRequestProto\x12*\n\rsignatureHash\x18\x01 \x01(\x0b\x32\x13.SignatureHashProto\x12\r\n\x05nonce\x18\x02 \x01(\x03\x12\x16\n\x0enotificationId\x18\x03 \x03(\t\x12\x1a\n\x12signatureAlgorithm\x18\x04 \x01(\t\x12\x19\n\x11\x62illingApiVersion\x18\x05 \x01(\x05\"\xbb\x01\n%InAppPurchaseInformationResponseProto\x12(\n\x0esignedResponse\x18\x01 \x01(\x0b\x32\x10.SignedDataProto\x12:\n\x15statusBarNotification\x18\x02 \x03(\x0b\x32\x1b.StatusBarNotificationProto\x12,\n\x0epurchaseResult\x18\x03 \x01(\x0b\x32\x14.PurchaseResultProto\"\x98\x01\n$InAppRestoreTransactionsRequestProto\x12*\n\rsignatureHash\x18\x01 \x01(\x0b\x32\x13.SignatureHashProto\x12\r\n\x05nonce\x18\x02 \x01(\x03\x12\x1a\n\x12signatureAlgorithm\x18\x03 \x01(\t\x12\x19\n\x11\x62illingApiVersion\x18\x04 \x01(\x05\"\x7f\n%InAppRestoreTransactionsResponseProto\x12(\n\x0esignedResponse\x18\x01 \x01(\x0b\x32\x10.SignedDataProto\x12,\n\x0epurchaseResult\x18\x02 \x01(\x0b\x32\x14.PurchaseResultProto\"\xba\x01\n\x19ModifyCommentRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12&\n\x07\x63omment\x18\x02 \x01(\x0b\x32\x15.ExternalCommentProto\x12\x15\n\rdeleteComment\x18\x03 \x01(\x08\x12\x11\n\tflagAsset\x18\x04 \x01(\x08\x12\x10\n\x08\x66lagType\x18\x05 \x01(\x05\x12\x13\n\x0b\x66lagMessage\x18\x06 \x01(\t\x12\x13\n\x0bnonFlagFlow\x18\x07 \x01(\x08\"\x1c\n\x1aModifyCommentResponseProto\"v\n\x16PaypalCountryInfoProto\x12\x19\n\x11\x62irthDateRequired\x18\x01 \x01(\x08\x12\x0f\n\x07tosText\x18\x02 \x01(\t\x12\x1c\n\x14\x62illingAgreementText\x18\x03 \x01(\t\x12\x12\n\npreTosText\x18\x04 \x01(\t\"y\n\x1fPaypalCreateAccountRequestProto\x12\x11\n\tfirstName\x18\x01 \x01(\t\x12\x10\n\x08lastName\x18\x02 \x01(\t\x12\x1e\n\x07\x61\x64\x64ress\x18\x03 \x01(\x0b\x32\r.AddressProto\x12\x11\n\tbirthDate\x18\x04 \x01(\t\"<\n PaypalCreateAccountResponseProto\x12\x18\n\x10\x63reateAccountKey\x18\x01 \x01(\t\"E\n\x16PaypalCredentialsProto\x12\x16\n\x0epreapprovalKey\x18\x01 \x01(\t\x12\x13\n\x0bpaypalEmail\x18\x02 \x01(\t\"B\n PaypalMassageAddressRequestProto\x12\x1e\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0b\x32\r.AddressProto\"C\n!PaypalMassageAddressResponseProto\x12\x1e\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0b\x32\r.AddressProto\"^\n(PaypalPreapprovalCredentialsRequestProto\x12\x15\n\rgaiaAuthToken\x18\x01 \x01(\t\x12\x1b\n\x13\x62illingInstrumentId\x18\x02 \x01(\t\"n\n)PaypalPreapprovalCredentialsResponseProto\x12\x12\n\nresultCode\x18\x01 \x01(\x05\x12\x18\n\x10paypalAccountKey\x18\x02 \x01(\t\x12\x13\n\x0bpaypalEmail\x18\x03 \x01(\t\"R\n$PaypalPreapprovalDetailsRequestProto\x12\x12\n\ngetAddress\x18\x01 \x01(\x08\x12\x16\n\x0epreapprovalKey\x18\x02 \x01(\t\"\\\n%PaypalPreapprovalDetailsResponseProto\x12\x13\n\x0bpaypalEmail\x18\x01 \x01(\t\x12\x1e\n\x07\x61\x64\x64ress\x18\x02 \x01(\x0b\x32\r.AddressProto\"\x1f\n\x1dPaypalPreapprovalRequestProto\"8\n\x1ePaypalPreapprovalResponseProto\x12\x16\n\x0epreapprovalKey\x18\x01 \x01(\t\"]\n\x19PendingNotificationsProto\x12\'\n\x0cnotification\x18\x01 \x03(\x0b\x32\x11.DataMessageProto\x12\x17\n\x0fnextCheckMillis\x18\x02 \x01(\x03\"e\n\x15PrefetchedBundleProto\x12$\n\x07request\x18\x01 \x01(\x0b\x32\x13.SingleRequestProto\x12&\n\x08response\x18\x02 \x01(\x0b\x32\x14.SingleResponseProto\"\xbc\x01\n\x15PurchaseCartInfoProto\x12\x11\n\titemPrice\x18\x01 \x01(\t\x12\x14\n\x0ctaxInclusive\x18\x02 \x01(\t\x12\x14\n\x0ctaxExclusive\x18\x03 \x01(\t\x12\r\n\x05total\x18\x04 \x01(\t\x12\x12\n\ntaxMessage\x18\x05 \x01(\t\x12\x15\n\rfooterMessage\x18\x06 \x01(\t\x12\x15\n\rpriceCurrency\x18\x07 \x01(\t\x12\x13\n\x0bpriceMicros\x18\x08 \x01(\x03\"\x93\x04\n\x11PurchaseInfoProto\x12\x15\n\rtransactionId\x18\x01 \x01(\t\x12(\n\x08\x63\x61rtInfo\x18\x02 \x01(\x0b\x32\x16.PurchaseCartInfoProto\x12\x41\n\x12\x62illinginstruments\x18\x03 \x01(\n2%.PurchaseInfoProto.BillingInstruments\x12\x18\n\x10\x65rrorInputFields\x18\t \x03(\x05\x12\x14\n\x0crefundPolicy\x18\n \x01(\t\x12\x15\n\ruserCanAddGdd\x18\x0c \x01(\x08\x12\x1f\n\x17\x65ligibleInstrumentTypes\x18\r \x03(\x05\x12\x0f\n\x07orderId\x18\x0f \x01(\t\x1a\x80\x02\n\x12\x42illingInstruments\x12R\n\x11\x62illinginstrument\x18\x04 \x03(\n27.PurchaseInfoProto.BillingInstruments.BillingInstrument\x12\"\n\x1a\x64\x65\x66\x61ultBillingInstrumentId\x18\x08 \x01(\t\x1ar\n\x11\x42illingInstrument\x12\n\n\x02id\x18\x05 \x01(\t\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\x11\n\tisInvalid\x18\x07 \x01(\x08\x12\x16\n\x0einstrumentType\x18\x0b \x01(\x05\x12\x18\n\x10instrumentStatus\x18\x0e \x01(\x05\"i\n\x1cPurchaseMetadataRequestProto\x12*\n\"deprecatedRetrieveBillingCountries\x18\x01 \x01(\x08\x12\x1d\n\x15\x62illingInstrumentType\x18\x02 \x01(\x05\"\x87\x04\n\x1dPurchaseMetadataResponseProto\x12;\n\tcountries\x18\x01 \x01(\n2(.PurchaseMetadataResponseProto.Countries\x1a\xa8\x03\n\tCountries\x12\x41\n\x07\x63ountry\x18\x02 \x03(\n20.PurchaseMetadataResponseProto.Countries.Country\x1a\xd7\x02\n\x07\x43ountry\x12\x13\n\x0b\x63ountryCode\x18\x03 \x01(\t\x12\x13\n\x0b\x63ountryName\x18\x04 \x01(\t\x12\x32\n\x11paypalCountryInfo\x18\x05 \x01(\x0b\x32\x17.PaypalCountryInfoProto\x12#\n\x1b\x61llowsReducedBillingAddress\x18\x06 \x01(\x08\x12\x65\n\x15instrumentaddressspec\x18\x07 \x03(\n2F.PurchaseMetadataResponseProto.Countries.Country.InstrumentAddressSpec\x1a\x62\n\x15InstrumentAddressSpec\x12\x18\n\x10instrumentFamily\x18\x08 \x01(\x05\x12/\n\x12\x62illingAddressSpec\x18\t \x01(\x0b\x32\x13.BillingAddressSpec\"\xe2\x03\n\x19PurchaseOrderRequestProto\x12\x15\n\rgaiaAuthToken\x18\x01 \x01(\t\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\x12\x15\n\rtransactionId\x18\x03 \x01(\t\x12\x1b\n\x13\x62illingInstrumentId\x18\x04 \x01(\t\x12\x13\n\x0btosAccepted\x18\x05 \x01(\x08\x12\x42\n\x19\x63\x61rrierBillingCredentials\x18\x06 \x01(\x0b\x32\x1f.CarrierBillingCredentialsProto\x12\x17\n\x0f\x65xistingOrderId\x18\x07 \x01(\t\x12\x1d\n\x15\x62illingInstrumentType\x18\x08 \x01(\x05\x12\x1b\n\x13\x62illingParametersId\x18\t \x01(\t\x12\x32\n\x11paypalCredentials\x18\n \x01(\x0b\x32\x17.PaypalCredentialsProto\x12,\n\x0eriskHeaderInfo\x18\x0b \x01(\x0b\x32\x14.RiskHeaderInfoProto\x12\x13\n\x0bproductType\x18\x0c \x01(\x05\x12*\n\rsignatureHash\x18\r \x01(\x0b\x32\x13.SignatureHashProto\x12\x18\n\x10\x64\x65veloperPayload\x18\x0e \x01(\t\"\xb6\x01\n\x1aPurchaseOrderResponseProto\x12\x1c\n\x14\x64\x65precatedResultCode\x18\x01 \x01(\x05\x12(\n\x0cpurchaseInfo\x18\x02 \x01(\x0b\x32\x12.PurchaseInfoProto\x12\"\n\x05\x61sset\x18\x03 \x01(\x0b\x32\x13.ExternalAssetProto\x12,\n\x0epurchaseResult\x18\x04 \x01(\x0b\x32\x14.PurchaseResultProto\"\x92\x04\n\x18PurchasePostRequestProto\x12\x15\n\rgaiaAuthToken\x18\x01 \x01(\t\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\x12\x15\n\rtransactionId\x18\x03 \x01(\t\x12N\n\x15\x62illinginstrumentinfo\x18\x04 \x01(\n2/.PurchasePostRequestProto.BillingInstrumentInfo\x12\x13\n\x0btosAccepted\x18\x07 \x01(\x08\x12\x17\n\x0f\x63\x62InstrumentKey\x18\x08 \x01(\t\x12\x1b\n\x13paypalAuthConfirmed\x18\x0b \x01(\x08\x12\x13\n\x0bproductType\x18\x0c \x01(\x05\x12*\n\rsignatureHash\x18\r \x01(\x0b\x32\x13.SignatureHashProto\x1a\xda\x01\n\x15\x42illingInstrumentInfo\x12\x1b\n\x13\x62illingInstrumentId\x18\x05 \x01(\t\x12\'\n\ncreditCard\x18\x06 \x01(\x0b\x32\x13.ExternalCreditCard\x12\x41\n\x11\x63\x61rrierInstrument\x18\t \x01(\x0b\x32&.ExternalCarrierBillingInstrumentProto\x12\x38\n\x10paypalInstrument\x18\n \x01(\x0b\x32\x1e.ExternalPaypalInstrumentProto\"\xaa\x02\n\x19PurchasePostResponseProto\x12\x1c\n\x14\x64\x65precatedResultCode\x18\x01 \x01(\x05\x12(\n\x0cpurchaseInfo\x18\x02 \x01(\x0b\x32\x12.PurchaseInfoProto\x12\x19\n\x11termsOfServiceUrl\x18\x03 \x01(\t\x12\x1a\n\x12termsOfServiceText\x18\x04 \x01(\t\x12\x1a\n\x12termsOfServiceName\x18\x05 \x01(\t\x12\"\n\x1atermsOfServiceCheckboxText\x18\x06 \x01(\t\x12 \n\x18termsOfServiceHeaderText\x18\x07 \x01(\t\x12,\n\x0epurchaseResult\x18\x08 \x01(\x0b\x32\x14.PurchaseResultProto\"q\n\x1bPurchaseProductRequestProto\x12\x13\n\x0bproductType\x18\x01 \x01(\x05\x12\x11\n\tproductId\x18\x02 \x01(\t\x12*\n\rsignatureHash\x18\x03 \x01(\x0b\x32\x13.SignatureHashProto\"p\n\x1cPurchaseProductResponseProto\x12\r\n\x05title\x18\x01 \x01(\t\x12\x11\n\titemTitle\x18\x02 \x01(\t\x12\x17\n\x0fitemDescription\x18\x03 \x01(\t\x12\x15\n\rmerchantField\x18\x04 \x01(\t\"D\n\x13PurchaseResultProto\x12\x12\n\nresultCode\x18\x01 \x01(\x05\x12\x19\n\x11resultCodeMessage\x18\x02 \x01(\t\"W\n\x14QuerySuggestionProto\x12\r\n\x05query\x18\x01 \x01(\t\x12\x1b\n\x13\x65stimatedNumResults\x18\x02 \x01(\x05\x12\x13\n\x0bqueryWeight\x18\x03 \x01(\x05\"A\n\x1bQuerySuggestionRequestProto\x12\r\n\x05query\x18\x01 \x01(\t\x12\x13\n\x0brequestType\x18\x02 \x01(\x05\"\x90\x02\n\x1cQuerySuggestionResponseProto\x12<\n\nsuggestion\x18\x01 \x03(\n2(.QuerySuggestionResponseProto.Suggestion\x12\"\n\x1a\x65stimatedNumAppSuggestions\x18\x04 \x01(\x05\x12$\n\x1c\x65stimatedNumQuerySuggestions\x18\x05 \x01(\x05\x1ah\n\nSuggestion\x12*\n\rappSuggestion\x18\x02 \x01(\x0b\x32\x13.AppSuggestionProto\x12.\n\x0fquerySuggestion\x18\x03 \x01(\x0b\x32\x15.QuerySuggestionProto\"T\n\x17RateCommentRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x11\n\tcreatorId\x18\x02 \x01(\t\x12\x15\n\rcommentRating\x18\x03 \x01(\x05\"\x1a\n\x18RateCommentResponseProto\">\n\x1fReconstructDatabaseRequestProto\x12\x1b\n\x13retrieveFullHistory\x18\x01 \x01(\x08\"H\n ReconstructDatabaseResponseProto\x12$\n\x05\x61sset\x18\x01 \x03(\x0b\x32\x15.AssetIdentifierProto\"%\n\x12RefundRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\"_\n\x13RefundResponseProto\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\"\n\x05\x61sset\x18\x02 \x01(\x0b\x32\x13.ExternalAssetProto\x12\x14\n\x0cresultDetail\x18\x03 \x01(\t\"*\n\x17RemoveAssetRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\"\xcd\x02\n\x16RequestPropertiesProto\x12\x15\n\ruserAuthToken\x18\x01 \x01(\t\x12\x1b\n\x13userAuthTokenSecure\x18\x02 \x01(\x08\x12\x17\n\x0fsoftwareVersion\x18\x03 \x01(\x05\x12\x0b\n\x03\x61id\x18\x04 \x01(\t\x12\x1d\n\x15productNameAndVersion\x18\x05 \x01(\t\x12\x14\n\x0cuserLanguage\x18\x06 \x01(\t\x12\x13\n\x0buserCountry\x18\x07 \x01(\t\x12\x14\n\x0coperatorName\x18\x08 \x01(\t\x12\x17\n\x0fsimOperatorName\x18\t \x01(\t\x12\x1b\n\x13operatorNumericName\x18\n \x01(\t\x12\x1e\n\x16simOperatorNumericName\x18\x0b \x01(\t\x12\x10\n\x08\x63lientId\x18\x0c \x01(\t\x12\x11\n\tloggingId\x18\r \x01(\t\"\xbe\x11\n\x0cRequestProto\x12\x32\n\x11requestProperties\x18\x01 \x01(\x0b\x32\x17.RequestPropertiesProto\x12&\n\x07request\x18\x02 \x03(\n2\x15.RequestProto.Request\x1a\xd1\x10\n\x07Request\x12\x42\n\x19requestSpecificProperties\x18\x03 \x01(\x0b\x32\x1f.RequestSpecificPropertiesProto\x12)\n\x0c\x61ssetRequest\x18\x04 \x01(\x0b\x32\x13.AssetsRequestProto\x12.\n\x0f\x63ommentsRequest\x18\x05 \x01(\x0b\x32\x15.CommentsRequestProto\x12\x38\n\x14modifyCommentRequest\x18\x06 \x01(\x0b\x32\x1a.ModifyCommentRequestProto\x12\x36\n\x13purchasePostRequest\x18\x07 \x01(\x0b\x32\x19.PurchasePostRequestProto\x12\x38\n\x14purchaseOrderRequest\x18\x08 \x01(\x0b\x32\x1a.PurchaseOrderRequestProto\x12\x34\n\x12\x63ontentSyncRequest\x18\t \x01(\x0b\x32\x18.ContentSyncRequestProto\x12.\n\x0fgetAssetRequest\x18\n \x01(\x0b\x32\x15.GetAssetRequestProto\x12.\n\x0fgetImageRequest\x18\x0b \x01(\x0b\x32\x15.GetImageRequestProto\x12*\n\rrefundRequest\x18\x0c \x01(\x0b\x32\x13.RefundRequestProto\x12>\n\x17purchaseMetadataRequest\x18\r \x01(\x0b\x32\x1d.PurchaseMetadataRequestProto\x12;\n\x14subCategoriesRequest\x18\x0e \x01(\x0b\x32\x1d.GetSubCategoriesRequestProto\x12<\n\x16uninstallReasonRequest\x18\x10 \x01(\x0b\x32\x1c.UninstallReasonRequestProto\x12\x34\n\x12rateCommentRequest\x18\x11 \x01(\x0b\x32\x18.RateCommentRequestProto\x12\x36\n\x13\x63heckLicenseRequest\x18\x12 \x01(\x0b\x32\x19.CheckLicenseRequestProto\x12@\n\x18getMarketMetadataRequest\x18\x13 \x01(\x0b\x32\x1e.GetMarketMetadataRequestProto\x12\x38\n\x14getCategoriesRequest\x18\x15 \x01(\x0b\x32\x1a.GetCategoriesRequestProto\x12:\n\x15getCarrierInfoRequest\x18\x16 \x01(\x0b\x32\x1b.GetCarrierInfoRequestProto\x12\x34\n\x12removeAssetRequest\x18\x17 \x01(\x0b\x32\x18.RemoveAssetRequestProto\x12\x44\n\x1arestoreApplicationsRequest\x18\x18 \x01(\x0b\x32 .RestoreApplicationsRequestProto\x12<\n\x16querySuggestionRequest\x18\x19 \x01(\x0b\x32\x1c.QuerySuggestionRequestProto\x12\x36\n\x13\x62illingEventRequest\x18\x1a \x01(\x0b\x32\x19.BillingEventRequestProto\x12@\n\x18paypalPreapprovalRequest\x18\x1b \x01(\x0b\x32\x1e.PaypalPreapprovalRequestProto\x12N\n\x1fpaypalPreapprovalDetailsRequest\x18\x1c \x01(\x0b\x32%.PaypalPreapprovalDetailsRequestProto\x12\x44\n\x1apaypalCreateAccountRequest\x18\x1d \x01(\x0b\x32 .PaypalCreateAccountRequestProto\x12V\n#paypalPreapprovalCredentialsRequest\x18\x1e \x01(\x0b\x32).PaypalPreapprovalCredentialsRequestProto\x12N\n\x1finAppRestoreTransactionsRequest\x18\x1f \x01(\x0b\x32%.InAppRestoreTransactionsRequestProto\x12N\n\x1finAppPurchaseInformationRequest\x18  \x01(\x0b\x32%.InAppPurchaseInformationRequestProto\x12H\n\x1c\x63heckForNotificationsRequest\x18! \x01(\x0b\x32\".CheckForNotificationsRequestProto\x12>\n\x17\x61\x63kNotificationsRequest\x18\" \x01(\x0b\x32\x1d.AckNotificationsRequestProto\x12<\n\x16purchaseProductRequest\x18# \x01(\x0b\x32\x1c.PurchaseProductRequestProto\x12\x44\n\x1areconstructDatabaseRequest\x18$ \x01(\x0b\x32 .ReconstructDatabaseRequestProto\x12\x46\n\x1bpaypalMassageAddressRequest\x18% \x01(\x0b\x32!.PaypalMassageAddressRequestProto\x12@\n\x18getAddressSnippetRequest\x18& \x01(\x0b\x32\x1e.GetAddressSnippetRequestProto\"5\n\x1eRequestSpecificPropertiesProto\x12\x13\n\x0bifNoneMatch\x18\x01 \x01(\t\"\xbe\x01\n\x17ResponsePropertiesProto\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06maxAge\x18\x02 \x01(\x05\x12\x0c\n\x04\x65tag\x18\x03 \x01(\t\x12\x15\n\rserverVersion\x18\x04 \x01(\x05\x12\x18\n\x10maxAgeConsumable\x18\x06 \x01(\x05\x12\x14\n\x0c\x65rrorMessage\x18\x07 \x01(\t\x12.\n\x0f\x65rrorInputField\x18\x08 \x03(\x0b\x32\x15.InputValidationError\"\xf7\x11\n\rResponseProto\x12)\n\x08response\x18\x01 \x03(\n2\x17.ResponseProto.Response\x12\x38\n\x14pendingNotifications\x18& \x01(\x0b\x32\x1a.PendingNotificationsProto\x1a\x80\x11\n\x08Response\x12\x34\n\x12responseProperties\x18\x02 \x01(\x0b\x32\x18.ResponsePropertiesProto\x12,\n\x0e\x61ssetsResponse\x18\x03 \x01(\x0b\x32\x14.AssetsResponseProto\x12\x30\n\x10\x63ommentsResponse\x18\x04 \x01(\x0b\x32\x16.CommentsResponseProto\x12:\n\x15modifyCommentResponse\x18\x05 \x01(\x0b\x32\x1b.ModifyCommentResponseProto\x12\x38\n\x14purchasePostResponse\x18\x06 \x01(\x0b\x32\x1a.PurchasePostResponseProto\x12:\n\x15purchaseOrderResponse\x18\x07 \x01(\x0b\x32\x1b.PurchaseOrderResponseProto\x12\x36\n\x13\x63ontentSyncResponse\x18\x08 \x01(\x0b\x32\x19.ContentSyncResponseProto\x12\x30\n\x10getAssetResponse\x18\t \x01(\x0b\x32\x16.GetAssetResponseProto\x12\x30\n\x10getImageResponse\x18\n \x01(\x0b\x32\x16.GetImageResponseProto\x12,\n\x0erefundResponse\x18\x0b \x01(\x0b\x32\x14.RefundResponseProto\x12@\n\x18purchaseMetadataResponse\x18\x0c \x01(\x0b\x32\x1e.PurchaseMetadataResponseProto\x12=\n\x15subCategoriesResponse\x18\r \x01(\x0b\x32\x1e.GetSubCategoriesResponseProto\x12>\n\x17uninstallReasonResponse\x18\x0f \x01(\x0b\x32\x1d.UninstallReasonResponseProto\x12\x36\n\x13rateCommentResponse\x18\x10 \x01(\x0b\x32\x19.RateCommentResponseProto\x12\x38\n\x14\x63heckLicenseResponse\x18\x11 \x01(\x0b\x32\x1a.CheckLicenseResponseProto\x12\x42\n\x19getMarketMetadataResponse\x18\x12 \x01(\x0b\x32\x1f.GetMarketMetadataResponseProto\x12\x30\n\x10prefetchedBundle\x18\x13 \x03(\x0b\x32\x16.PrefetchedBundleProto\x12:\n\x15getCategoriesResponse\x18\x14 \x01(\x0b\x32\x1b.GetCategoriesResponseProto\x12<\n\x16getCarrierInfoResponse\x18\x15 \x01(\x0b\x32\x1c.GetCarrierInfoResponseProto\x12\x45\n\x1arestoreApplicationResponse\x18\x17 \x01(\x0b\x32!.RestoreApplicationsResponseProto\x12>\n\x17querySuggestionResponse\x18\x18 \x01(\x0b\x32\x1d.QuerySuggestionResponseProto\x12\x38\n\x14\x62illingEventResponse\x18\x19 \x01(\x0b\x32\x1a.BillingEventResponseProto\x12\x42\n\x19paypalPreapprovalResponse\x18\x1a \x01(\x0b\x32\x1f.PaypalPreapprovalResponseProto\x12P\n paypalPreapprovalDetailsResponse\x18\x1b \x01(\x0b\x32&.PaypalPreapprovalDetailsResponseProto\x12\x46\n\x1bpaypalCreateAccountResponse\x18\x1c \x01(\x0b\x32!.PaypalCreateAccountResponseProto\x12X\n$paypalPreapprovalCredentialsResponse\x18\x1d \x01(\x0b\x32*.PaypalPreapprovalCredentialsResponseProto\x12P\n inAppRestoreTransactionsResponse\x18\x1e \x01(\x0b\x32&.InAppRestoreTransactionsResponseProto\x12P\n inAppPurchaseInformationResponse\x18\x1f \x01(\x0b\x32&.InAppPurchaseInformationResponseProto\x12J\n\x1d\x63heckForNotificationsResponse\x18  \x01(\x0b\x32#.CheckForNotificationsResponseProto\x12@\n\x18\x61\x63kNotificationsResponse\x18! \x01(\x0b\x32\x1e.AckNotificationsResponseProto\x12>\n\x17purchaseProductResponse\x18\" \x01(\x0b\x32\x1d.PurchaseProductResponseProto\x12\x46\n\x1breconstructDatabaseResponse\x18# \x01(\x0b\x32!.ReconstructDatabaseResponseProto\x12H\n\x1cpaypalMassageAddressResponse\x18$ \x01(\x0b\x32\".PaypalMassageAddressResponseProto\x12\x42\n\x19getAddressSnippetResponse\x18% \x01(\x0b\x32\x1f.GetAddressSnippetResponseProto\"\x86\x01\n\x1fRestoreApplicationsRequestProto\x12\x17\n\x0f\x62\x61\x63kupAndroidId\x18\x01 \x01(\t\x12\x12\n\ntosVersion\x18\x02 \x01(\t\x12\x36\n\x13\x64\x65viceConfiguration\x18\x03 \x01(\x0b\x32\x19.DeviceConfigurationProto\"I\n RestoreApplicationsResponseProto\x12%\n\x05\x61sset\x18\x01 \x03(\x0b\x32\x16.GetAssetResponseProto\"/\n\x13RiskHeaderInfoProto\x12\x18\n\x10hashedDeviceInfo\x18\x01 \x01(\t\"L\n\x12SignatureHashProto\x12\x13\n\x0bpackageName\x18\x01 \x01(\t\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0c\n\x04hash\x18\x03 \x01(\x0c\"8\n\x0fSignedDataProto\x12\x12\n\nsignedData\x18\x01 \x01(\t\x12\x11\n\tsignature\x18\x02 \x01(\t\"\xdf\x10\n\x12SingleRequestProto\x12\x42\n\x19requestSpecificProperties\x18\x03 \x01(\x0b\x32\x1f.RequestSpecificPropertiesProto\x12)\n\x0c\x61ssetRequest\x18\x04 \x01(\x0b\x32\x13.AssetsRequestProto\x12.\n\x0f\x63ommentsRequest\x18\x05 \x01(\x0b\x32\x15.CommentsRequestProto\x12\x38\n\x14modifyCommentRequest\x18\x06 \x01(\x0b\x32\x1a.ModifyCommentRequestProto\x12\x36\n\x13purchasePostRequest\x18\x07 \x01(\x0b\x32\x19.PurchasePostRequestProto\x12\x38\n\x14purchaseOrderRequest\x18\x08 \x01(\x0b\x32\x1a.PurchaseOrderRequestProto\x12\x34\n\x12\x63ontentSyncRequest\x18\t \x01(\x0b\x32\x18.ContentSyncRequestProto\x12.\n\x0fgetAssetRequest\x18\n \x01(\x0b\x32\x15.GetAssetRequestProto\x12.\n\x0fgetImageRequest\x18\x0b \x01(\x0b\x32\x15.GetImageRequestProto\x12*\n\rrefundRequest\x18\x0c \x01(\x0b\x32\x13.RefundRequestProto\x12>\n\x17purchaseMetadataRequest\x18\r \x01(\x0b\x32\x1d.PurchaseMetadataRequestProto\x12;\n\x14subCategoriesRequest\x18\x0e \x01(\x0b\x32\x1d.GetSubCategoriesRequestProto\x12<\n\x16uninstallReasonRequest\x18\x10 \x01(\x0b\x32\x1c.UninstallReasonRequestProto\x12\x34\n\x12rateCommentRequest\x18\x11 \x01(\x0b\x32\x18.RateCommentRequestProto\x12\x36\n\x13\x63heckLicenseRequest\x18\x12 \x01(\x0b\x32\x19.CheckLicenseRequestProto\x12@\n\x18getMarketMetadataRequest\x18\x13 \x01(\x0b\x32\x1e.GetMarketMetadataRequestProto\x12\x38\n\x14getCategoriesRequest\x18\x15 \x01(\x0b\x32\x1a.GetCategoriesRequestProto\x12:\n\x15getCarrierInfoRequest\x18\x16 \x01(\x0b\x32\x1b.GetCarrierInfoRequestProto\x12\x34\n\x12removeAssetRequest\x18\x17 \x01(\x0b\x32\x18.RemoveAssetRequestProto\x12\x44\n\x1arestoreApplicationsRequest\x18\x18 \x01(\x0b\x32 .RestoreApplicationsRequestProto\x12<\n\x16querySuggestionRequest\x18\x19 \x01(\x0b\x32\x1c.QuerySuggestionRequestProto\x12\x36\n\x13\x62illingEventRequest\x18\x1a \x01(\x0b\x32\x19.BillingEventRequestProto\x12@\n\x18paypalPreapprovalRequest\x18\x1b \x01(\x0b\x32\x1e.PaypalPreapprovalRequestProto\x12N\n\x1fpaypalPreapprovalDetailsRequest\x18\x1c \x01(\x0b\x32%.PaypalPreapprovalDetailsRequestProto\x12\x44\n\x1apaypalCreateAccountRequest\x18\x1d \x01(\x0b\x32 .PaypalCreateAccountRequestProto\x12V\n#paypalPreapprovalCredentialsRequest\x18\x1e \x01(\x0b\x32).PaypalPreapprovalCredentialsRequestProto\x12N\n\x1finAppRestoreTransactionsRequest\x18\x1f \x01(\x0b\x32%.InAppRestoreTransactionsRequestProto\x12Q\n\"getInAppPurchaseInformationRequest\x18  \x01(\x0b\x32%.InAppPurchaseInformationRequestProto\x12H\n\x1c\x63heckForNotificationsRequest\x18! \x01(\x0b\x32\".CheckForNotificationsRequestProto\x12>\n\x17\x61\x63kNotificationsRequest\x18\" \x01(\x0b\x32\x1d.AckNotificationsRequestProto\x12<\n\x16purchaseProductRequest\x18# \x01(\x0b\x32\x1c.PurchaseProductRequestProto\x12\x44\n\x1areconstructDatabaseRequest\x18$ \x01(\x0b\x32 .ReconstructDatabaseRequestProto\x12\x46\n\x1bpaypalMassageAddressRequest\x18% \x01(\x0b\x32!.PaypalMassageAddressRequestProto\x12@\n\x18getAddressSnippetRequest\x18& \x01(\x0b\x32\x1e.GetAddressSnippetRequestProto\"\xdc\x10\n\x13SingleResponseProto\x12\x34\n\x12responseProperties\x18\x02 \x01(\x0b\x32\x18.ResponsePropertiesProto\x12,\n\x0e\x61ssetsResponse\x18\x03 \x01(\x0b\x32\x14.AssetsResponseProto\x12\x30\n\x10\x63ommentsResponse\x18\x04 \x01(\x0b\x32\x16.CommentsResponseProto\x12:\n\x15modifyCommentResponse\x18\x05 \x01(\x0b\x32\x1b.ModifyCommentResponseProto\x12\x38\n\x14purchasePostResponse\x18\x06 \x01(\x0b\x32\x1a.PurchasePostResponseProto\x12:\n\x15purchaseOrderResponse\x18\x07 \x01(\x0b\x32\x1b.PurchaseOrderResponseProto\x12\x36\n\x13\x63ontentSyncResponse\x18\x08 \x01(\x0b\x32\x19.ContentSyncResponseProto\x12\x30\n\x10getAssetResponse\x18\t \x01(\x0b\x32\x16.GetAssetResponseProto\x12\x30\n\x10getImageResponse\x18\n \x01(\x0b\x32\x16.GetImageResponseProto\x12,\n\x0erefundResponse\x18\x0b \x01(\x0b\x32\x14.RefundResponseProto\x12@\n\x18purchaseMetadataResponse\x18\x0c \x01(\x0b\x32\x1e.PurchaseMetadataResponseProto\x12=\n\x15subCategoriesResponse\x18\r \x01(\x0b\x32\x1e.GetSubCategoriesResponseProto\x12>\n\x17uninstallReasonResponse\x18\x0f \x01(\x0b\x32\x1d.UninstallReasonResponseProto\x12\x36\n\x13rateCommentResponse\x18\x10 \x01(\x0b\x32\x19.RateCommentResponseProto\x12\x38\n\x14\x63heckLicenseResponse\x18\x11 \x01(\x0b\x32\x1a.CheckLicenseResponseProto\x12\x42\n\x19getMarketMetadataResponse\x18\x12 \x01(\x0b\x32\x1f.GetMarketMetadataResponseProto\x12:\n\x15getCategoriesResponse\x18\x14 \x01(\x0b\x32\x1b.GetCategoriesResponseProto\x12<\n\x16getCarrierInfoResponse\x18\x15 \x01(\x0b\x32\x1c.GetCarrierInfoResponseProto\x12\x45\n\x1arestoreApplicationResponse\x18\x17 \x01(\x0b\x32!.RestoreApplicationsResponseProto\x12>\n\x17querySuggestionResponse\x18\x18 \x01(\x0b\x32\x1d.QuerySuggestionResponseProto\x12\x38\n\x14\x62illingEventResponse\x18\x19 \x01(\x0b\x32\x1a.BillingEventResponseProto\x12\x42\n\x19paypalPreapprovalResponse\x18\x1a \x01(\x0b\x32\x1f.PaypalPreapprovalResponseProto\x12P\n paypalPreapprovalDetailsResponse\x18\x1b \x01(\x0b\x32&.PaypalPreapprovalDetailsResponseProto\x12\x46\n\x1bpaypalCreateAccountResponse\x18\x1c \x01(\x0b\x32!.PaypalCreateAccountResponseProto\x12X\n$paypalPreapprovalCredentialsResponse\x18\x1d \x01(\x0b\x32*.PaypalPreapprovalCredentialsResponseProto\x12P\n inAppRestoreTransactionsResponse\x18\x1e \x01(\x0b\x32&.InAppRestoreTransactionsResponseProto\x12S\n#getInAppPurchaseInformationResponse\x18\x1f \x01(\x0b\x32&.InAppPurchaseInformationResponseProto\x12J\n\x1d\x63heckForNotificationsResponse\x18  \x01(\x0b\x32#.CheckForNotificationsResponseProto\x12@\n\x18\x61\x63kNotificationsResponse\x18! \x01(\x0b\x32\x1e.AckNotificationsResponseProto\x12>\n\x17purchaseProductResponse\x18\" \x01(\x0b\x32\x1d.PurchaseProductResponseProto\x12\x46\n\x1breconstructDatabaseResponse\x18# \x01(\x0b\x32!.ReconstructDatabaseResponseProto\x12H\n\x1cpaypalMassageAddressResponse\x18$ \x01(\x0b\x32\".PaypalMassageAddressResponseProto\x12\x42\n\x19getAddressSnippetResponse\x18% \x01(\x0b\x32\x1f.GetAddressSnippetResponseProto\"[\n\x1aStatusBarNotificationProto\x12\x12\n\ntickerText\x18\x01 \x01(\t\x12\x14\n\x0c\x63ontentTitle\x18\x02 \x01(\t\x12\x13\n\x0b\x63ontentText\x18\x03 \x01(\t\">\n\x1bUninstallReasonRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x0e\n\x06reason\x18\x02 \x01(\x05\"\x1e\n\x1cUninstallReasonResponseProto')
+  serialized_pb='\n\x10googleplay.proto\"\x19\n\x17\x41\x63kNotificationResponse\"\x8b\x03\n\x16\x41ndroidAppDeliveryData\x12\x14\n\x0c\x64ownloadSize\x18\x01 \x01(\x03\x12\x11\n\tsignature\x18\x02 \x01(\t\x12\x13\n\x0b\x64ownloadUrl\x18\x03 \x01(\t\x12(\n\x0e\x61\x64\x64itionalFile\x18\x04 \x03(\x0b\x32\x10.AppFileMetadata\x12\'\n\x12\x64ownloadAuthCookie\x18\x05 \x03(\x0b\x32\x0b.HttpCookie\x12\x15\n\rforwardLocked\x18\x06 \x01(\x08\x12\x15\n\rrefundTimeout\x18\x07 \x01(\x03\x12\x17\n\x0fserverInitiated\x18\x08 \x01(\x08\x12%\n\x1dpostInstallRefundWindowMillis\x18\t \x01(\x03\x12\x1c\n\x14immediateStartNeeded\x18\n \x01(\x08\x12\'\n\tpatchData\x18\x0b \x01(\x0b\x32\x14.AndroidAppPatchData\x12+\n\x10\x65ncryptionParams\x18\x0c \x01(\x0b\x32\x11.EncryptionParams\"\x85\x01\n\x13\x41ndroidAppPatchData\x12\x17\n\x0f\x62\x61seVersionCode\x18\x01 \x01(\x05\x12\x15\n\rbaseSignature\x18\x02 \x01(\t\x12\x13\n\x0b\x64ownloadUrl\x18\x03 \x01(\t\x12\x13\n\x0bpatchFormat\x18\x04 \x01(\x05\x12\x14\n\x0cmaxPatchSize\x18\x05 \x01(\x03\"[\n\x0f\x41ppFileMetadata\x12\x10\n\x08\x66ileType\x18\x01 \x01(\x05\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0c\n\x04size\x18\x03 \x01(\x03\x12\x13\n\x0b\x64ownloadUrl\x18\x04 \x01(\t\"K\n\x10\x45ncryptionParams\x12\x0f\n\x07version\x18\x01 \x01(\x05\x12\x15\n\rencryptionKey\x18\x02 \x01(\t\x12\x0f\n\x07hmacKey\x18\x03 \x01(\t\")\n\nHttpCookie\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xad\x02\n\x07\x41\x64\x64ress\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0c\x61\x64\x64ressLine1\x18\x02 \x01(\t\x12\x14\n\x0c\x61\x64\x64ressLine2\x18\x03 \x01(\t\x12\x0c\n\x04\x63ity\x18\x04 \x01(\t\x12\r\n\x05state\x18\x05 \x01(\t\x12\x12\n\npostalCode\x18\x06 \x01(\t\x12\x15\n\rpostalCountry\x18\x07 \x01(\t\x12\x19\n\x11\x64\x65pendentLocality\x18\x08 \x01(\t\x12\x13\n\x0bsortingCode\x18\t \x01(\t\x12\x14\n\x0clanguageCode\x18\n \x01(\t\x12\x13\n\x0bphoneNumber\x18\x0b \x01(\t\x12\x11\n\tisReduced\x18\x0c \x01(\x08\x12\x11\n\tfirstName\x18\r \x01(\t\x12\x10\n\x08lastName\x18\x0e \x01(\t\x12\r\n\x05\x65mail\x18\x0f \x01(\t\"J\n\nBookAuthor\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x17\n\x0f\x64\x65precatedQuery\x18\x02 \x01(\t\x12\x15\n\x05\x64ocid\x18\x03 \x01(\x0b\x32\x06.Docid\"\xc3\x03\n\x0b\x42ookDetails\x12\x1d\n\x07subject\x18\x03 \x03(\x0b\x32\x0c.BookSubject\x12\x11\n\tpublisher\x18\x04 \x01(\t\x12\x17\n\x0fpublicationDate\x18\x05 \x01(\t\x12\x0c\n\x04isbn\x18\x06 \x01(\t\x12\x15\n\rnumberOfPages\x18\x07 \x01(\x05\x12\x10\n\x08subtitle\x18\x08 \x01(\t\x12\x1b\n\x06\x61uthor\x18\t \x03(\x0b\x32\x0b.BookAuthor\x12\x11\n\treaderUrl\x18\n \x01(\t\x12\x17\n\x0f\x64ownloadEpubUrl\x18\x0b \x01(\t\x12\x16\n\x0e\x64ownloadPdfUrl\x18\x0c \x01(\t\x12\x17\n\x0f\x61\x63sEpubTokenUrl\x18\r \x01(\t\x12\x16\n\x0e\x61\x63sPdfTokenUrl\x18\x0e \x01(\t\x12\x15\n\repubAvailable\x18\x0f \x01(\x08\x12\x14\n\x0cpdfAvailable\x18\x10 \x01(\x08\x12\x16\n\x0e\x61\x62outTheAuthor\x18\x11 \x01(\t\x12+\n\nidentifier\x18\x12 \x03(\n2\x17.BookDetails.Identifier\x1a.\n\nIdentifier\x12\x0c\n\x04type\x18\x13 \x01(\x05\x12\x12\n\nidentifier\x18\x14 \x01(\t\"=\n\x0b\x42ookSubject\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05query\x18\x02 \x01(\t\x12\x11\n\tsubjectId\x18\x03 \x01(\t\"+\n\nBrowseLink\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07\x64\x61taUrl\x18\x03 \x01(\t\"w\n\x0e\x42rowseResponse\x12\x13\n\x0b\x63ontentsUrl\x18\x01 \x01(\t\x12\x10\n\x08promoUrl\x18\x02 \x01(\t\x12\x1d\n\x08\x63\x61tegory\x18\x03 \x03(\x0b\x32\x0b.BrowseLink\x12\x1f\n\nbreadcrumb\x18\x04 \x03(\x0b\x32\x0b.BrowseLink\"\x8f\x02\n\x10\x41\x64\x64ressChallenge\x12\x1c\n\x14responseAddressParam\x18\x01 \x01(\t\x12\x1f\n\x17responseCheckboxesParam\x18\x02 \x01(\t\x12\r\n\x05title\x18\x03 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x04 \x01(\t\x12\x1f\n\x08\x63heckbox\x18\x05 \x03(\x0b\x32\r.FormCheckbox\x12\x19\n\x07\x61\x64\x64ress\x18\x06 \x01(\x0b\x32\x08.Address\x12.\n\x0f\x65rrorInputField\x18\x07 \x03(\x0b\x32\x15.InputValidationError\x12\x11\n\terrorHtml\x18\x08 \x01(\t\x12\x15\n\rrequiredField\x18\t \x03(\x05\"\xef\x01\n\x17\x41uthenticationChallenge\x12\x1a\n\x12\x61uthenticationType\x18\x01 \x01(\x05\x12\'\n\x1fresponseAuthenticationTypeParam\x18\x02 \x01(\t\x12\x1f\n\x17responseRetryCountParam\x18\x03 \x01(\t\x12\x15\n\rpinHeaderText\x18\x04 \x01(\t\x12\x1e\n\x16pinDescriptionTextHtml\x18\x05 \x01(\t\x12\x16\n\x0egaiaHeaderText\x18\x06 \x01(\t\x12\x1f\n\x17gaiaDescriptionTextHtml\x18\x07 \x01(\t\"\x81\t\n\x0b\x42uyResponse\x12\x37\n\x10purchaseResponse\x18\x01 \x01(\x0b\x32\x1d.PurchaseNotificationResponse\x12/\n\x0c\x63heckoutinfo\x18\x02 \x01(\n2\x19.BuyResponse.CheckoutInfo\x12\x16\n\x0e\x63ontinueViaUrl\x18\x08 \x01(\t\x12\x19\n\x11purchaseStatusUrl\x18\t \x01(\t\x12\x19\n\x11\x63heckoutServiceId\x18\x0c \x01(\t\x12\x1d\n\x15\x63heckoutTokenRequired\x18\r \x01(\x08\x12\x17\n\x0f\x62\x61seCheckoutUrl\x18\x0e \x01(\t\x12\x17\n\x0ftosCheckboxHtml\x18% \x03(\t\x12\x1a\n\x12iabPermissionError\x18& \x01(\x05\x12\x37\n\x16purchaseStatusResponse\x18\' \x01(\x0b\x32\x17.PurchaseStatusResponse\x12\x16\n\x0epurchaseCookie\x18. \x01(\t\x12\x1d\n\tchallenge\x18\x31 \x01(\x0b\x32\n.Challenge\x1a\xdc\x05\n\x0c\x43heckoutInfo\x12\x17\n\x04item\x18\x03 \x01(\x0b\x32\t.LineItem\x12\x1a\n\x07subItem\x18\x04 \x03(\x0b\x32\t.LineItem\x12@\n\x0e\x63heckoutoption\x18\x05 \x03(\n2(.BuyResponse.CheckoutInfo.CheckoutOption\x12\x1d\n\x15\x64\x65precatedCheckoutUrl\x18\n \x01(\t\x12\x18\n\x10\x61\x64\x64InstrumentUrl\x18\x0b \x01(\t\x12\x12\n\nfooterHtml\x18\x14 \x03(\t\x12 \n\x18\x65ligibleInstrumentFamily\x18\x1f \x03(\x05\x12\x14\n\x0c\x66ootnoteHtml\x18$ \x03(\t\x12\'\n\x12\x65ligibleInstrument\x18, \x03(\x0b\x32\x0b.Instrument\x1a\xa6\x03\n\x0e\x43heckoutOption\x12\x15\n\rformOfPayment\x18\x06 \x01(\t\x12\x1b\n\x13\x65ncodedAdjustedCart\x18\x07 \x01(\t\x12\x14\n\x0cinstrumentId\x18\x0f \x01(\t\x12\x17\n\x04item\x18\x10 \x03(\x0b\x32\t.LineItem\x12\x1a\n\x07subItem\x18\x11 \x03(\x0b\x32\t.LineItem\x12\x18\n\x05total\x18\x12 \x01(\x0b\x32\t.LineItem\x12\x12\n\nfooterHtml\x18\x13 \x03(\t\x12\x18\n\x10instrumentFamily\x18\x1d \x01(\x05\x12.\n&deprecatedInstrumentInapplicableReason\x18\x1e \x03(\x05\x12\x1a\n\x12selectedInstrument\x18  \x01(\x08\x12\x1a\n\x07summary\x18! \x01(\x0b\x32\t.LineItem\x12\x14\n\x0c\x66ootnoteHtml\x18# \x03(\t\x12\x1f\n\ninstrument\x18+ \x01(\x0b\x32\x0b.Instrument\x12\x16\n\x0epurchaseCookie\x18- \x01(\t\x12\x16\n\x0e\x64isabledReason\x18\x30 \x03(\t\"s\n\tChallenge\x12+\n\x10\x61\x64\x64ressChallenge\x18\x01 \x01(\x0b\x32\x11.AddressChallenge\x12\x39\n\x17\x61uthenticationChallenge\x18\x02 \x01(\x0b\x32\x18.AuthenticationChallenge\"F\n\x0c\x46ormCheckbox\x12\x13\n\x0b\x64\x65scription\x18\x01 \x01(\t\x12\x0f\n\x07\x63hecked\x18\x02 \x01(\x08\x12\x10\n\x08required\x18\x03 \x01(\x08\"\\\n\x08LineItem\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x15\n\x05offer\x18\x03 \x01(\x0b\x32\x06.Offer\x12\x16\n\x06\x61mount\x18\x04 \x01(\x0b\x32\x06.Money\"F\n\x05Money\x12\x0e\n\x06micros\x18\x01 \x01(\x03\x12\x14\n\x0c\x63urrencyCode\x18\x02 \x01(\t\x12\x17\n\x0f\x66ormattedAmount\x18\x03 \x01(\t\"\x80\x01\n\x1cPurchaseNotificationResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x1d\n\tdebugInfo\x18\x02 \x01(\x0b\x32\n.DebugInfo\x12\x1d\n\x15localizedErrorMessage\x18\x03 \x01(\t\x12\x12\n\npurchaseId\x18\x04 \x01(\t\"\xf9\x01\n\x16PurchaseStatusResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x11\n\tstatusMsg\x18\x02 \x01(\t\x12\x13\n\x0bstatusTitle\x18\x03 \x01(\t\x12\x14\n\x0c\x62riefMessage\x18\x04 \x01(\t\x12\x0f\n\x07infoUrl\x18\x05 \x01(\t\x12%\n\rlibraryUpdate\x18\x06 \x01(\x0b\x32\x0e.LibraryUpdate\x12\'\n\x12rejectedInstrument\x18\x07 \x01(\x0b\x32\x0b.Instrument\x12\x30\n\x0f\x61ppDeliveryData\x18\x08 \x01(\x0b\x32\x17.AndroidAppDeliveryData\"\xa2\x01\n\x17\x43heckInstrumentResponse\x12\x1e\n\x16userHasValidInstrument\x18\x01 \x01(\x08\x12\x1d\n\x15\x63heckoutTokenRequired\x18\x02 \x01(\x08\x12\x1f\n\ninstrument\x18\x04 \x03(\x0b\x32\x0b.Instrument\x12\'\n\x12\x65ligibleInstrument\x18\x05 \x03(\x0b\x32\x0b.Instrument\"Q\n\x17UpdateInstrumentRequest\x12\x1f\n\ninstrument\x18\x01 \x01(\x0b\x32\x0b.Instrument\x12\x15\n\rcheckoutToken\x18\x02 \x01(\t\"\xd4\x01\n\x18UpdateInstrumentResponse\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0cinstrumentId\x18\x02 \x01(\t\x12\x17\n\x0fuserMessageHtml\x18\x03 \x01(\t\x12.\n\x0f\x65rrorInputField\x18\x04 \x03(\x0b\x32\x15.InputValidationError\x12\x1d\n\x15\x63heckoutTokenRequired\x18\x05 \x01(\x08\x12*\n\rredeemedOffer\x18\x06 \x01(\x0b\x32\x13.RedeemedPromoOffer\"0\n\x1bInitiateAssociationResponse\x12\x11\n\tuserToken\x18\x01 \x01(\t\"n\n\x19VerifyAssociationResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12 \n\x0e\x62illingAddress\x18\x02 \x01(\x0b\x32\x08.Address\x12\x1f\n\ncarrierTos\x18\x03 \x01(\x0b\x32\x0b.CarrierTos\"\xcc\x01\n\x17\x41\x64\x64\x43reditCardPromoOffer\x12\x12\n\nheaderText\x18\x01 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x02 \x01(\t\x12\x15\n\x05image\x18\x03 \x01(\x0b\x32\x06.Image\x12\x1c\n\x14introductoryTextHtml\x18\x04 \x01(\t\x12\x12\n\nofferTitle\x18\x05 \x01(\t\x12\x1b\n\x13noActionDescription\x18\x06 \x01(\t\x12\x1e\n\x16termsAndConditionsHtml\x18\x07 \x01(\t\"K\n\x13\x41vailablePromoOffer\x12\x34\n\x12\x61\x64\x64\x43reditCardOffer\x18\x01 \x01(\x0b\x32\x18.AddCreditCardPromoOffer\"\x92\x01\n\x17\x43heckPromoOfferResponse\x12,\n\x0e\x61vailableOffer\x18\x01 \x03(\x0b\x32\x14.AvailablePromoOffer\x12*\n\rredeemedOffer\x18\x02 \x01(\x0b\x32\x13.RedeemedPromoOffer\x12\x1d\n\x15\x63heckoutTokenRequired\x18\x03 \x01(\x08\"X\n\x12RedeemedPromoOffer\x12\x12\n\nheaderText\x18\x01 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x02 \x01(\t\x12\x15\n\x05image\x18\x03 \x01(\x0b\x32\x06.Image\"<\n\x05\x44ocid\x12\x14\n\x0c\x62\x61\x63kendDocid\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\x0f\n\x07\x62\x61\x63kend\x18\x03 \x01(\x05\">\n\x07Install\x12\x11\n\tandroidId\x18\x01 \x01(\x06\x12\x0f\n\x07version\x18\x02 \x01(\x05\x12\x0f\n\x07\x62undled\x18\x03 \x01(\x08\"\x80\x03\n\x05Offer\x12\x0e\n\x06micros\x18\x01 \x01(\x03\x12\x14\n\x0c\x63urrencyCode\x18\x02 \x01(\t\x12\x17\n\x0f\x66ormattedAmount\x18\x03 \x01(\t\x12\x1e\n\x0e\x63onvertedPrice\x18\x04 \x03(\x0b\x32\x06.Offer\x12\x1c\n\x14\x63heckoutFlowRequired\x18\x05 \x01(\x08\x12\x17\n\x0f\x66ullPriceMicros\x18\x06 \x01(\x03\x12\x1b\n\x13\x66ormattedFullAmount\x18\x07 \x01(\t\x12\x11\n\tofferType\x18\x08 \x01(\x05\x12!\n\x0brentalTerms\x18\t \x01(\x0b\x32\x0c.RentalTerms\x12\x12\n\nonSaleDate\x18\n \x01(\x03\x12\x16\n\x0epromotionLabel\x18\x0b \x03(\t\x12-\n\x11subscriptionTerms\x18\x0c \x01(\x0b\x32\x12.SubscriptionTerms\x12\x15\n\rformattedName\x18\r \x01(\t\x12\x1c\n\x14\x66ormattedDescription\x18\x0e \x01(\t\"\xb1\x01\n\rOwnershipInfo\x12\x1f\n\x17initiationTimestampMsec\x18\x01 \x01(\x03\x12\x1f\n\x17validUntilTimestampMsec\x18\x02 \x01(\x03\x12\x14\n\x0c\x61utoRenewing\x18\x03 \x01(\x08\x12\"\n\x1arefundTimeoutTimestampMsec\x18\x04 \x01(\x03\x12$\n\x1cpostDeliveryRefundWindowMsec\x18\x05 \x01(\x03\"H\n\x0bRentalTerms\x12\x1a\n\x12grantPeriodSeconds\x18\x01 \x01(\x05\x12\x1d\n\x15\x61\x63tivatePeriodSeconds\x18\x02 \x01(\x05\"[\n\x11SubscriptionTerms\x12$\n\x0frecurringPeriod\x18\x01 \x01(\x0b\x32\x0b.TimePeriod\x12 \n\x0btrialPeriod\x18\x02 \x01(\x0b\x32\x0b.TimePeriod\")\n\nTimePeriod\x12\x0c\n\x04unit\x18\x01 \x01(\x05\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\"G\n\x12\x42illingAddressSpec\x12\x1a\n\x12\x62illingAddressType\x18\x01 \x01(\x05\x12\x15\n\rrequiredField\x18\x02 \x03(\x05\">\n\x19\x43\x61rrierBillingCredentials\x12\r\n\x05value\x18\x01 \x01(\t\x12\x12\n\nexpiration\x18\x02 \x01(\x03\"\xa9\x02\n\x18\x43\x61rrierBillingInstrument\x12\x15\n\rinstrumentKey\x18\x01 \x01(\t\x12\x13\n\x0b\x61\x63\x63ountType\x18\x02 \x01(\t\x12\x14\n\x0c\x63urrencyCode\x18\x03 \x01(\t\x12\x18\n\x10transactionLimit\x18\x04 \x01(\x03\x12\x1c\n\x14subscriberIdentifier\x18\x05 \x01(\t\x12\x39\n\x17\x65ncryptedSubscriberInfo\x18\x06 \x01(\x0b\x32\x18.EncryptedSubscriberInfo\x12/\n\x0b\x63redentials\x18\x07 \x01(\x0b\x32\x1a.CarrierBillingCredentials\x12\'\n\x12\x61\x63\x63\x65ptedCarrierTos\x18\x08 \x01(\x0b\x32\x0b.CarrierTos\"\xca\x01\n\x1e\x43\x61rrierBillingInstrumentStatus\x12\x1f\n\ncarrierTos\x18\x01 \x01(\x0b\x32\x0b.CarrierTos\x12\x1b\n\x13\x61ssociationRequired\x18\x02 \x01(\x08\x12\x18\n\x10passwordRequired\x18\x03 \x01(\x08\x12.\n\x15\x63\x61rrierPasswordPrompt\x18\x04 \x01(\x0b\x32\x0f.PasswordPrompt\x12\x12\n\napiVersion\x18\x05 \x01(\x05\x12\x0c\n\x04name\x18\x06 \x01(\t\"\x8e\x01\n\nCarrierTos\x12 \n\x06\x64\x63\x62Tos\x18\x01 \x01(\x0b\x32\x10.CarrierTosEntry\x12 \n\x06piiTos\x18\x02 \x01(\x0b\x32\x10.CarrierTosEntry\x12\x1d\n\x15needsDcbTosAcceptance\x18\x03 \x01(\x08\x12\x1d\n\x15needsPiiTosAcceptance\x18\x04 \x01(\x08\"/\n\x0f\x43\x61rrierTosEntry\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\t\"\xa2\x01\n\x14\x43reditCardInstrument\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x14\n\x0c\x65scrowHandle\x18\x02 \x01(\t\x12\x12\n\nlastDigits\x18\x03 \x01(\t\x12\x17\n\x0f\x65xpirationMonth\x18\x04 \x01(\x05\x12\x16\n\x0e\x65xpirationYear\x18\x05 \x01(\x05\x12!\n\x0e\x65scrowEfeParam\x18\x06 \x03(\x0b\x32\t.EfeParam\"&\n\x08\x45\x66\x65Param\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12\r\n\x05value\x18\x02 \x01(\t\"@\n\x14InputValidationError\x12\x12\n\ninputField\x18\x01 \x01(\x05\x12\x14\n\x0c\x65rrorMessage\x18\x02 \x01(\t\"\xc2\x02\n\nInstrument\x12\x14\n\x0cinstrumentId\x18\x01 \x01(\t\x12 \n\x0e\x62illingAddress\x18\x02 \x01(\x0b\x32\x08.Address\x12)\n\ncreditCard\x18\x03 \x01(\x0b\x32\x15.CreditCardInstrument\x12\x31\n\x0e\x63\x61rrierBilling\x18\x04 \x01(\x0b\x32\x19.CarrierBillingInstrument\x12/\n\x12\x62illingAddressSpec\x18\x05 \x01(\x0b\x32\x13.BillingAddressSpec\x12\x18\n\x10instrumentFamily\x18\x06 \x01(\x05\x12=\n\x14\x63\x61rrierBillingStatus\x18\x07 \x01(\x0b\x32\x1f.CarrierBillingInstrumentStatus\x12\x14\n\x0c\x64isplayTitle\x18\x08 \x01(\t\";\n\x0ePasswordPrompt\x12\x0e\n\x06prompt\x18\x01 \x01(\t\x12\x19\n\x11\x66orgotPasswordUrl\x18\x02 \x01(\t\"\x92\x01\n\x11\x43ontainerMetadata\x12\x11\n\tbrowseUrl\x18\x01 \x01(\t\x12\x13\n\x0bnextPageUrl\x18\x02 \x01(\t\x12\x11\n\trelevance\x18\x03 \x01(\x01\x12\x18\n\x10\x65stimatedResults\x18\x04 \x01(\x03\x12\x17\n\x0f\x61nalyticsCookie\x18\x05 \x01(\t\x12\x0f\n\x07ordered\x18\x06 \x01(\x08\"\x15\n\x13\x46lagContentResponse\"i\n\tDebugInfo\x12\x0f\n\x07message\x18\x01 \x03(\t\x12!\n\x06timing\x18\x02 \x03(\n2\x11.DebugInfo.Timing\x1a(\n\x06Timing\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x10\n\x08timeInMs\x18\x04 \x01(\x01\"T\n\x10\x44\x65liveryResponse\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x30\n\x0f\x61ppDeliveryData\x18\x02 \x01(\x0b\x32\x17.AndroidAppDeliveryData\"\'\n\x10\x42ulkDetailsEntry\x12\x13\n\x03\x64oc\x18\x01 \x01(\x0b\x32\x06.DocV2\"=\n\x12\x42ulkDetailsRequest\x12\r\n\x05\x64ocid\x18\x01 \x03(\t\x12\x18\n\x10includeChildDocs\x18\x02 \x01(\x08\"7\n\x13\x42ulkDetailsResponse\x12 \n\x05\x65ntry\x18\x01 \x03(\x0b\x32\x11.BulkDetailsEntry\"\x89\x01\n\x0f\x44\x65tailsResponse\x12\x15\n\x05\x64ocV1\x18\x01 \x01(\x0b\x32\x06.DocV1\x12\x17\n\x0f\x61nalyticsCookie\x18\x02 \x01(\t\x12\x1b\n\nuserReview\x18\x03 \x01(\x0b\x32\x07.Review\x12\x15\n\x05\x64ocV2\x18\x04 \x01(\x0b\x32\x06.DocV2\x12\x12\n\nfooterHtml\x18\x05 \x01(\t\"\xb5\x03\n\x18\x44\x65viceConfigurationProto\x12\x13\n\x0btouchScreen\x18\x01 \x01(\x05\x12\x10\n\x08keyboard\x18\x02 \x01(\x05\x12\x12\n\nnavigation\x18\x03 \x01(\x05\x12\x14\n\x0cscreenLayout\x18\x04 \x01(\x05\x12\x17\n\x0fhasHardKeyboard\x18\x05 \x01(\x08\x12\x1c\n\x14hasFiveWayNavigation\x18\x06 \x01(\x08\x12\x15\n\rscreenDensity\x18\x07 \x01(\x05\x12\x13\n\x0bglEsVersion\x18\x08 \x01(\x05\x12\x1b\n\x13systemSharedLibrary\x18\t \x03(\t\x12\x1e\n\x16systemAvailableFeature\x18\n \x03(\t\x12\x16\n\x0enativePlatform\x18\x0b \x03(\t\x12\x13\n\x0bscreenWidth\x18\x0c \x01(\x05\x12\x14\n\x0cscreenHeight\x18\r \x01(\x05\x12\x1d\n\x15systemSupportedLocale\x18\x0e \x03(\t\x12\x13\n\x0bglExtension\x18\x0f \x03(\t\x12\x13\n\x0b\x64\x65viceClass\x18\x10 \x01(\x05\x12\x1c\n\x14maxApkDownloadSizeMb\x18\x11 \x01(\x05\"\xff\x03\n\x08\x44ocument\x12\x15\n\x05\x64ocid\x18\x01 \x01(\x0b\x32\x06.Docid\x12\x1a\n\nfetchDocid\x18\x02 \x01(\x0b\x32\x06.Docid\x12\x1b\n\x0bsampleDocid\x18\x03 \x01(\x0b\x32\x06.Docid\x12\r\n\x05title\x18\x04 \x01(\t\x12\x0b\n\x03url\x18\x05 \x01(\t\x12\x0f\n\x07snippet\x18\x06 \x03(\t\x12\x1f\n\x0fpriceDeprecated\x18\x07 \x01(\x0b\x32\x06.Offer\x12#\n\x0c\x61vailability\x18\t \x01(\x0b\x32\r.Availability\x12\x15\n\x05image\x18\n \x03(\x0b\x32\x06.Image\x12\x18\n\x05\x63hild\x18\x0b \x03(\x0b\x32\t.Document\x12)\n\x0f\x61ggregateRating\x18\r \x01(\x0b\x32\x10.AggregateRating\x12\x15\n\x05offer\x18\x0e \x03(\x0b\x32\x06.Offer\x12*\n\x11translatedSnippet\x18\x0f \x03(\x0b\x32\x0f.TranslatedText\x12)\n\x0f\x64ocumentVariant\x18\x10 \x03(\x0b\x32\x10.DocumentVariant\x12\x12\n\ncategoryId\x18\x11 \x03(\t\x12\x1d\n\ndecoration\x18\x12 \x03(\x0b\x32\t.Document\x12\x19\n\x06parent\x18\x13 \x03(\x0b\x32\t.Document\x12\x18\n\x10privacyPolicyUrl\x18\x14 \x01(\t\"\x81\x02\n\x0f\x44ocumentVariant\x12\x15\n\rvariationType\x18\x01 \x01(\x05\x12\x13\n\x04rule\x18\x02 \x01(\x0b\x32\x05.Rule\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0f\n\x07snippet\x18\x04 \x03(\t\x12\x15\n\rrecentChanges\x18\x05 \x01(\t\x12(\n\x0f\x61utoTranslation\x18\x06 \x03(\x0b\x32\x0f.TranslatedText\x12\x15\n\x05offer\x18\x07 \x03(\x0b\x32\x06.Offer\x12\x11\n\tchannelId\x18\t \x01(\x03\x12\x18\n\x05\x63hild\x18\n \x03(\x0b\x32\t.Document\x12\x1d\n\ndecoration\x18\x0b \x03(\x0b\x32\t.Document\"\xba\x02\n\x05Image\x12\x11\n\timageType\x18\x01 \x01(\x05\x12#\n\tdimension\x18\x02 \x01(\n2\x10.Image.Dimension\x12\x10\n\x08imageUrl\x18\x05 \x01(\t\x12\x18\n\x10\x61ltTextLocalized\x18\x06 \x01(\t\x12\x11\n\tsecureUrl\x18\x07 \x01(\t\x12\x1a\n\x12positionInSequence\x18\x08 \x01(\x05\x12\x1e\n\x16supportsFifeUrlOptions\x18\t \x01(\x08\x12!\n\x08\x63itation\x18\n \x01(\n2\x0f.Image.Citation\x1a*\n\tDimension\x12\r\n\x05width\x18\x03 \x01(\x05\x12\x0e\n\x06height\x18\x04 \x01(\x05\x1a/\n\x08\x43itation\x12\x16\n\x0etitleLocalized\x18\x0b \x01(\t\x12\x0b\n\x03url\x18\x0c \x01(\t\"J\n\x0eTranslatedText\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x14\n\x0csourceLocale\x18\x02 \x01(\t\x12\x14\n\x0ctargetLocale\x18\x03 \x01(\t\"@\n\x05\x42\x61\x64ge\x12\r\n\x05title\x18\x01 \x01(\t\x12\x15\n\x05image\x18\x02 \x03(\x0b\x32\x06.Image\x12\x11\n\tbrowseUrl\x18\x03 \x01(\t\"-\n\x13\x43ontainerWithBanner\x12\x16\n\x0e\x63olorThemeArgb\x18\x01 \x01(\t\">\n\x0c\x44\x65\x61lOfTheDay\x12\x16\n\x0e\x66\x65\x61turedHeader\x18\x01 \x01(\t\x12\x16\n\x0e\x63olorThemeArgb\x18\x02 \x01(\t\"\x8e\x01\n\x18\x45\x64itorialSeriesContainer\x12\x13\n\x0bseriesTitle\x18\x01 \x01(\t\x12\x16\n\x0eseriesSubtitle\x18\x02 \x01(\t\x12\x14\n\x0c\x65pisodeTitle\x18\x03 \x01(\t\x12\x17\n\x0f\x65pisodeSubtitle\x18\x04 \x01(\t\x12\x16\n\x0e\x63olorThemeArgb\x18\x05 \x01(\t\"\x13\n\x04Link\x12\x0b\n\x03uri\x18\x01 \x01(\t\"i\n\x0bPlusOneData\x12\x11\n\tsetByUser\x18\x01 \x01(\x08\x12\r\n\x05total\x18\x02 \x01(\x03\x12\x14\n\x0c\x63irclesTotal\x18\x03 \x01(\x03\x12\"\n\rcirclesPeople\x18\x04 \x03(\x0b\x32\x0b.PlusPerson\":\n\nPlusPerson\x12\x13\n\x0b\x64isplayName\x18\x02 \x01(\t\x12\x17\n\x0fprofileImageUrl\x18\x04 \x01(\t\"r\n\x0bPromotedDoc\x12\r\n\x05title\x18\x01 \x01(\t\x12\x10\n\x08subtitle\x18\x02 \x01(\t\x12\x15\n\x05image\x18\x03 \x03(\x0b\x32\x06.Image\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x04 \x01(\t\x12\x12\n\ndetailsUrl\x18\x05 \x01(\t\"G\n\x06Reason\x12\x13\n\x0b\x62riefReason\x18\x01 \x01(\t\x12\x16\n\x0e\x64\x65tailedReason\x18\x02 \x01(\t\x12\x10\n\x08uniqueId\x18\x03 \x01(\t\"^\n\x0fSectionMetadata\x12\x0e\n\x06header\x18\x01 \x01(\t\x12\x0f\n\x07listUrl\x18\x02 \x01(\t\x12\x11\n\tbrowseUrl\x18\x03 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x04 \x01(\t\"\xd5\x01\n\rSeriesAntenna\x12\x13\n\x0bseriesTitle\x18\x01 \x01(\t\x12\x16\n\x0eseriesSubtitle\x18\x02 \x01(\t\x12\x14\n\x0c\x65pisodeTitle\x18\x03 \x01(\t\x12\x17\n\x0f\x65pisodeSubtitle\x18\x04 \x01(\t\x12\x16\n\x0e\x63olorThemeArgb\x18\x05 \x01(\t\x12\'\n\rsectionTracks\x18\x06 \x01(\x0b\x32\x10.SectionMetadata\x12\'\n\rsectionAlbums\x18\x07 \x01(\x0b\x32\x10.SectionMetadata\"\x8f\x04\n\x08Template\x12%\n\rseriesAntenna\x18\x01 \x01(\x0b\x32\x0e.SeriesAntenna\x12%\n\x0etileGraphic2X1\x18\x02 \x01(\x0b\x32\r.TileTemplate\x12%\n\x0etileGraphic4X2\x18\x03 \x01(\x0b\x32\r.TileTemplate\x12\x31\n\x1atileGraphicColoredTitle2X1\x18\x04 \x01(\x0b\x32\r.TileTemplate\x12\x33\n\x1ctileGraphicUpperLeftTitle2X1\x18\x05 \x01(\x0b\x32\r.TileTemplate\x12\x35\n\x1etileDetailsReflectedGraphic2X2\x18\x06 \x01(\x0b\x32\r.TileTemplate\x12\'\n\x10tileFourBlock4X2\x18\x07 \x01(\x0b\x32\r.TileTemplate\x12\x31\n\x13\x63ontainerWithBanner\x18\x08 \x01(\x0b\x32\x14.ContainerWithBanner\x12#\n\x0c\x64\x65\x61lOfTheDay\x18\t \x01(\x0b\x32\r.DealOfTheDay\x12\x31\n\x1atileGraphicColoredTitle4X2\x18\n \x01(\x0b\x32\r.TileTemplate\x12;\n\x18\x65\x64itorialSeriesContainer\x18\x0b \x01(\x0b\x32\x19.EditorialSeriesContainer\"=\n\x0cTileTemplate\x12\x16\n\x0e\x63olorThemeArgb\x18\x01 \x01(\t\x12\x15\n\rcolorTextArgb\x18\x02 \x01(\t\"#\n\x07Warning\x12\x18\n\x10localizedMessage\x18\x01 \x01(\t\"c\n\x0c\x41lbumDetails\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1e\n\x07\x64\x65tails\x18\x02 \x01(\x0b\x32\r.MusicDetails\x12%\n\rdisplayArtist\x18\x03 \x01(\x0b\x32\x0e.ArtistDetails\"\x8e\x03\n\nAppDetails\x12\x15\n\rdeveloperName\x18\x01 \x01(\t\x12\x1a\n\x12majorVersionNumber\x18\x02 \x01(\x05\x12\x13\n\x0bversionCode\x18\x03 \x01(\x05\x12\x15\n\rversionString\x18\x04 \x01(\t\x12\r\n\x05title\x18\x05 \x01(\t\x12\x13\n\x0b\x61ppCategory\x18\x07 \x03(\t\x12\x15\n\rcontentRating\x18\x08 \x01(\x05\x12\x18\n\x10installationSize\x18\t \x01(\x03\x12\x12\n\npermission\x18\n \x03(\t\x12\x16\n\x0e\x64\x65veloperEmail\x18\x0b \x01(\t\x12\x18\n\x10\x64\x65veloperWebsite\x18\x0c \x01(\t\x12\x14\n\x0cnumDownloads\x18\r \x01(\t\x12\x13\n\x0bpackageName\x18\x0e \x01(\t\x12\x19\n\x11recentChangesHtml\x18\x0f \x01(\t\x12\x12\n\nuploadDate\x18\x10 \x01(\t\x12\x1b\n\x04\x66ile\x18\x11 \x03(\x0b\x32\r.FileMetadata\x12\x0f\n\x07\x61ppType\x18\x12 \x01(\t\"^\n\rArtistDetails\x12\x12\n\ndetailsUrl\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12+\n\rexternalLinks\x18\x03 \x01(\x0b\x32\x14.ArtistExternalLinks\"b\n\x13\x41rtistExternalLinks\x12\x12\n\nwebsiteUrl\x18\x01 \x03(\t\x12\x1c\n\x14googlePlusProfileUrl\x18\x02 \x01(\t\x12\x19\n\x11youtubeChannelUrl\x18\x03 \x01(\t\"\xc6\x03\n\x0f\x44ocumentDetails\x12\x1f\n\nappDetails\x18\x01 \x01(\x0b\x32\x0b.AppDetails\x12#\n\x0c\x61lbumDetails\x18\x02 \x01(\x0b\x32\r.AlbumDetails\x12%\n\rartistDetails\x18\x03 \x01(\x0b\x32\x0e.ArtistDetails\x12!\n\x0bsongDetails\x18\x04 \x01(\x0b\x32\x0c.SongDetails\x12!\n\x0b\x62ookDetails\x18\x05 \x01(\x0b\x32\x0c.BookDetails\x12#\n\x0cvideoDetails\x18\x06 \x01(\x0b\x32\r.VideoDetails\x12\x31\n\x13subscriptionDetails\x18\x07 \x01(\x0b\x32\x14.SubscriptionDetails\x12)\n\x0fmagazineDetails\x18\x08 \x01(\x0b\x32\x10.MagazineDetails\x12%\n\rtvShowDetails\x18\t \x01(\x0b\x32\x0e.TvShowDetails\x12)\n\x0ftvSeasonDetails\x18\n \x01(\x0b\x32\x10.TvSeasonDetails\x12+\n\x10tvEpisodeDetails\x18\x0b \x01(\x0b\x32\x11.TvEpisodeDetails\"C\n\x0c\x46ileMetadata\x12\x10\n\x08\x66ileType\x18\x01 \x01(\x05\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0c\n\x04size\x18\x03 \x01(\x03\"\x94\x01\n\x0fMagazineDetails\x12\x18\n\x10parentDetailsUrl\x18\x01 \x01(\t\x12)\n!deviceAvailabilityDescriptionHtml\x18\x02 \x01(\t\x12\x16\n\x0epsvDescription\x18\x03 \x01(\t\x12$\n\x1c\x64\x65liveryFrequencyDescription\x18\x04 \x01(\t\"\xbb\x01\n\x0cMusicDetails\x12\x11\n\tcensoring\x18\x01 \x01(\x05\x12\x13\n\x0b\x64urationSec\x18\x02 \x01(\x05\x12\x1b\n\x13originalReleaseDate\x18\x03 \x01(\t\x12\r\n\x05label\x18\x04 \x01(\t\x12\x1e\n\x06\x61rtist\x18\x05 \x03(\x0b\x32\x0e.ArtistDetails\x12\r\n\x05genre\x18\x06 \x03(\t\x12\x13\n\x0breleaseDate\x18\x07 \x01(\t\x12\x13\n\x0breleaseType\x18\x08 \x03(\x05\"\x9e\x01\n\x0bSongDetails\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1e\n\x07\x64\x65tails\x18\x02 \x01(\x0b\x32\r.MusicDetails\x12\x11\n\talbumName\x18\x03 \x01(\t\x12\x13\n\x0btrackNumber\x18\x04 \x01(\x05\x12\x12\n\npreviewUrl\x18\x05 \x01(\t\x12%\n\rdisplayArtist\x18\x06 \x01(\x0b\x32\x0e.ArtistDetails\"1\n\x13SubscriptionDetails\x12\x1a\n\x12subscriptionPeriod\x18\x01 \x01(\x05\"e\n\x07Trailer\x12\x11\n\ttrailerId\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\x14\n\x0cthumbnailUrl\x18\x03 \x01(\t\x12\x10\n\x08watchUrl\x18\x04 \x01(\t\x12\x10\n\x08\x64uration\x18\x05 \x01(\t\"W\n\x10TvEpisodeDetails\x12\x18\n\x10parentDetailsUrl\x18\x01 \x01(\t\x12\x14\n\x0c\x65pisodeIndex\x18\x02 \x01(\x05\x12\x13\n\x0breleaseDate\x18\x03 \x01(\t\"j\n\x0fTvSeasonDetails\x12\x18\n\x10parentDetailsUrl\x18\x01 \x01(\t\x12\x13\n\x0bseasonIndex\x18\x02 \x01(\x05\x12\x13\n\x0breleaseDate\x18\x03 \x01(\t\x12\x13\n\x0b\x62roadcaster\x18\x04 \x01(\t\"]\n\rTvShowDetails\x12\x13\n\x0bseasonCount\x18\x01 \x01(\x05\x12\x11\n\tstartYear\x18\x02 \x01(\x05\x12\x0f\n\x07\x65ndYear\x18\x03 \x01(\x05\x12\x13\n\x0b\x62roadcaster\x18\x04 \x01(\t\"?\n\x0bVideoCredit\x12\x12\n\ncreditType\x18\x01 \x01(\x05\x12\x0e\n\x06\x63redit\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x03(\t\"\xdb\x01\n\x0cVideoDetails\x12\x1c\n\x06\x63redit\x18\x01 \x03(\x0b\x32\x0c.VideoCredit\x12\x10\n\x08\x64uration\x18\x02 \x01(\t\x12\x13\n\x0breleaseDate\x18\x03 \x01(\t\x12\x15\n\rcontentRating\x18\x04 \x01(\t\x12\r\n\x05likes\x18\x05 \x01(\x03\x12\x10\n\x08\x64islikes\x18\x06 \x01(\x03\x12\r\n\x05genre\x18\x07 \x03(\t\x12\x19\n\x07trailer\x18\x08 \x03(\x0b\x32\x08.Trailer\x12$\n\nrentalTerm\x18\t \x03(\x0b\x32\x10.VideoRentalTerm\"\xa0\x01\n\x0fVideoRentalTerm\x12\x11\n\tofferType\x18\x01 \x01(\x05\x12\x19\n\x11offerAbbreviation\x18\x02 \x01(\t\x12\x14\n\x0crentalHeader\x18\x03 \x01(\t\x12#\n\x04term\x18\x04 \x03(\n2\x15.VideoRentalTerm.Term\x1a$\n\x04Term\x12\x0e\n\x06header\x18\x05 \x01(\t\x12\x0c\n\x04\x62ody\x18\x06 \x01(\t\"\xf9\x01\n\x06\x42ucket\x12\x18\n\x08\x64ocument\x18\x01 \x03(\x0b\x32\x06.DocV1\x12\x13\n\x0bmultiCorpus\x18\x02 \x01(\x08\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0f\n\x07iconUrl\x18\x04 \x01(\t\x12\x17\n\x0f\x66ullContentsUrl\x18\x05 \x01(\t\x12\x11\n\trelevance\x18\x06 \x01(\x01\x12\x18\n\x10\x65stimatedResults\x18\x07 \x01(\x03\x12\x17\n\x0f\x61nalyticsCookie\x18\x08 \x01(\t\x12\x1b\n\x13\x66ullContentsListUrl\x18\t \x01(\t\x12\x13\n\x0bnextPageUrl\x18\n \x01(\t\x12\x0f\n\x07ordered\x18\x0b \x01(\x08\"<\n\x0cListResponse\x12\x17\n\x06\x62ucket\x18\x01 \x03(\x0b\x32\x07.Bucket\x12\x13\n\x03\x64oc\x18\x02 \x03(\x0b\x32\x06.DocV2\"\x94\x03\n\x05\x44ocV1\x12\x1c\n\tfinskyDoc\x18\x01 \x01(\x0b\x32\t.Document\x12\r\n\x05\x64ocid\x18\x02 \x01(\t\x12\x12\n\ndetailsUrl\x18\x03 \x01(\t\x12\x12\n\nreviewsUrl\x18\x04 \x01(\t\x12\x16\n\x0erelatedListUrl\x18\x05 \x01(\t\x12\x15\n\rmoreByListUrl\x18\x06 \x01(\t\x12\x10\n\x08shareUrl\x18\x07 \x01(\t\x12\x0f\n\x07\x63reator\x18\x08 \x01(\t\x12!\n\x07\x64\x65tails\x18\t \x01(\x0b\x32\x10.DocumentDetails\x12\x17\n\x0f\x64\x65scriptionHtml\x18\n \x01(\t\x12\x18\n\x10relatedBrowseUrl\x18\x0b \x01(\t\x12\x17\n\x0fmoreByBrowseUrl\x18\x0c \x01(\t\x12\x15\n\rrelatedHeader\x18\r \x01(\t\x12\x14\n\x0cmoreByHeader\x18\x0e \x01(\t\x12\r\n\x05title\x18\x0f \x01(\t\x12!\n\x0bplusOneData\x18\x10 \x01(\x0b\x32\x0c.PlusOneData\x12\x16\n\x0ewarningMessage\x18\x11 \x01(\t\"\xcd\x04\n\x0b\x41nnotations\x12(\n\x0esectionRelated\x18\x01 \x01(\x0b\x32\x10.SectionMetadata\x12\'\n\rsectionMoreBy\x18\x02 \x01(\x0b\x32\x10.SectionMetadata\x12!\n\x0bplusOneData\x18\x03 \x01(\x0b\x32\x0c.PlusOneData\x12\x19\n\x07warning\x18\x04 \x03(\x0b\x32\x08.Warning\x12+\n\x11sectionBodyOfWork\x18\x05 \x01(\x0b\x32\x10.SectionMetadata\x12,\n\x12sectionCoreContent\x18\x06 \x01(\x0b\x32\x10.SectionMetadata\x12\x1b\n\x08template\x18\x07 \x01(\x0b\x32\t.Template\x12\x1f\n\x0f\x62\x61\x64geForCreator\x18\x08 \x03(\x0b\x32\x06.Badge\x12\x1b\n\x0b\x62\x61\x64geForDoc\x18\t \x03(\x0b\x32\x06.Badge\x12\x13\n\x04link\x18\n \x01(\x0b\x32\x05.Link\x12*\n\x10sectionCrossSell\x18\x0b \x01(\x0b\x32\x10.SectionMetadata\x12/\n\x15sectionRelatedDocType\x18\x0c \x01(\x0b\x32\x10.SectionMetadata\x12!\n\x0bpromotedDoc\x18\r \x03(\x0b\x32\x0c.PromotedDoc\x12\x11\n\tofferNote\x18\x0e \x01(\t\x12\x1c\n\x0csubscription\x18\x10 \x03(\x0b\x32\x06.DocV2\x12\x17\n\x06reason\x18\x11 \x01(\x0b\x32\x07.Reason\x12\x18\n\x10privacyPolicyUrl\x18\x12 \x01(\t\"\xa9\x04\n\x05\x44ocV2\x12\r\n\x05\x64ocid\x18\x01 \x01(\t\x12\x14\n\x0c\x62\x61\x63kendDocid\x18\x02 \x01(\t\x12\x0f\n\x07\x64ocType\x18\x03 \x01(\x05\x12\x11\n\tbackendId\x18\x04 \x01(\x05\x12\r\n\x05title\x18\x05 \x01(\t\x12\x0f\n\x07\x63reator\x18\x06 \x01(\t\x12\x17\n\x0f\x64\x65scriptionHtml\x18\x07 \x01(\t\x12\x15\n\x05offer\x18\x08 \x03(\x0b\x32\x06.Offer\x12#\n\x0c\x61vailability\x18\t \x01(\x0b\x32\r.Availability\x12\x15\n\x05image\x18\n \x03(\x0b\x32\x06.Image\x12\x15\n\x05\x63hild\x18\x0b \x03(\x0b\x32\x06.DocV2\x12-\n\x11\x63ontainerMetadata\x18\x0c \x01(\x0b\x32\x12.ContainerMetadata\x12!\n\x07\x64\x65tails\x18\r \x01(\x0b\x32\x10.DocumentDetails\x12)\n\x0f\x61ggregateRating\x18\x0e \x01(\x0b\x32\x10.AggregateRating\x12!\n\x0b\x61nnotations\x18\x0f \x01(\x0b\x32\x0c.Annotations\x12\x12\n\ndetailsUrl\x18\x10 \x01(\t\x12\x10\n\x08shareUrl\x18\x11 \x01(\t\x12\x12\n\nreviewsUrl\x18\x12 \x01(\t\x12\x12\n\nbackendUrl\x18\x13 \x01(\t\x12\x1a\n\x12purchaseDetailsUrl\x18\x14 \x01(\t\x12\x17\n\x0f\x64\x65tailsReusable\x18\x15 \x01(\x08\x12\x11\n\tpromoText\x18\x1b \x01(\t\"\x99\x01\n\x17\x45ncryptedSubscriberInfo\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\x12\x14\n\x0c\x65ncryptedKey\x18\x02 \x01(\t\x12\x11\n\tsignature\x18\x03 \x01(\t\x12\x12\n\ninitVector\x18\x04 \x01(\t\x12\x18\n\x10googleKeyVersion\x18\x05 \x01(\x05\x12\x19\n\x11\x63\x61rrierKeyVersion\x18\x06 \x01(\x05\"\xbd\x03\n\x0c\x41vailability\x12\x13\n\x0brestriction\x18\x05 \x01(\x05\x12\x11\n\tofferType\x18\x06 \x01(\x05\x12\x13\n\x04rule\x18\x07 \x01(\x0b\x32\x05.Rule\x12X\n perdeviceavailabilityrestriction\x18\t \x03(\n2..Availability.PerDeviceAvailabilityRestriction\x12\x18\n\x10\x61vailableIfOwned\x18\r \x01(\x08\x12\x19\n\x07install\x18\x0e \x03(\x0b\x32\x08.Install\x12)\n\nfilterInfo\x18\x10 \x01(\x0b\x32\x15.FilterEvaluationInfo\x12%\n\rownershipInfo\x18\x11 \x01(\x0b\x32\x0e.OwnershipInfo\x1a\x8e\x01\n PerDeviceAvailabilityRestriction\x12\x11\n\tandroidId\x18\n \x01(\x06\x12\x19\n\x11\x64\x65viceRestriction\x18\x0b \x01(\x05\x12\x11\n\tchannelId\x18\x0c \x01(\x03\x12)\n\nfilterInfo\x18\x0f \x01(\x0b\x32\x15.FilterEvaluationInfo\"?\n\x14\x46ilterEvaluationInfo\x12\'\n\x0eruleEvaluation\x18\x01 \x03(\x0b\x32\x0f.RuleEvaluation\"\xd4\x01\n\x04Rule\x12\x0e\n\x06negate\x18\x01 \x01(\x08\x12\x10\n\x08operator\x18\x02 \x01(\x05\x12\x0b\n\x03key\x18\x03 \x01(\x05\x12\x11\n\tstringArg\x18\x04 \x03(\t\x12\x0f\n\x07longArg\x18\x05 \x03(\x03\x12\x11\n\tdoubleArg\x18\x06 \x03(\x01\x12\x16\n\x07subrule\x18\x07 \x03(\x0b\x32\x05.Rule\x12\x14\n\x0cresponseCode\x18\x08 \x01(\x05\x12\x0f\n\x07\x63omment\x18\t \x01(\t\x12\x15\n\rstringArgHash\x18\n \x03(\x06\x12\x10\n\x08\x63onstArg\x18\x0b \x03(\x05\"\x8d\x01\n\x0eRuleEvaluation\x12\x13\n\x04rule\x18\x01 \x01(\x0b\x32\x05.Rule\x12\x19\n\x11\x61\x63tualStringValue\x18\x02 \x03(\t\x12\x17\n\x0f\x61\x63tualLongValue\x18\x03 \x03(\x03\x12\x17\n\x0f\x61\x63tualBoolValue\x18\x04 \x03(\x08\x12\x19\n\x11\x61\x63tualDoubleValue\x18\x05 \x03(\x01\"v\n\x11LibraryAppDetails\x12\x17\n\x0f\x63\x65rtificateHash\x18\x02 \x01(\t\x12\"\n\x1arefundTimeoutTimestampMsec\x18\x03 \x01(\x03\x12$\n\x1cpostDeliveryRefundWindowMsec\x18\x04 \x01(\x03\"\xc4\x01\n\x0fLibraryMutation\x12\x15\n\x05\x64ocid\x18\x01 \x01(\x0b\x32\x06.Docid\x12\x11\n\tofferType\x18\x02 \x01(\x05\x12\x14\n\x0c\x64ocumentHash\x18\x03 \x01(\x03\x12\x0f\n\x07\x64\x65leted\x18\x04 \x01(\x08\x12&\n\nappDetails\x18\x05 \x01(\x0b\x32\x12.LibraryAppDetails\x12\x38\n\x13subscriptionDetails\x18\x06 \x01(\x0b\x32\x1b.LibrarySubscriptionDetails\"\x95\x01\n\x1aLibrarySubscriptionDetails\x12\x1f\n\x17initiationTimestampMsec\x18\x01 \x01(\x03\x12\x1f\n\x17validUntilTimestampMsec\x18\x02 \x01(\x03\x12\x14\n\x0c\x61utoRenewing\x18\x03 \x01(\x08\x12\x1f\n\x17trialUntilTimestampMsec\x18\x04 \x01(\x03\"\x8c\x01\n\rLibraryUpdate\x12\x0e\n\x06status\x18\x01 \x01(\x05\x12\x0e\n\x06\x63orpus\x18\x02 \x01(\x05\x12\x13\n\x0bserverToken\x18\x03 \x01(\x0c\x12\"\n\x08mutation\x18\x04 \x03(\x0b\x32\x10.LibraryMutation\x12\x0f\n\x07hasMore\x18\x05 \x01(\x08\x12\x11\n\tlibraryId\x18\x06 \x01(\t\"c\n\x12\x43lientLibraryState\x12\x0e\n\x06\x63orpus\x18\x01 \x01(\x05\x12\x13\n\x0bserverToken\x18\x02 \x01(\x0c\x12\x13\n\x0bhashCodeSum\x18\x03 \x01(\x03\x12\x13\n\x0blibrarySize\x18\x04 \x01(\x05\"F\n\x19LibraryReplicationRequest\x12)\n\x0clibraryState\x18\x01 \x03(\x0b\x32\x13.ClientLibraryState\"<\n\x1aLibraryReplicationResponse\x12\x1e\n\x06update\x18\x01 \x03(\x0b\x32\x0e.LibraryUpdate\"l\n\rClickLogEvent\x12\x11\n\teventTime\x18\x01 \x01(\x03\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x0e\n\x06listId\x18\x03 \x01(\t\x12\x13\n\x0breferrerUrl\x18\x04 \x01(\t\x12\x16\n\x0ereferrerListId\x18\x05 \x01(\t\"0\n\nLogRequest\x12\"\n\nclickEvent\x18\x01 \x03(\x0b\x32\x0e.ClickLogEvent\"\r\n\x0bLogResponse\"B\n\x1a\x41ndroidAppNotificationData\x12\x13\n\x0bversionCode\x18\x01 \x01(\x05\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\"M\n\x15InAppNotificationData\x12\x17\n\x0f\x63heckoutOrderId\x18\x01 \x01(\t\x12\x1b\n\x13inAppNotificationId\x18\x02 \x01(\t\"#\n\x10LibraryDirtyData\x12\x0f\n\x07\x62\x61\x63kend\x18\x01 \x01(\x05\"\x97\x04\n\x0cNotification\x12\x18\n\x10notificationType\x18\x01 \x01(\x05\x12\x11\n\ttimestamp\x18\x03 \x01(\x03\x12\x15\n\x05\x64ocid\x18\x04 \x01(\x0b\x32\x06.Docid\x12\x10\n\x08\x64ocTitle\x18\x05 \x01(\t\x12\x11\n\tuserEmail\x18\x06 \x01(\t\x12,\n\x07\x61ppData\x18\x07 \x01(\x0b\x32\x1b.AndroidAppNotificationData\x12\x30\n\x0f\x61ppDeliveryData\x18\x08 \x01(\x0b\x32\x17.AndroidAppDeliveryData\x12\x31\n\x13purchaseRemovalData\x18\t \x01(\x0b\x32\x14.PurchaseRemovalData\x12\x33\n\x14userNotificationData\x18\n \x01(\x0b\x32\x15.UserNotificationData\x12\x35\n\x15inAppNotificationData\x18\x0b \x01(\x0b\x32\x16.InAppNotificationData\x12\x33\n\x14purchaseDeclinedData\x18\x0c \x01(\x0b\x32\x15.PurchaseDeclinedData\x12\x16\n\x0enotificationId\x18\r \x01(\t\x12%\n\rlibraryUpdate\x18\x0e \x01(\x0b\x32\x0e.LibraryUpdate\x12+\n\x10libraryDirtyData\x18\x0f \x01(\x0b\x32\x11.LibraryDirtyData\"@\n\x14PurchaseDeclinedData\x12\x0e\n\x06reason\x18\x01 \x01(\x05\x12\x18\n\x10showNotification\x18\x02 \x01(\x08\"(\n\x13PurchaseRemovalData\x12\x11\n\tmalicious\x18\x01 \x01(\x08\"\x88\x01\n\x14UserNotificationData\x12\x19\n\x11notificationTitle\x18\x01 \x01(\t\x12\x18\n\x10notificationText\x18\x02 \x01(\t\x12\x12\n\ntickerText\x18\x03 \x01(\t\x12\x13\n\x0b\x64ialogTitle\x18\x04 \x01(\t\x12\x12\n\ndialogText\x18\x05 \x01(\t\"\x11\n\x0fPlusOneResponse\"\x1e\n\x1cRateSuggestedContentResponse\"\xa7\x02\n\x0f\x41ggregateRating\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x12\n\nstarRating\x18\x02 \x01(\x02\x12\x14\n\x0cratingsCount\x18\x03 \x01(\x04\x12\x16\n\x0eoneStarRatings\x18\x04 \x01(\x04\x12\x16\n\x0etwoStarRatings\x18\x05 \x01(\x04\x12\x18\n\x10threeStarRatings\x18\x06 \x01(\x04\x12\x17\n\x0f\x66ourStarRatings\x18\x07 \x01(\x04\x12\x17\n\x0f\x66iveStarRatings\x18\x08 \x01(\x04\x12\x15\n\rthumbsUpCount\x18\t \x01(\x04\x12\x17\n\x0fthumbsDownCount\x18\n \x01(\x04\x12\x14\n\x0c\x63ommentCount\x18\x0b \x01(\x04\x12\x1a\n\x12\x62\x61yesianMeanRating\x18\x0c \x01(\x01\"c\n\x0e\x44irectPurchase\x12\x12\n\ndetailsUrl\x18\x01 \x01(\t\x12\x15\n\rpurchaseDocid\x18\x02 \x01(\t\x12\x13\n\x0bparentDocid\x18\x03 \x01(\t\x12\x11\n\tofferType\x18\x04 \x01(\x05\"\x89\x01\n\x13ResolveLinkResponse\x12\x12\n\ndetailsUrl\x18\x01 \x01(\t\x12\x11\n\tbrowseUrl\x18\x02 \x01(\t\x12\x11\n\tsearchUrl\x18\x03 \x01(\t\x12\'\n\x0e\x64irectPurchase\x18\x04 \x01(\x0b\x32\x0f.DirectPurchase\x12\x0f\n\x07homeUrl\x18\x05 \x01(\t\"\xb5\t\n\x07Payload\x12#\n\x0clistResponse\x18\x01 \x01(\x0b\x32\r.ListResponse\x12)\n\x0f\x64\x65tailsResponse\x18\x02 \x01(\x0b\x32\x10.DetailsResponse\x12\'\n\x0ereviewResponse\x18\x03 \x01(\x0b\x32\x0f.ReviewResponse\x12!\n\x0b\x62uyResponse\x18\x04 \x01(\x0b\x32\x0c.BuyResponse\x12\'\n\x0esearchResponse\x18\x05 \x01(\x0b\x32\x0f.SearchResponse\x12!\n\x0btocResponse\x18\x06 \x01(\x0b\x32\x0c.TocResponse\x12\'\n\x0e\x62rowseResponse\x18\x07 \x01(\x0b\x32\x0f.BrowseResponse\x12\x37\n\x16purchaseStatusResponse\x18\x08 \x01(\x0b\x32\x17.PurchaseStatusResponse\x12;\n\x18updateInstrumentResponse\x18\t \x01(\x0b\x32\x19.UpdateInstrumentResponse\x12!\n\x0blogResponse\x18\n \x01(\x0b\x32\x0c.LogResponse\x12\x39\n\x17\x63heckInstrumentResponse\x18\x0b \x01(\x0b\x32\x18.CheckInstrumentResponse\x12)\n\x0fplusOneResponse\x18\x0c \x01(\x0b\x32\x10.PlusOneResponse\x12\x31\n\x13\x66lagContentResponse\x18\r \x01(\x0b\x32\x14.FlagContentResponse\x12\x39\n\x17\x61\x63kNotificationResponse\x18\x0e \x01(\x0b\x32\x18.AckNotificationResponse\x12\x41\n\x1binitiateAssociationResponse\x18\x0f \x01(\x0b\x32\x1c.InitiateAssociationResponse\x12=\n\x19verifyAssociationResponse\x18\x10 \x01(\x0b\x32\x1a.VerifyAssociationResponse\x12?\n\x1alibraryReplicationResponse\x18\x11 \x01(\x0b\x32\x1b.LibraryReplicationResponse\x12\'\n\x0erevokeResponse\x18\x12 \x01(\x0b\x32\x0f.RevokeResponse\x12\x31\n\x13\x62ulkDetailsResponse\x18\x13 \x01(\x0b\x32\x14.BulkDetailsResponse\x12\x31\n\x13resolveLinkResponse\x18\x14 \x01(\x0b\x32\x14.ResolveLinkResponse\x12+\n\x10\x64\x65liveryResponse\x18\x15 \x01(\x0b\x32\x11.DeliveryResponse\x12-\n\x11\x61\x63\x63\x65ptTosResponse\x18\x16 \x01(\x0b\x32\x12.AcceptTosResponse\x12\x43\n\x1crateSuggestedContentResponse\x18\x17 \x01(\x0b\x32\x1d.RateSuggestedContentResponse\x12\x39\n\x17\x63heckPromoOfferResponse\x18\x18 \x01(\x0b\x32\x18.CheckPromoOfferResponse\"U\n\x08PreFetch\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x10\n\x08response\x18\x02 \x01(\x0c\x12\x0c\n\x04\x65tag\x18\x03 \x01(\t\x12\x0b\n\x03ttl\x18\x04 \x01(\x03\x12\x0f\n\x07softTtl\x18\x05 \x01(\x03\"\x91\x01\n\x0fResponseWrapper\x12\x19\n\x07payload\x18\x01 \x01(\x0b\x32\x08.Payload\x12!\n\x08\x63ommands\x18\x02 \x01(\x0b\x32\x0f.ServerCommands\x12\x1b\n\x08preFetch\x18\x03 \x03(\x0b\x32\t.PreFetch\x12#\n\x0cnotification\x18\x04 \x03(\x0b\x32\r.Notification\"]\n\x0eServerCommands\x12\x12\n\nclearCache\x18\x01 \x01(\x08\x12\x1b\n\x13\x64isplayErrorMessage\x18\x02 \x01(\t\x12\x1a\n\x12logErrorStacktrace\x18\x03 \x01(\t\"D\n\x12GetReviewsResponse\x12\x17\n\x06review\x18\x01 \x03(\x0b\x32\x07.Review\x12\x15\n\rmatchingCount\x18\x02 \x01(\x03\"\xdf\x01\n\x06Review\x12\x17\n\x0f\x64ocumentVersion\x18\x04 \x01(\t\x12\x15\n\rtimestampMsec\x18\x05 \x01(\x03\x12\x12\n\nstarRating\x18\x06 \x01(\x05\x12\r\n\x05title\x18\x07 \x01(\t\x12\x0f\n\x07\x63omment\x18\x08 \x01(\t\x12\x11\n\tcommentId\x18\t \x01(\t\x12\x1b\n\x06\x61uthor\x18! \x01(\x0b\x32\x0b.GoogleUser\x12\x12\n\ndeviceName\x18\x13 \x01(\t\x12\x11\n\treplyText\x18\x1d \x01(\t\x12\x1a\n\x12replyTimestampMsec\x18\x1e \x01(\x03\"\xa1\x01\n\nGoogleUser\x12\r\n\x05\x64ocId\x18\x01 \x01(\t\x12\x0e\n\x06userId\x18\x02 \x01(\t\x12\x10\n\x08unknown1\x18\x03 \x01(\x05\x12\x10\n\x08unknown2\x18\x04 \x01(\x05\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x15\n\x05image\x18\n \x01(\x0b\x32\x06.Image\x12\x14\n\x0cplayStoreUrl\x18\x10 \x01(\t\x12\x15\n\rgooglePlusUrl\x18\x13 \x01(\t\"O\n\x0eReviewResponse\x12(\n\x0bgetResponse\x18\x01 \x01(\x0b\x32\x13.GetReviewsResponse\x12\x13\n\x0bnextPageUrl\x18\x02 \x01(\t\"7\n\x0eRevokeResponse\x12%\n\rlibraryUpdate\x18\x01 \x01(\x0b\x32\x0e.LibraryUpdate\"g\n\rRelatedSearch\x12\x11\n\tsearchUrl\x18\x01 \x01(\t\x12\x0e\n\x06header\x18\x02 \x01(\t\x12\x11\n\tbackendId\x18\x03 \x01(\x05\x12\x0f\n\x07\x64ocType\x18\x04 \x01(\x05\x12\x0f\n\x07\x63urrent\x18\x05 \x01(\x08\"\xac\x01\n\x0eSearchResponse\x12\x15\n\roriginalQuery\x18\x01 \x01(\t\x12\x16\n\x0esuggestedQuery\x18\x02 \x01(\t\x12\x16\n\x0e\x61ggregateQuery\x18\x03 \x01(\x08\x12\x17\n\x06\x62ucket\x18\x04 \x03(\x0b\x32\x07.Bucket\x12\x13\n\x03\x64oc\x18\x05 \x03(\x0b\x32\x06.DocV2\x12%\n\rrelatedSearch\x18\x06 \x03(\x0b\x32\x0e.RelatedSearch\"X\n\x0e\x43orpusMetadata\x12\x0f\n\x07\x62\x61\x63kend\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\nlandingUrl\x18\x03 \x01(\t\x12\x13\n\x0blibraryName\x18\x04 \x01(\t\"#\n\x0b\x45xperiments\x12\x14\n\x0c\x65xperimentId\x18\x01 \x03(\t\"\x8c\x02\n\x0bTocResponse\x12\x1f\n\x06\x63orpus\x18\x01 \x03(\x0b\x32\x0f.CorpusMetadata\x12\x1c\n\x14tosVersionDeprecated\x18\x02 \x01(\x05\x12\x12\n\ntosContent\x18\x03 \x01(\t\x12\x0f\n\x07homeUrl\x18\x04 \x01(\t\x12!\n\x0b\x65xperiments\x18\x05 \x01(\x0b\x32\x0c.Experiments\x12&\n\x1etosCheckboxTextMarketingEmails\x18\x06 \x01(\t\x12\x10\n\x08tosToken\x18\x07 \x01(\t\x12#\n\x0cuserSettings\x18\x08 \x01(\x0b\x32\r.UserSettings\x12\x17\n\x0ficonOverrideUrl\x18\t \x01(\t\"9\n\x0cUserSettings\x12)\n!tosCheckboxMarketingEmailsOptedIn\x18\x01 \x01(\x08\"\x13\n\x11\x41\x63\x63\x65ptTosResponse\"~\n\x1c\x41\x63kNotificationsRequestProto\x12\x16\n\x0enotificationId\x18\x01 \x03(\t\x12*\n\rsignatureHash\x18\x02 \x01(\x0b\x32\x13.SignatureHashProto\x12\x1a\n\x12nackNotificationId\x18\x03 \x03(\t\"\x1f\n\x1d\x41\x63kNotificationsResponseProto\"\x9f\x01\n\x0c\x41\x64\x64ressProto\x12\x10\n\x08\x61\x64\x64ress1\x18\x01 \x01(\t\x12\x10\n\x08\x61\x64\x64ress2\x18\x02 \x01(\t\x12\x0c\n\x04\x63ity\x18\x03 \x01(\t\x12\r\n\x05state\x18\x04 \x01(\t\x12\x12\n\npostalCode\x18\x05 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x06 \x01(\t\x12\x0c\n\x04name\x18\x07 \x01(\t\x12\x0c\n\x04type\x18\x08 \x01(\t\x12\r\n\x05phone\x18\t \x01(\t\"*\n\x0c\x41ppDataProto\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"<\n\x12\x41ppSuggestionProto\x12&\n\tassetInfo\x18\x01 \x01(\x0b\x32\x13.ExternalAssetProto\"Q\n\x14\x41ssetIdentifierProto\x12\x13\n\x0bpackageName\x18\x01 \x01(\t\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0f\n\x07\x61ssetId\x18\x03 \x01(\t\"\x8c\x03\n\x12\x41ssetsRequestProto\x12\x11\n\tassetType\x18\x01 \x01(\x05\x12\r\n\x05query\x18\x02 \x01(\t\x12\x12\n\ncategoryId\x18\x03 \x01(\t\x12\x0f\n\x07\x61ssetId\x18\x04 \x03(\t\x12\x1e\n\x16retrieveVendingHistory\x18\x05 \x01(\x08\x12\x1c\n\x14retrieveExtendedInfo\x18\x06 \x01(\x08\x12\x11\n\tsortOrder\x18\x07 \x01(\x05\x12\x12\n\nstartIndex\x18\x08 \x01(\x03\x12\x12\n\nnumEntries\x18\t \x01(\x03\x12\x12\n\nviewFilter\x18\n \x01(\x05\x12\x13\n\x0brankingType\x18\x0b \x01(\t\x12\x1e\n\x16retrieveCarrierChannel\x18\x0c \x01(\x08\x12\x1e\n\x16pendingDownloadAssetId\x18\r \x03(\t\x12!\n\x19reconstructVendingHistory\x18\x0e \x01(\x08\x12\x19\n\x11unfilteredResults\x18\x0f \x01(\x08\x12\x0f\n\x07\x62\x61\x64geId\x18\x10 \x03(\t\"\xd0\x01\n\x13\x41ssetsResponseProto\x12\"\n\x05\x61sset\x18\x01 \x03(\x0b\x32\x13.ExternalAssetProto\x12\x17\n\x0fnumTotalEntries\x18\x02 \x01(\x03\x12\x16\n\x0e\x63orrectedQuery\x18\x03 \x01(\t\x12%\n\x08\x61ltAsset\x18\x04 \x03(\x0b\x32\x13.ExternalAssetProto\x12\x1b\n\x13numCorrectedEntries\x18\x05 \x01(\x03\x12\x0e\n\x06header\x18\x06 \x01(\t\x12\x10\n\x08listType\x18\x07 \x01(\x05\"\xbb\x01\n\x18\x42illingEventRequestProto\x12\x11\n\teventType\x18\x01 \x01(\x05\x12\x1b\n\x13\x62illingParametersId\x18\x02 \x01(\t\x12\x15\n\rresultSuccess\x18\x03 \x01(\x08\x12\x15\n\rclientMessage\x18\x04 \x01(\t\x12\x41\n\x11\x63\x61rrierInstrument\x18\x05 \x01(\x0b\x32&.ExternalCarrierBillingInstrumentProto\"\x1b\n\x19\x42illingEventResponseProto\"\xbc\x03\n\x15\x42illingParameterProto\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06mncMcc\x18\x03 \x03(\t\x12\x12\n\nbackendUrl\x18\x04 \x03(\t\x12\x0e\n\x06iconId\x18\x05 \x01(\t\x12\x1d\n\x15\x62illingInstrumentType\x18\x06 \x01(\x05\x12\x15\n\rapplicationId\x18\x07 \x01(\t\x12\x0e\n\x06tosUrl\x18\x08 \x01(\t\x12\x1d\n\x15instrumentTosRequired\x18\t \x01(\x08\x12\x12\n\napiVersion\x18\n \x01(\x05\x12)\n!perTransactionCredentialsRequired\x18\x0b \x01(\x08\x12\x32\n*sendSubscriberIdWithCarrierBillingRequests\x18\x0c \x01(\x08\x12\x1f\n\x17\x64\x65viceAssociationMethod\x18\r \x01(\x05\x12\x1f\n\x17userTokenRequestMessage\x18\x0e \x01(\t\x12\x1f\n\x17userTokenRequestAddress\x18\x0f \x01(\t\x12\x1a\n\x12passphraseRequired\x18\x10 \x01(\x08\"Q\n\x1e\x43\x61rrierBillingCredentialsProto\x12\x13\n\x0b\x63redentials\x18\x01 \x01(\t\x12\x1a\n\x12\x63redentialsTimeout\x18\x02 \x01(\x03\"\xff\x01\n\rCategoryProto\x12\x11\n\tassetType\x18\x02 \x01(\x05\x12\x12\n\ncategoryId\x18\x03 \x01(\t\x12\x17\n\x0f\x63\x61tegoryDisplay\x18\x04 \x01(\t\x12\x18\n\x10\x63\x61tegorySubtitle\x18\x05 \x01(\t\x12\x19\n\x11promotedAssetsNew\x18\x06 \x03(\t\x12\x1a\n\x12promotedAssetsHome\x18\x07 \x03(\t\x12%\n\rsubCategories\x18\x08 \x03(\x0b\x32\x0e.CategoryProto\x12\x1a\n\x12promotedAssetsPaid\x18\t \x03(\t\x12\x1a\n\x12promotedAssetsFree\x18\n \x03(\t\":\n!CheckForNotificationsRequestProto\x12\x15\n\ralarmDuration\x18\x01 \x01(\x03\"$\n\"CheckForNotificationsResponseProto\"S\n\x18\x43heckLicenseRequestProto\x12\x13\n\x0bpackageName\x18\x01 \x01(\t\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\r\n\x05nonce\x18\x03 \x01(\x03\"X\n\x19\x43heckLicenseResponseProto\x12\x14\n\x0cresponseCode\x18\x01 \x01(\x05\x12\x12\n\nsignedData\x18\x02 \x01(\t\x12\x11\n\tsignature\x18\x03 \x01(\t\"\x87\x01\n\x14\x43ommentsRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x12\n\nstartIndex\x18\x02 \x01(\x03\x12\x12\n\nnumEntries\x18\x03 \x01(\x03\x12\x1f\n\x17shouldReturnSelfComment\x18\x04 \x01(\x08\x12\x15\n\rassetReferrer\x18\x05 \x01(\t\"\x84\x01\n\x15\x43ommentsResponseProto\x12&\n\x07\x63omment\x18\x01 \x03(\x0b\x32\x15.ExternalCommentProto\x12\x17\n\x0fnumTotalEntries\x18\x02 \x01(\x03\x12*\n\x0bselfComment\x18\x03 \x01(\x0b\x32\x15.ExternalCommentProto\"\xc0\x03\n\x17\x43ontentSyncRequestProto\x12\x13\n\x0bincremental\x18\x01 \x01(\x08\x12\x45\n\x11\x61ssetinstallstate\x18\x02 \x03(\n2*.ContentSyncRequestProto.AssetInstallState\x12\x35\n\tsystemapp\x18\n \x03(\n2\".ContentSyncRequestProto.SystemApp\x12\x1a\n\x12sideloadedAppCount\x18\x0e \x01(\x05\x1a\xa5\x01\n\x11\x41ssetInstallState\x12\x0f\n\x07\x61ssetId\x18\x03 \x01(\t\x12\x12\n\nassetState\x18\x04 \x01(\x05\x12\x13\n\x0binstallTime\x18\x05 \x01(\x03\x12\x15\n\runinstallTime\x18\x06 \x01(\x03\x12\x13\n\x0bpackageName\x18\x07 \x01(\t\x12\x13\n\x0bversionCode\x18\x08 \x01(\x05\x12\x15\n\rassetReferrer\x18\t \x01(\t\x1aN\n\tSystemApp\x12\x13\n\x0bpackageName\x18\x0b \x01(\t\x12\x13\n\x0bversionCode\x18\x0c \x01(\x05\x12\x17\n\x0f\x63\x65rtificateHash\x18\r \x03(\t\"7\n\x18\x43ontentSyncResponseProto\x12\x1b\n\x13numUpdatesAvailable\x18\x01 \x01(\x05\"D\n\x10\x44\x61taMessageProto\x12\x10\n\x08\x63\x61tegory\x18\x01 \x01(\t\x12\x1e\n\x07\x61ppData\x18\x03 \x03(\x0b\x32\r.AppDataProto\"P\n\x11\x44ownloadInfoProto\x12\x0f\n\x07\x61pkSize\x18\x01 \x01(\x03\x12*\n\x0e\x61\x64\x64itionalFile\x18\x02 \x03(\x0b\x32\x12.FileMetadataProto\"\xe6\n\n\x12\x45xternalAssetProto\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\x11\n\tassetType\x18\x03 \x01(\x05\x12\r\n\x05owner\x18\x04 \x01(\t\x12\x0f\n\x07version\x18\x05 \x01(\t\x12\r\n\x05price\x18\x06 \x01(\t\x12\x15\n\raverageRating\x18\x07 \x01(\t\x12\x12\n\nnumRatings\x18\x08 \x01(\x03\x12\x44\n\x13purchaseinformation\x18\t \x01(\n2\'.ExternalAssetProto.PurchaseInformation\x12\x36\n\x0c\x65xtendedinfo\x18\x0c \x01(\n2 .ExternalAssetProto.ExtendedInfo\x12\x0f\n\x07ownerId\x18\x16 \x01(\t\x12\x13\n\x0bpackageName\x18\x18 \x01(\t\x12\x13\n\x0bversionCode\x18\x19 \x01(\x05\x12\x14\n\x0c\x62undledAsset\x18\x1d \x01(\x08\x12\x15\n\rpriceCurrency\x18  \x01(\t\x12\x13\n\x0bpriceMicros\x18! \x01(\x03\x12\x14\n\x0c\x66ilterReason\x18# \x01(\t\x12\x19\n\x11\x61\x63tualSellerPrice\x18( \x01(\t\x12%\n\x08\x61ppBadge\x18/ \x03(\x0b\x32\x13.ExternalBadgeProto\x12\'\n\nownerBadge\x18\x30 \x03(\x0b\x32\x13.ExternalBadgeProto\x1a\x7f\n\x13PurchaseInformation\x12\x14\n\x0cpurchaseTime\x18\n \x01(\x03\x12\x19\n\x11refundTimeoutTime\x18\x0b \x01(\x03\x12\x19\n\x11refundStartPolicy\x18- \x01(\x05\x12\x1c\n\x14refundWindowDuration\x18. \x01(\x03\x1a\xca\x05\n\x0c\x45xtendedInfo\x12\x13\n\x0b\x64\x65scription\x18\r \x01(\t\x12\x15\n\rdownloadCount\x18\x0e \x01(\x03\x12\x1f\n\x17\x61pplicationPermissionId\x18\x0f \x03(\t\x12 \n\x18requiredInstallationSize\x18\x10 \x01(\x03\x12\x13\n\x0bpackageName\x18\x11 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\x12 \x01(\t\x12\x15\n\rforwardLocked\x18\x13 \x01(\x08\x12\x14\n\x0c\x63ontactEmail\x18\x14 \x01(\t\x12\x1b\n\x13\x65verInstalledByUser\x18\x15 \x01(\x08\x12\x1b\n\x13\x64ownloadCountString\x18\x17 \x01(\t\x12\x14\n\x0c\x63ontactPhone\x18\x1a \x01(\t\x12\x16\n\x0e\x63ontactWebsite\x18\x1b \x01(\t\x12\x1e\n\x16nextPurchaseRefundable\x18\x1c \x01(\x08\x12\x16\n\x0enumScreenshots\x18\x1e \x01(\x05\x12\x1e\n\x16promotionalDescription\x18\x1f \x01(\t\x12\x18\n\x10serverAssetState\x18\" \x01(\x05\x12\x1a\n\x12\x63ontentRatingLevel\x18$ \x01(\x05\x12\x1b\n\x13\x63ontentRatingString\x18% \x01(\t\x12\x15\n\rrecentChanges\x18& \x01(\t\x12M\n\x11packagedependency\x18\' \x03(\n22.ExternalAssetProto.ExtendedInfo.PackageDependency\x12\x11\n\tvideoLink\x18+ \x01(\t\x12(\n\x0c\x64ownloadInfo\x18\x31 \x01(\x0b\x32\x12.DownloadInfoProto\x1a\x41\n\x11PackageDependency\x12\x13\n\x0bpackageName\x18) \x01(\t\x12\x17\n\x0fskipPermissions\x18* \x01(\x08\"5\n\x17\x45xternalBadgeImageProto\x12\r\n\x05usage\x18\x01 \x01(\x05\x12\x0b\n\x03url\x18\x02 \x01(\t\"\x8a\x01\n\x12\x45xternalBadgeProto\x12\x16\n\x0elocalizedTitle\x18\x01 \x01(\t\x12\x1c\n\x14localizedDescription\x18\x02 \x01(\t\x12,\n\nbadgeImage\x18\x03 \x03(\x0b\x32\x18.ExternalBadgeImageProto\x12\x10\n\x08searchId\x18\x04 \x01(\t\"\xe0\x02\n%ExternalCarrierBillingInstrumentProto\x12\x15\n\rinstrumentKey\x18\x01 \x01(\t\x12\x1c\n\x14subscriberIdentifier\x18\x02 \x01(\t\x12\x13\n\x0b\x61\x63\x63ountType\x18\x03 \x01(\t\x12\x1a\n\x12subscriberCurrency\x18\x04 \x01(\t\x12\x18\n\x10transactionLimit\x18\x05 \x01(\x04\x12\x16\n\x0esubscriberName\x18\x06 \x01(\t\x12\x10\n\x08\x61\x64\x64ress1\x18\x07 \x01(\t\x12\x10\n\x08\x61\x64\x64ress2\x18\x08 \x01(\t\x12\x0c\n\x04\x63ity\x18\t \x01(\t\x12\r\n\x05state\x18\n \x01(\t\x12\x12\n\npostalCode\x18\x0b \x01(\t\x12\x0f\n\x07\x63ountry\x18\x0c \x01(\t\x12\x39\n\x17\x65ncryptedSubscriberInfo\x18\r \x01(\x0b\x32\x18.EncryptedSubscriberInfo\"r\n\x14\x45xternalCommentProto\x12\x0c\n\x04\x62ody\x18\x01 \x01(\t\x12\x0e\n\x06rating\x18\x02 \x01(\x05\x12\x13\n\x0b\x63reatorName\x18\x03 \x01(\t\x12\x14\n\x0c\x63reationTime\x18\x04 \x01(\x03\x12\x11\n\tcreatorId\x18\x05 \x01(\t\"\xfb\x01\n\x12\x45xternalCreditCard\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x12\n\nlastDigits\x18\x02 \x01(\t\x12\x0f\n\x07\x65xpYear\x18\x03 \x01(\x05\x12\x10\n\x08\x65xpMonth\x18\x04 \x01(\x05\x12\x12\n\npersonName\x18\x05 \x01(\t\x12\x13\n\x0b\x63ountryCode\x18\x06 \x01(\t\x12\x12\n\npostalCode\x18\x07 \x01(\t\x12\x13\n\x0bmakeDefault\x18\x08 \x01(\x08\x12\x10\n\x08\x61\x64\x64ress1\x18\t \x01(\t\x12\x10\n\x08\x61\x64\x64ress2\x18\n \x01(\t\x12\x0c\n\x04\x63ity\x18\x0b \x01(\t\x12\r\n\x05state\x18\x0c \x01(\t\x12\r\n\x05phone\x18\r \x01(\t\"\xb5\x01\n\x1d\x45xternalPaypalInstrumentProto\x12\x15\n\rinstrumentKey\x18\x01 \x01(\t\x12\x16\n\x0epreapprovalKey\x18\x02 \x01(\t\x12\x13\n\x0bpaypalEmail\x18\x03 \x01(\t\x12$\n\rpaypalAddress\x18\x04 \x01(\x0b\x32\r.AddressProto\x12*\n\"multiplePaypalInstrumentsSupported\x18\x05 \x01(\x08\"]\n\x11\x46ileMetadataProto\x12\x10\n\x08\x66ileType\x18\x01 \x01(\x05\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0c\n\x04size\x18\x03 \x01(\x03\x12\x13\n\x0b\x64ownloadUrl\x18\x04 \x01(\t\"Z\n\x1dGetAddressSnippetRequestProto\x12\x39\n\x17\x65ncryptedSubscriberInfo\x18\x01 \x01(\x0b\x32\x18.EncryptedSubscriberInfo\"8\n\x1eGetAddressSnippetResponseProto\x12\x16\n\x0e\x61\x64\x64ressSnippet\x18\x01 \x01(\t\"B\n\x14GetAssetRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x19\n\x11\x64irectDownloadKey\x18\x02 \x01(\t\"\xda\x03\n\x15GetAssetResponseProto\x12\x39\n\x0cinstallasset\x18\x01 \x01(\n2#.GetAssetResponseProto.InstallAsset\x12*\n\x0e\x61\x64\x64itionalFile\x18\x0f \x03(\x0b\x32\x12.FileMetadataProto\x1a\xd9\x02\n\x0cInstallAsset\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\x12\x11\n\tassetName\x18\x03 \x01(\t\x12\x11\n\tassetType\x18\x04 \x01(\t\x12\x14\n\x0c\x61ssetPackage\x18\x05 \x01(\t\x12\x0f\n\x07\x62lobUrl\x18\x06 \x01(\t\x12\x16\n\x0e\x61ssetSignature\x18\x07 \x01(\t\x12\x11\n\tassetSize\x18\x08 \x01(\x03\x12\x1b\n\x13refundTimeoutMillis\x18\t \x01(\x03\x12\x15\n\rforwardLocked\x18\n \x01(\x08\x12\x0f\n\x07secured\x18\x0b \x01(\x08\x12\x13\n\x0bversionCode\x18\x0c \x01(\x05\x12\x1e\n\x16\x64ownloadAuthCookieName\x18\r \x01(\t\x12\x1f\n\x17\x64ownloadAuthCookieValue\x18\x0e \x01(\t\x12%\n\x1dpostInstallRefundWindowMillis\x18\x10 \x01(\x03\"\x1c\n\x1aGetCarrierInfoRequestProto\"\xb8\x01\n\x1bGetCarrierInfoResponseProto\x12\x1d\n\x15\x63\x61rrierChannelEnabled\x18\x01 \x01(\x08\x12\x17\n\x0f\x63\x61rrierLogoIcon\x18\x02 \x01(\x0c\x12\x15\n\rcarrierBanner\x18\x03 \x01(\x0c\x12\x17\n\x0f\x63\x61rrierSubtitle\x18\x04 \x01(\t\x12\x14\n\x0c\x63\x61rrierTitle\x18\x05 \x01(\t\x12\x1b\n\x13\x63\x61rrierImageDensity\x18\x06 \x01(\x05\"6\n\x19GetCategoriesRequestProto\x12\x19\n\x11prefetchPromoData\x18\x01 \x01(\x08\"@\n\x1aGetCategoriesResponseProto\x12\"\n\ncategories\x18\x01 \x03(\x0b\x32\x0e.CategoryProto\"\xbb\x01\n\x14GetImageRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x12\n\nimageUsage\x18\x03 \x01(\x05\x12\x0f\n\x07imageId\x18\x04 \x01(\t\x12\x1b\n\x13screenPropertyWidth\x18\x05 \x01(\x05\x12\x1c\n\x14screenPropertyHeight\x18\x06 \x01(\x05\x12\x1d\n\x15screenPropertyDensity\x18\x07 \x01(\x05\x12\x13\n\x0bproductType\x18\x08 \x01(\x05\"@\n\x15GetImageResponseProto\x12\x11\n\timageData\x18\x01 \x01(\x0c\x12\x14\n\x0cimageDensity\x18\x02 \x01(\x05\"\xf4\x01\n\x1dGetMarketMetadataRequestProto\x12\x17\n\x0flastRequestTime\x18\x01 \x01(\x03\x12\x36\n\x13\x64\x65viceConfiguration\x18\x02 \x01(\x0b\x32\x19.DeviceConfigurationProto\x12\x15\n\rdeviceRoaming\x18\x03 \x01(\x08\x12\x1b\n\x13marketSignatureHash\x18\x04 \x03(\t\x12\x15\n\rcontentRating\x18\x05 \x01(\x05\x12\x17\n\x0f\x64\x65viceModelName\x18\x06 \x01(\t\x12\x1e\n\x16\x64\x65viceManufacturerName\x18\x07 \x01(\t\"\xb7\x02\n\x1eGetMarketMetadataResponseProto\x12\x1f\n\x17latestClientVersionCode\x18\x01 \x01(\x05\x12\x17\n\x0flatestClientUrl\x18\x02 \x01(\t\x12\x17\n\x0fpaidAppsEnabled\x18\x03 \x01(\x08\x12\x30\n\x10\x62illingParameter\x18\x04 \x03(\x0b\x32\x16.BillingParameterProto\x12\x1a\n\x12\x63ommentPostEnabled\x18\x05 \x01(\x08\x12\x1c\n\x14\x62illingEventsEnabled\x18\x06 \x01(\x08\x12\x16\n\x0ewarningMessage\x18\x07 \x01(\t\x12\x1b\n\x13inAppBillingEnabled\x18\x08 \x01(\x08\x12!\n\x19inAppBillingMaxApiVersion\x18\t \x01(\x05\"1\n\x1cGetSubCategoriesRequestProto\x12\x11\n\tassetType\x18\x01 \x01(\x05\"\xa2\x01\n\x1dGetSubCategoriesResponseProto\x12?\n\x0bsubcategory\x18\x01 \x03(\n2*.GetSubCategoriesResponseProto.SubCategory\x1a@\n\x0bSubCategory\x12\x1a\n\x12subCategoryDisplay\x18\x02 \x01(\t\x12\x15\n\rsubCategoryId\x18\x03 \x01(\t\"\xb0\x01\n$InAppPurchaseInformationRequestProto\x12*\n\rsignatureHash\x18\x01 \x01(\x0b\x32\x13.SignatureHashProto\x12\r\n\x05nonce\x18\x02 \x01(\x03\x12\x16\n\x0enotificationId\x18\x03 \x03(\t\x12\x1a\n\x12signatureAlgorithm\x18\x04 \x01(\t\x12\x19\n\x11\x62illingApiVersion\x18\x05 \x01(\x05\"\xbb\x01\n%InAppPurchaseInformationResponseProto\x12(\n\x0esignedResponse\x18\x01 \x01(\x0b\x32\x10.SignedDataProto\x12:\n\x15statusBarNotification\x18\x02 \x03(\x0b\x32\x1b.StatusBarNotificationProto\x12,\n\x0epurchaseResult\x18\x03 \x01(\x0b\x32\x14.PurchaseResultProto\"\x98\x01\n$InAppRestoreTransactionsRequestProto\x12*\n\rsignatureHash\x18\x01 \x01(\x0b\x32\x13.SignatureHashProto\x12\r\n\x05nonce\x18\x02 \x01(\x03\x12\x1a\n\x12signatureAlgorithm\x18\x03 \x01(\t\x12\x19\n\x11\x62illingApiVersion\x18\x04 \x01(\x05\"\x7f\n%InAppRestoreTransactionsResponseProto\x12(\n\x0esignedResponse\x18\x01 \x01(\x0b\x32\x10.SignedDataProto\x12,\n\x0epurchaseResult\x18\x02 \x01(\x0b\x32\x14.PurchaseResultProto\"\xba\x01\n\x19ModifyCommentRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12&\n\x07\x63omment\x18\x02 \x01(\x0b\x32\x15.ExternalCommentProto\x12\x15\n\rdeleteComment\x18\x03 \x01(\x08\x12\x11\n\tflagAsset\x18\x04 \x01(\x08\x12\x10\n\x08\x66lagType\x18\x05 \x01(\x05\x12\x13\n\x0b\x66lagMessage\x18\x06 \x01(\t\x12\x13\n\x0bnonFlagFlow\x18\x07 \x01(\x08\"\x1c\n\x1aModifyCommentResponseProto\"v\n\x16PaypalCountryInfoProto\x12\x19\n\x11\x62irthDateRequired\x18\x01 \x01(\x08\x12\x0f\n\x07tosText\x18\x02 \x01(\t\x12\x1c\n\x14\x62illingAgreementText\x18\x03 \x01(\t\x12\x12\n\npreTosText\x18\x04 \x01(\t\"y\n\x1fPaypalCreateAccountRequestProto\x12\x11\n\tfirstName\x18\x01 \x01(\t\x12\x10\n\x08lastName\x18\x02 \x01(\t\x12\x1e\n\x07\x61\x64\x64ress\x18\x03 \x01(\x0b\x32\r.AddressProto\x12\x11\n\tbirthDate\x18\x04 \x01(\t\"<\n PaypalCreateAccountResponseProto\x12\x18\n\x10\x63reateAccountKey\x18\x01 \x01(\t\"E\n\x16PaypalCredentialsProto\x12\x16\n\x0epreapprovalKey\x18\x01 \x01(\t\x12\x13\n\x0bpaypalEmail\x18\x02 \x01(\t\"B\n PaypalMassageAddressRequestProto\x12\x1e\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0b\x32\r.AddressProto\"C\n!PaypalMassageAddressResponseProto\x12\x1e\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0b\x32\r.AddressProto\"^\n(PaypalPreapprovalCredentialsRequestProto\x12\x15\n\rgaiaAuthToken\x18\x01 \x01(\t\x12\x1b\n\x13\x62illingInstrumentId\x18\x02 \x01(\t\"n\n)PaypalPreapprovalCredentialsResponseProto\x12\x12\n\nresultCode\x18\x01 \x01(\x05\x12\x18\n\x10paypalAccountKey\x18\x02 \x01(\t\x12\x13\n\x0bpaypalEmail\x18\x03 \x01(\t\"R\n$PaypalPreapprovalDetailsRequestProto\x12\x12\n\ngetAddress\x18\x01 \x01(\x08\x12\x16\n\x0epreapprovalKey\x18\x02 \x01(\t\"\\\n%PaypalPreapprovalDetailsResponseProto\x12\x13\n\x0bpaypalEmail\x18\x01 \x01(\t\x12\x1e\n\x07\x61\x64\x64ress\x18\x02 \x01(\x0b\x32\r.AddressProto\"\x1f\n\x1dPaypalPreapprovalRequestProto\"8\n\x1ePaypalPreapprovalResponseProto\x12\x16\n\x0epreapprovalKey\x18\x01 \x01(\t\"]\n\x19PendingNotificationsProto\x12\'\n\x0cnotification\x18\x01 \x03(\x0b\x32\x11.DataMessageProto\x12\x17\n\x0fnextCheckMillis\x18\x02 \x01(\x03\"e\n\x15PrefetchedBundleProto\x12$\n\x07request\x18\x01 \x01(\x0b\x32\x13.SingleRequestProto\x12&\n\x08response\x18\x02 \x01(\x0b\x32\x14.SingleResponseProto\"\xbc\x01\n\x15PurchaseCartInfoProto\x12\x11\n\titemPrice\x18\x01 \x01(\t\x12\x14\n\x0ctaxInclusive\x18\x02 \x01(\t\x12\x14\n\x0ctaxExclusive\x18\x03 \x01(\t\x12\r\n\x05total\x18\x04 \x01(\t\x12\x12\n\ntaxMessage\x18\x05 \x01(\t\x12\x15\n\rfooterMessage\x18\x06 \x01(\t\x12\x15\n\rpriceCurrency\x18\x07 \x01(\t\x12\x13\n\x0bpriceMicros\x18\x08 \x01(\x03\"\x93\x04\n\x11PurchaseInfoProto\x12\x15\n\rtransactionId\x18\x01 \x01(\t\x12(\n\x08\x63\x61rtInfo\x18\x02 \x01(\x0b\x32\x16.PurchaseCartInfoProto\x12\x41\n\x12\x62illinginstruments\x18\x03 \x01(\n2%.PurchaseInfoProto.BillingInstruments\x12\x18\n\x10\x65rrorInputFields\x18\t \x03(\x05\x12\x14\n\x0crefundPolicy\x18\n \x01(\t\x12\x15\n\ruserCanAddGdd\x18\x0c \x01(\x08\x12\x1f\n\x17\x65ligibleInstrumentTypes\x18\r \x03(\x05\x12\x0f\n\x07orderId\x18\x0f \x01(\t\x1a\x80\x02\n\x12\x42illingInstruments\x12R\n\x11\x62illinginstrument\x18\x04 \x03(\n27.PurchaseInfoProto.BillingInstruments.BillingInstrument\x12\"\n\x1a\x64\x65\x66\x61ultBillingInstrumentId\x18\x08 \x01(\t\x1ar\n\x11\x42illingInstrument\x12\n\n\x02id\x18\x05 \x01(\t\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\x11\n\tisInvalid\x18\x07 \x01(\x08\x12\x16\n\x0einstrumentType\x18\x0b \x01(\x05\x12\x18\n\x10instrumentStatus\x18\x0e \x01(\x05\"i\n\x1cPurchaseMetadataRequestProto\x12*\n\"deprecatedRetrieveBillingCountries\x18\x01 \x01(\x08\x12\x1d\n\x15\x62illingInstrumentType\x18\x02 \x01(\x05\"\x87\x04\n\x1dPurchaseMetadataResponseProto\x12;\n\tcountries\x18\x01 \x01(\n2(.PurchaseMetadataResponseProto.Countries\x1a\xa8\x03\n\tCountries\x12\x41\n\x07\x63ountry\x18\x02 \x03(\n20.PurchaseMetadataResponseProto.Countries.Country\x1a\xd7\x02\n\x07\x43ountry\x12\x13\n\x0b\x63ountryCode\x18\x03 \x01(\t\x12\x13\n\x0b\x63ountryName\x18\x04 \x01(\t\x12\x32\n\x11paypalCountryInfo\x18\x05 \x01(\x0b\x32\x17.PaypalCountryInfoProto\x12#\n\x1b\x61llowsReducedBillingAddress\x18\x06 \x01(\x08\x12\x65\n\x15instrumentaddressspec\x18\x07 \x03(\n2F.PurchaseMetadataResponseProto.Countries.Country.InstrumentAddressSpec\x1a\x62\n\x15InstrumentAddressSpec\x12\x18\n\x10instrumentFamily\x18\x08 \x01(\x05\x12/\n\x12\x62illingAddressSpec\x18\t \x01(\x0b\x32\x13.BillingAddressSpec\"\xe2\x03\n\x19PurchaseOrderRequestProto\x12\x15\n\rgaiaAuthToken\x18\x01 \x01(\t\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\x12\x15\n\rtransactionId\x18\x03 \x01(\t\x12\x1b\n\x13\x62illingInstrumentId\x18\x04 \x01(\t\x12\x13\n\x0btosAccepted\x18\x05 \x01(\x08\x12\x42\n\x19\x63\x61rrierBillingCredentials\x18\x06 \x01(\x0b\x32\x1f.CarrierBillingCredentialsProto\x12\x17\n\x0f\x65xistingOrderId\x18\x07 \x01(\t\x12\x1d\n\x15\x62illingInstrumentType\x18\x08 \x01(\x05\x12\x1b\n\x13\x62illingParametersId\x18\t \x01(\t\x12\x32\n\x11paypalCredentials\x18\n \x01(\x0b\x32\x17.PaypalCredentialsProto\x12,\n\x0eriskHeaderInfo\x18\x0b \x01(\x0b\x32\x14.RiskHeaderInfoProto\x12\x13\n\x0bproductType\x18\x0c \x01(\x05\x12*\n\rsignatureHash\x18\r \x01(\x0b\x32\x13.SignatureHashProto\x12\x18\n\x10\x64\x65veloperPayload\x18\x0e \x01(\t\"\xb6\x01\n\x1aPurchaseOrderResponseProto\x12\x1c\n\x14\x64\x65precatedResultCode\x18\x01 \x01(\x05\x12(\n\x0cpurchaseInfo\x18\x02 \x01(\x0b\x32\x12.PurchaseInfoProto\x12\"\n\x05\x61sset\x18\x03 \x01(\x0b\x32\x13.ExternalAssetProto\x12,\n\x0epurchaseResult\x18\x04 \x01(\x0b\x32\x14.PurchaseResultProto\"\x92\x04\n\x18PurchasePostRequestProto\x12\x15\n\rgaiaAuthToken\x18\x01 \x01(\t\x12\x0f\n\x07\x61ssetId\x18\x02 \x01(\t\x12\x15\n\rtransactionId\x18\x03 \x01(\t\x12N\n\x15\x62illinginstrumentinfo\x18\x04 \x01(\n2/.PurchasePostRequestProto.BillingInstrumentInfo\x12\x13\n\x0btosAccepted\x18\x07 \x01(\x08\x12\x17\n\x0f\x63\x62InstrumentKey\x18\x08 \x01(\t\x12\x1b\n\x13paypalAuthConfirmed\x18\x0b \x01(\x08\x12\x13\n\x0bproductType\x18\x0c \x01(\x05\x12*\n\rsignatureHash\x18\r \x01(\x0b\x32\x13.SignatureHashProto\x1a\xda\x01\n\x15\x42illingInstrumentInfo\x12\x1b\n\x13\x62illingInstrumentId\x18\x05 \x01(\t\x12\'\n\ncreditCard\x18\x06 \x01(\x0b\x32\x13.ExternalCreditCard\x12\x41\n\x11\x63\x61rrierInstrument\x18\t \x01(\x0b\x32&.ExternalCarrierBillingInstrumentProto\x12\x38\n\x10paypalInstrument\x18\n \x01(\x0b\x32\x1e.ExternalPaypalInstrumentProto\"\xaa\x02\n\x19PurchasePostResponseProto\x12\x1c\n\x14\x64\x65precatedResultCode\x18\x01 \x01(\x05\x12(\n\x0cpurchaseInfo\x18\x02 \x01(\x0b\x32\x12.PurchaseInfoProto\x12\x19\n\x11termsOfServiceUrl\x18\x03 \x01(\t\x12\x1a\n\x12termsOfServiceText\x18\x04 \x01(\t\x12\x1a\n\x12termsOfServiceName\x18\x05 \x01(\t\x12\"\n\x1atermsOfServiceCheckboxText\x18\x06 \x01(\t\x12 \n\x18termsOfServiceHeaderText\x18\x07 \x01(\t\x12,\n\x0epurchaseResult\x18\x08 \x01(\x0b\x32\x14.PurchaseResultProto\"q\n\x1bPurchaseProductRequestProto\x12\x13\n\x0bproductType\x18\x01 \x01(\x05\x12\x11\n\tproductId\x18\x02 \x01(\t\x12*\n\rsignatureHash\x18\x03 \x01(\x0b\x32\x13.SignatureHashProto\"p\n\x1cPurchaseProductResponseProto\x12\r\n\x05title\x18\x01 \x01(\t\x12\x11\n\titemTitle\x18\x02 \x01(\t\x12\x17\n\x0fitemDescription\x18\x03 \x01(\t\x12\x15\n\rmerchantField\x18\x04 \x01(\t\"D\n\x13PurchaseResultProto\x12\x12\n\nresultCode\x18\x01 \x01(\x05\x12\x19\n\x11resultCodeMessage\x18\x02 \x01(\t\"W\n\x14QuerySuggestionProto\x12\r\n\x05query\x18\x01 \x01(\t\x12\x1b\n\x13\x65stimatedNumResults\x18\x02 \x01(\x05\x12\x13\n\x0bqueryWeight\x18\x03 \x01(\x05\"A\n\x1bQuerySuggestionRequestProto\x12\r\n\x05query\x18\x01 \x01(\t\x12\x13\n\x0brequestType\x18\x02 \x01(\x05\"\x90\x02\n\x1cQuerySuggestionResponseProto\x12<\n\nsuggestion\x18\x01 \x03(\n2(.QuerySuggestionResponseProto.Suggestion\x12\"\n\x1a\x65stimatedNumAppSuggestions\x18\x04 \x01(\x05\x12$\n\x1c\x65stimatedNumQuerySuggestions\x18\x05 \x01(\x05\x1ah\n\nSuggestion\x12*\n\rappSuggestion\x18\x02 \x01(\x0b\x32\x13.AppSuggestionProto\x12.\n\x0fquerySuggestion\x18\x03 \x01(\x0b\x32\x15.QuerySuggestionProto\"T\n\x17RateCommentRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x11\n\tcreatorId\x18\x02 \x01(\t\x12\x15\n\rcommentRating\x18\x03 \x01(\x05\"\x1a\n\x18RateCommentResponseProto\">\n\x1fReconstructDatabaseRequestProto\x12\x1b\n\x13retrieveFullHistory\x18\x01 \x01(\x08\"H\n ReconstructDatabaseResponseProto\x12$\n\x05\x61sset\x18\x01 \x03(\x0b\x32\x15.AssetIdentifierProto\"%\n\x12RefundRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\"_\n\x13RefundResponseProto\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\"\n\x05\x61sset\x18\x02 \x01(\x0b\x32\x13.ExternalAssetProto\x12\x14\n\x0cresultDetail\x18\x03 \x01(\t\"*\n\x17RemoveAssetRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\"\xcd\x02\n\x16RequestPropertiesProto\x12\x15\n\ruserAuthToken\x18\x01 \x01(\t\x12\x1b\n\x13userAuthTokenSecure\x18\x02 \x01(\x08\x12\x17\n\x0fsoftwareVersion\x18\x03 \x01(\x05\x12\x0b\n\x03\x61id\x18\x04 \x01(\t\x12\x1d\n\x15productNameAndVersion\x18\x05 \x01(\t\x12\x14\n\x0cuserLanguage\x18\x06 \x01(\t\x12\x13\n\x0buserCountry\x18\x07 \x01(\t\x12\x14\n\x0coperatorName\x18\x08 \x01(\t\x12\x17\n\x0fsimOperatorName\x18\t \x01(\t\x12\x1b\n\x13operatorNumericName\x18\n \x01(\t\x12\x1e\n\x16simOperatorNumericName\x18\x0b \x01(\t\x12\x10\n\x08\x63lientId\x18\x0c \x01(\t\x12\x11\n\tloggingId\x18\r \x01(\t\"\xbe\x11\n\x0cRequestProto\x12\x32\n\x11requestProperties\x18\x01 \x01(\x0b\x32\x17.RequestPropertiesProto\x12&\n\x07request\x18\x02 \x03(\n2\x15.RequestProto.Request\x1a\xd1\x10\n\x07Request\x12\x42\n\x19requestSpecificProperties\x18\x03 \x01(\x0b\x32\x1f.RequestSpecificPropertiesProto\x12)\n\x0c\x61ssetRequest\x18\x04 \x01(\x0b\x32\x13.AssetsRequestProto\x12.\n\x0f\x63ommentsRequest\x18\x05 \x01(\x0b\x32\x15.CommentsRequestProto\x12\x38\n\x14modifyCommentRequest\x18\x06 \x01(\x0b\x32\x1a.ModifyCommentRequestProto\x12\x36\n\x13purchasePostRequest\x18\x07 \x01(\x0b\x32\x19.PurchasePostRequestProto\x12\x38\n\x14purchaseOrderRequest\x18\x08 \x01(\x0b\x32\x1a.PurchaseOrderRequestProto\x12\x34\n\x12\x63ontentSyncRequest\x18\t \x01(\x0b\x32\x18.ContentSyncRequestProto\x12.\n\x0fgetAssetRequest\x18\n \x01(\x0b\x32\x15.GetAssetRequestProto\x12.\n\x0fgetImageRequest\x18\x0b \x01(\x0b\x32\x15.GetImageRequestProto\x12*\n\rrefundRequest\x18\x0c \x01(\x0b\x32\x13.RefundRequestProto\x12>\n\x17purchaseMetadataRequest\x18\r \x01(\x0b\x32\x1d.PurchaseMetadataRequestProto\x12;\n\x14subCategoriesRequest\x18\x0e \x01(\x0b\x32\x1d.GetSubCategoriesRequestProto\x12<\n\x16uninstallReasonRequest\x18\x10 \x01(\x0b\x32\x1c.UninstallReasonRequestProto\x12\x34\n\x12rateCommentRequest\x18\x11 \x01(\x0b\x32\x18.RateCommentRequestProto\x12\x36\n\x13\x63heckLicenseRequest\x18\x12 \x01(\x0b\x32\x19.CheckLicenseRequestProto\x12@\n\x18getMarketMetadataRequest\x18\x13 \x01(\x0b\x32\x1e.GetMarketMetadataRequestProto\x12\x38\n\x14getCategoriesRequest\x18\x15 \x01(\x0b\x32\x1a.GetCategoriesRequestProto\x12:\n\x15getCarrierInfoRequest\x18\x16 \x01(\x0b\x32\x1b.GetCarrierInfoRequestProto\x12\x34\n\x12removeAssetRequest\x18\x17 \x01(\x0b\x32\x18.RemoveAssetRequestProto\x12\x44\n\x1arestoreApplicationsRequest\x18\x18 \x01(\x0b\x32 .RestoreApplicationsRequestProto\x12<\n\x16querySuggestionRequest\x18\x19 \x01(\x0b\x32\x1c.QuerySuggestionRequestProto\x12\x36\n\x13\x62illingEventRequest\x18\x1a \x01(\x0b\x32\x19.BillingEventRequestProto\x12@\n\x18paypalPreapprovalRequest\x18\x1b \x01(\x0b\x32\x1e.PaypalPreapprovalRequestProto\x12N\n\x1fpaypalPreapprovalDetailsRequest\x18\x1c \x01(\x0b\x32%.PaypalPreapprovalDetailsRequestProto\x12\x44\n\x1apaypalCreateAccountRequest\x18\x1d \x01(\x0b\x32 .PaypalCreateAccountRequestProto\x12V\n#paypalPreapprovalCredentialsRequest\x18\x1e \x01(\x0b\x32).PaypalPreapprovalCredentialsRequestProto\x12N\n\x1finAppRestoreTransactionsRequest\x18\x1f \x01(\x0b\x32%.InAppRestoreTransactionsRequestProto\x12N\n\x1finAppPurchaseInformationRequest\x18  \x01(\x0b\x32%.InAppPurchaseInformationRequestProto\x12H\n\x1c\x63heckForNotificationsRequest\x18! \x01(\x0b\x32\".CheckForNotificationsRequestProto\x12>\n\x17\x61\x63kNotificationsRequest\x18\" \x01(\x0b\x32\x1d.AckNotificationsRequestProto\x12<\n\x16purchaseProductRequest\x18# \x01(\x0b\x32\x1c.PurchaseProductRequestProto\x12\x44\n\x1areconstructDatabaseRequest\x18$ \x01(\x0b\x32 .ReconstructDatabaseRequestProto\x12\x46\n\x1bpaypalMassageAddressRequest\x18% \x01(\x0b\x32!.PaypalMassageAddressRequestProto\x12@\n\x18getAddressSnippetRequest\x18& \x01(\x0b\x32\x1e.GetAddressSnippetRequestProto\"5\n\x1eRequestSpecificPropertiesProto\x12\x13\n\x0bifNoneMatch\x18\x01 \x01(\t\"\xbe\x01\n\x17ResponsePropertiesProto\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06maxAge\x18\x02 \x01(\x05\x12\x0c\n\x04\x65tag\x18\x03 \x01(\t\x12\x15\n\rserverVersion\x18\x04 \x01(\x05\x12\x18\n\x10maxAgeConsumable\x18\x06 \x01(\x05\x12\x14\n\x0c\x65rrorMessage\x18\x07 \x01(\t\x12.\n\x0f\x65rrorInputField\x18\x08 \x03(\x0b\x32\x15.InputValidationError\"\xf7\x11\n\rResponseProto\x12)\n\x08response\x18\x01 \x03(\n2\x17.ResponseProto.Response\x12\x38\n\x14pendingNotifications\x18& \x01(\x0b\x32\x1a.PendingNotificationsProto\x1a\x80\x11\n\x08Response\x12\x34\n\x12responseProperties\x18\x02 \x01(\x0b\x32\x18.ResponsePropertiesProto\x12,\n\x0e\x61ssetsResponse\x18\x03 \x01(\x0b\x32\x14.AssetsResponseProto\x12\x30\n\x10\x63ommentsResponse\x18\x04 \x01(\x0b\x32\x16.CommentsResponseProto\x12:\n\x15modifyCommentResponse\x18\x05 \x01(\x0b\x32\x1b.ModifyCommentResponseProto\x12\x38\n\x14purchasePostResponse\x18\x06 \x01(\x0b\x32\x1a.PurchasePostResponseProto\x12:\n\x15purchaseOrderResponse\x18\x07 \x01(\x0b\x32\x1b.PurchaseOrderResponseProto\x12\x36\n\x13\x63ontentSyncResponse\x18\x08 \x01(\x0b\x32\x19.ContentSyncResponseProto\x12\x30\n\x10getAssetResponse\x18\t \x01(\x0b\x32\x16.GetAssetResponseProto\x12\x30\n\x10getImageResponse\x18\n \x01(\x0b\x32\x16.GetImageResponseProto\x12,\n\x0erefundResponse\x18\x0b \x01(\x0b\x32\x14.RefundResponseProto\x12@\n\x18purchaseMetadataResponse\x18\x0c \x01(\x0b\x32\x1e.PurchaseMetadataResponseProto\x12=\n\x15subCategoriesResponse\x18\r \x01(\x0b\x32\x1e.GetSubCategoriesResponseProto\x12>\n\x17uninstallReasonResponse\x18\x0f \x01(\x0b\x32\x1d.UninstallReasonResponseProto\x12\x36\n\x13rateCommentResponse\x18\x10 \x01(\x0b\x32\x19.RateCommentResponseProto\x12\x38\n\x14\x63heckLicenseResponse\x18\x11 \x01(\x0b\x32\x1a.CheckLicenseResponseProto\x12\x42\n\x19getMarketMetadataResponse\x18\x12 \x01(\x0b\x32\x1f.GetMarketMetadataResponseProto\x12\x30\n\x10prefetchedBundle\x18\x13 \x03(\x0b\x32\x16.PrefetchedBundleProto\x12:\n\x15getCategoriesResponse\x18\x14 \x01(\x0b\x32\x1b.GetCategoriesResponseProto\x12<\n\x16getCarrierInfoResponse\x18\x15 \x01(\x0b\x32\x1c.GetCarrierInfoResponseProto\x12\x45\n\x1arestoreApplicationResponse\x18\x17 \x01(\x0b\x32!.RestoreApplicationsResponseProto\x12>\n\x17querySuggestionResponse\x18\x18 \x01(\x0b\x32\x1d.QuerySuggestionResponseProto\x12\x38\n\x14\x62illingEventResponse\x18\x19 \x01(\x0b\x32\x1a.BillingEventResponseProto\x12\x42\n\x19paypalPreapprovalResponse\x18\x1a \x01(\x0b\x32\x1f.PaypalPreapprovalResponseProto\x12P\n paypalPreapprovalDetailsResponse\x18\x1b \x01(\x0b\x32&.PaypalPreapprovalDetailsResponseProto\x12\x46\n\x1bpaypalCreateAccountResponse\x18\x1c \x01(\x0b\x32!.PaypalCreateAccountResponseProto\x12X\n$paypalPreapprovalCredentialsResponse\x18\x1d \x01(\x0b\x32*.PaypalPreapprovalCredentialsResponseProto\x12P\n inAppRestoreTransactionsResponse\x18\x1e \x01(\x0b\x32&.InAppRestoreTransactionsResponseProto\x12P\n inAppPurchaseInformationResponse\x18\x1f \x01(\x0b\x32&.InAppPurchaseInformationResponseProto\x12J\n\x1d\x63heckForNotificationsResponse\x18  \x01(\x0b\x32#.CheckForNotificationsResponseProto\x12@\n\x18\x61\x63kNotificationsResponse\x18! \x01(\x0b\x32\x1e.AckNotificationsResponseProto\x12>\n\x17purchaseProductResponse\x18\" \x01(\x0b\x32\x1d.PurchaseProductResponseProto\x12\x46\n\x1breconstructDatabaseResponse\x18# \x01(\x0b\x32!.ReconstructDatabaseResponseProto\x12H\n\x1cpaypalMassageAddressResponse\x18$ \x01(\x0b\x32\".PaypalMassageAddressResponseProto\x12\x42\n\x19getAddressSnippetResponse\x18% \x01(\x0b\x32\x1f.GetAddressSnippetResponseProto\"\x86\x01\n\x1fRestoreApplicationsRequestProto\x12\x17\n\x0f\x62\x61\x63kupAndroidId\x18\x01 \x01(\t\x12\x12\n\ntosVersion\x18\x02 \x01(\t\x12\x36\n\x13\x64\x65viceConfiguration\x18\x03 \x01(\x0b\x32\x19.DeviceConfigurationProto\"I\n RestoreApplicationsResponseProto\x12%\n\x05\x61sset\x18\x01 \x03(\x0b\x32\x16.GetAssetResponseProto\"/\n\x13RiskHeaderInfoProto\x12\x18\n\x10hashedDeviceInfo\x18\x01 \x01(\t\"L\n\x12SignatureHashProto\x12\x13\n\x0bpackageName\x18\x01 \x01(\t\x12\x13\n\x0bversionCode\x18\x02 \x01(\x05\x12\x0c\n\x04hash\x18\x03 \x01(\x0c\"8\n\x0fSignedDataProto\x12\x12\n\nsignedData\x18\x01 \x01(\t\x12\x11\n\tsignature\x18\x02 \x01(\t\"\xdf\x10\n\x12SingleRequestProto\x12\x42\n\x19requestSpecificProperties\x18\x03 \x01(\x0b\x32\x1f.RequestSpecificPropertiesProto\x12)\n\x0c\x61ssetRequest\x18\x04 \x01(\x0b\x32\x13.AssetsRequestProto\x12.\n\x0f\x63ommentsRequest\x18\x05 \x01(\x0b\x32\x15.CommentsRequestProto\x12\x38\n\x14modifyCommentRequest\x18\x06 \x01(\x0b\x32\x1a.ModifyCommentRequestProto\x12\x36\n\x13purchasePostRequest\x18\x07 \x01(\x0b\x32\x19.PurchasePostRequestProto\x12\x38\n\x14purchaseOrderRequest\x18\x08 \x01(\x0b\x32\x1a.PurchaseOrderRequestProto\x12\x34\n\x12\x63ontentSyncRequest\x18\t \x01(\x0b\x32\x18.ContentSyncRequestProto\x12.\n\x0fgetAssetRequest\x18\n \x01(\x0b\x32\x15.GetAssetRequestProto\x12.\n\x0fgetImageRequest\x18\x0b \x01(\x0b\x32\x15.GetImageRequestProto\x12*\n\rrefundRequest\x18\x0c \x01(\x0b\x32\x13.RefundRequestProto\x12>\n\x17purchaseMetadataRequest\x18\r \x01(\x0b\x32\x1d.PurchaseMetadataRequestProto\x12;\n\x14subCategoriesRequest\x18\x0e \x01(\x0b\x32\x1d.GetSubCategoriesRequestProto\x12<\n\x16uninstallReasonRequest\x18\x10 \x01(\x0b\x32\x1c.UninstallReasonRequestProto\x12\x34\n\x12rateCommentRequest\x18\x11 \x01(\x0b\x32\x18.RateCommentRequestProto\x12\x36\n\x13\x63heckLicenseRequest\x18\x12 \x01(\x0b\x32\x19.CheckLicenseRequestProto\x12@\n\x18getMarketMetadataRequest\x18\x13 \x01(\x0b\x32\x1e.GetMarketMetadataRequestProto\x12\x38\n\x14getCategoriesRequest\x18\x15 \x01(\x0b\x32\x1a.GetCategoriesRequestProto\x12:\n\x15getCarrierInfoRequest\x18\x16 \x01(\x0b\x32\x1b.GetCarrierInfoRequestProto\x12\x34\n\x12removeAssetRequest\x18\x17 \x01(\x0b\x32\x18.RemoveAssetRequestProto\x12\x44\n\x1arestoreApplicationsRequest\x18\x18 \x01(\x0b\x32 .RestoreApplicationsRequestProto\x12<\n\x16querySuggestionRequest\x18\x19 \x01(\x0b\x32\x1c.QuerySuggestionRequestProto\x12\x36\n\x13\x62illingEventRequest\x18\x1a \x01(\x0b\x32\x19.BillingEventRequestProto\x12@\n\x18paypalPreapprovalRequest\x18\x1b \x01(\x0b\x32\x1e.PaypalPreapprovalRequestProto\x12N\n\x1fpaypalPreapprovalDetailsRequest\x18\x1c \x01(\x0b\x32%.PaypalPreapprovalDetailsRequestProto\x12\x44\n\x1apaypalCreateAccountRequest\x18\x1d \x01(\x0b\x32 .PaypalCreateAccountRequestProto\x12V\n#paypalPreapprovalCredentialsRequest\x18\x1e \x01(\x0b\x32).PaypalPreapprovalCredentialsRequestProto\x12N\n\x1finAppRestoreTransactionsRequest\x18\x1f \x01(\x0b\x32%.InAppRestoreTransactionsRequestProto\x12Q\n\"getInAppPurchaseInformationRequest\x18  \x01(\x0b\x32%.InAppPurchaseInformationRequestProto\x12H\n\x1c\x63heckForNotificationsRequest\x18! \x01(\x0b\x32\".CheckForNotificationsRequestProto\x12>\n\x17\x61\x63kNotificationsRequest\x18\" \x01(\x0b\x32\x1d.AckNotificationsRequestProto\x12<\n\x16purchaseProductRequest\x18# \x01(\x0b\x32\x1c.PurchaseProductRequestProto\x12\x44\n\x1areconstructDatabaseRequest\x18$ \x01(\x0b\x32 .ReconstructDatabaseRequestProto\x12\x46\n\x1bpaypalMassageAddressRequest\x18% \x01(\x0b\x32!.PaypalMassageAddressRequestProto\x12@\n\x18getAddressSnippetRequest\x18& \x01(\x0b\x32\x1e.GetAddressSnippetRequestProto\"\xdc\x10\n\x13SingleResponseProto\x12\x34\n\x12responseProperties\x18\x02 \x01(\x0b\x32\x18.ResponsePropertiesProto\x12,\n\x0e\x61ssetsResponse\x18\x03 \x01(\x0b\x32\x14.AssetsResponseProto\x12\x30\n\x10\x63ommentsResponse\x18\x04 \x01(\x0b\x32\x16.CommentsResponseProto\x12:\n\x15modifyCommentResponse\x18\x05 \x01(\x0b\x32\x1b.ModifyCommentResponseProto\x12\x38\n\x14purchasePostResponse\x18\x06 \x01(\x0b\x32\x1a.PurchasePostResponseProto\x12:\n\x15purchaseOrderResponse\x18\x07 \x01(\x0b\x32\x1b.PurchaseOrderResponseProto\x12\x36\n\x13\x63ontentSyncResponse\x18\x08 \x01(\x0b\x32\x19.ContentSyncResponseProto\x12\x30\n\x10getAssetResponse\x18\t \x01(\x0b\x32\x16.GetAssetResponseProto\x12\x30\n\x10getImageResponse\x18\n \x01(\x0b\x32\x16.GetImageResponseProto\x12,\n\x0erefundResponse\x18\x0b \x01(\x0b\x32\x14.RefundResponseProto\x12@\n\x18purchaseMetadataResponse\x18\x0c \x01(\x0b\x32\x1e.PurchaseMetadataResponseProto\x12=\n\x15subCategoriesResponse\x18\r \x01(\x0b\x32\x1e.GetSubCategoriesResponseProto\x12>\n\x17uninstallReasonResponse\x18\x0f \x01(\x0b\x32\x1d.UninstallReasonResponseProto\x12\x36\n\x13rateCommentResponse\x18\x10 \x01(\x0b\x32\x19.RateCommentResponseProto\x12\x38\n\x14\x63heckLicenseResponse\x18\x11 \x01(\x0b\x32\x1a.CheckLicenseResponseProto\x12\x42\n\x19getMarketMetadataResponse\x18\x12 \x01(\x0b\x32\x1f.GetMarketMetadataResponseProto\x12:\n\x15getCategoriesResponse\x18\x14 \x01(\x0b\x32\x1b.GetCategoriesResponseProto\x12<\n\x16getCarrierInfoResponse\x18\x15 \x01(\x0b\x32\x1c.GetCarrierInfoResponseProto\x12\x45\n\x1arestoreApplicationResponse\x18\x17 \x01(\x0b\x32!.RestoreApplicationsResponseProto\x12>\n\x17querySuggestionResponse\x18\x18 \x01(\x0b\x32\x1d.QuerySuggestionResponseProto\x12\x38\n\x14\x62illingEventResponse\x18\x19 \x01(\x0b\x32\x1a.BillingEventResponseProto\x12\x42\n\x19paypalPreapprovalResponse\x18\x1a \x01(\x0b\x32\x1f.PaypalPreapprovalResponseProto\x12P\n paypalPreapprovalDetailsResponse\x18\x1b \x01(\x0b\x32&.PaypalPreapprovalDetailsResponseProto\x12\x46\n\x1bpaypalCreateAccountResponse\x18\x1c \x01(\x0b\x32!.PaypalCreateAccountResponseProto\x12X\n$paypalPreapprovalCredentialsResponse\x18\x1d \x01(\x0b\x32*.PaypalPreapprovalCredentialsResponseProto\x12P\n inAppRestoreTransactionsResponse\x18\x1e \x01(\x0b\x32&.InAppRestoreTransactionsResponseProto\x12S\n#getInAppPurchaseInformationResponse\x18\x1f \x01(\x0b\x32&.InAppPurchaseInformationResponseProto\x12J\n\x1d\x63heckForNotificationsResponse\x18  \x01(\x0b\x32#.CheckForNotificationsResponseProto\x12@\n\x18\x61\x63kNotificationsResponse\x18! \x01(\x0b\x32\x1e.AckNotificationsResponseProto\x12>\n\x17purchaseProductResponse\x18\" \x01(\x0b\x32\x1d.PurchaseProductResponseProto\x12\x46\n\x1breconstructDatabaseResponse\x18# \x01(\x0b\x32!.ReconstructDatabaseResponseProto\x12H\n\x1cpaypalMassageAddressResponse\x18$ \x01(\x0b\x32\".PaypalMassageAddressResponseProto\x12\x42\n\x19getAddressSnippetResponse\x18% \x01(\x0b\x32\x1f.GetAddressSnippetResponseProto\"[\n\x1aStatusBarNotificationProto\x12\x12\n\ntickerText\x18\x01 \x01(\t\x12\x14\n\x0c\x63ontentTitle\x18\x02 \x01(\t\x12\x13\n\x0b\x63ontentText\x18\x03 \x01(\t\">\n\x1bUninstallReasonRequestProto\x12\x0f\n\x07\x61ssetId\x18\x01 \x01(\t\x12\x0e\n\x06reason\x18\x02 \x01(\x05\"\x1e\n\x1cUninstallReasonResponseProto')
 
 
 
@@ -7781,84 +7781,70 @@ _REVIEW = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='authorName', full_name='Review.authorName', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='url', full_name='Review.url', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='source', full_name='Review.source', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='documentVersion', full_name='Review.documentVersion', index=3,
+      name='documentVersion', full_name='Review.documentVersion', index=0,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='timestampMsec', full_name='Review.timestampMsec', index=4,
+      name='timestampMsec', full_name='Review.timestampMsec', index=1,
       number=5, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='starRating', full_name='Review.starRating', index=5,
+      name='starRating', full_name='Review.starRating', index=2,
       number=6, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='title', full_name='Review.title', index=6,
+      name='title', full_name='Review.title', index=3,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='comment', full_name='Review.comment', index=7,
+      name='comment', full_name='Review.comment', index=4,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='commentId', full_name='Review.commentId', index=8,
+      name='commentId', full_name='Review.commentId', index=5,
       number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='deviceName', full_name='Review.deviceName', index=9,
+      name='author', full_name='Review.author', index=6,
+      number=33, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='deviceName', full_name='Review.deviceName', index=7,
       number=19, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='replyText', full_name='Review.replyText', index=10,
+      name='replyText', full_name='Review.replyText', index=8,
       number=29, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='replyTimestampMsec', full_name='Review.replyTimestampMsec', index=11,
+      name='replyTimestampMsec', full_name='Review.replyTimestampMsec', index=9,
       number=30, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -7874,7 +7860,84 @@ _REVIEW = _descriptor.Descriptor(
   is_extendable=False,
   extension_ranges=[],
   serialized_start=21436,
-  serialized_end=21679,
+  serialized_end=21659,
+)
+
+
+_GOOGLEUSER = _descriptor.Descriptor(
+  name='GoogleUser',
+  full_name='GoogleUser',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='docId', full_name='GoogleUser.docId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='userId', full_name='GoogleUser.userId', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='unknown1', full_name='GoogleUser.unknown1', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='unknown2', full_name='GoogleUser.unknown2', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='GoogleUser.name', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='image', full_name='GoogleUser.image', index=5,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='playStoreUrl', full_name='GoogleUser.playStoreUrl', index=6,
+      number=16, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='googlePlusUrl', full_name='GoogleUser.googlePlusUrl', index=7,
+      number=19, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=21662,
+  serialized_end=21823,
 )
 
 
@@ -7908,8 +7971,8 @@ _REVIEWRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=21681,
-  serialized_end=21760,
+  serialized_start=21825,
+  serialized_end=21904,
 )
 
 
@@ -7936,8 +7999,8 @@ _REVOKERESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=21762,
-  serialized_end=21817,
+  serialized_start=21906,
+  serialized_end=21961,
 )
 
 
@@ -7992,8 +8055,8 @@ _RELATEDSEARCH = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=21819,
-  serialized_end=21922,
+  serialized_start=21963,
+  serialized_end=22066,
 )
 
 
@@ -8055,8 +8118,8 @@ _SEARCHRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=21925,
-  serialized_end=22097,
+  serialized_start=22069,
+  serialized_end=22241,
 )
 
 
@@ -8104,8 +8167,8 @@ _CORPUSMETADATA = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=22099,
-  serialized_end=22187,
+  serialized_start=22243,
+  serialized_end=22331,
 )
 
 
@@ -8132,8 +8195,8 @@ _EXPERIMENTS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=22189,
-  serialized_end=22224,
+  serialized_start=22333,
+  serialized_end=22368,
 )
 
 
@@ -8216,8 +8279,8 @@ _TOCRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=22227,
-  serialized_end=22495,
+  serialized_start=22371,
+  serialized_end=22639,
 )
 
 
@@ -8244,8 +8307,8 @@ _USERSETTINGS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=22497,
-  serialized_end=22554,
+  serialized_start=22641,
+  serialized_end=22698,
 )
 
 
@@ -8265,8 +8328,8 @@ _ACCEPTTOSRESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=22556,
-  serialized_end=22575,
+  serialized_start=22700,
+  serialized_end=22719,
 )
 
 
@@ -8307,8 +8370,8 @@ _ACKNOTIFICATIONSREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=22577,
-  serialized_end=22703,
+  serialized_start=22721,
+  serialized_end=22847,
 )
 
 
@@ -8328,8 +8391,8 @@ _ACKNOTIFICATIONSRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=22705,
-  serialized_end=22736,
+  serialized_start=22849,
+  serialized_end=22880,
 )
 
 
@@ -8412,8 +8475,8 @@ _ADDRESSPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=22739,
-  serialized_end=22898,
+  serialized_start=22883,
+  serialized_end=23042,
 )
 
 
@@ -8447,8 +8510,8 @@ _APPDATAPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=22900,
-  serialized_end=22942,
+  serialized_start=23044,
+  serialized_end=23086,
 )
 
 
@@ -8475,8 +8538,8 @@ _APPSUGGESTIONPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=22944,
-  serialized_end=23004,
+  serialized_start=23088,
+  serialized_end=23148,
 )
 
 
@@ -8517,8 +8580,8 @@ _ASSETIDENTIFIERPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=23006,
-  serialized_end=23087,
+  serialized_start=23150,
+  serialized_end=23231,
 )
 
 
@@ -8650,8 +8713,8 @@ _ASSETSREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=23090,
-  serialized_end=23486,
+  serialized_start=23234,
+  serialized_end=23630,
 )
 
 
@@ -8720,8 +8783,8 @@ _ASSETSRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=23489,
-  serialized_end=23697,
+  serialized_start=23633,
+  serialized_end=23841,
 )
 
 
@@ -8776,8 +8839,8 @@ _BILLINGEVENTREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=23700,
-  serialized_end=23887,
+  serialized_start=23844,
+  serialized_end=24031,
 )
 
 
@@ -8797,8 +8860,8 @@ _BILLINGEVENTRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=23889,
-  serialized_end=23916,
+  serialized_start=24033,
+  serialized_end=24060,
 )
 
 
@@ -8930,8 +8993,8 @@ _BILLINGPARAMETERPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=23919,
-  serialized_end=24363,
+  serialized_start=24063,
+  serialized_end=24507,
 )
 
 
@@ -8965,8 +9028,8 @@ _CARRIERBILLINGCREDENTIALSPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=24365,
-  serialized_end=24446,
+  serialized_start=24509,
+  serialized_end=24590,
 )
 
 
@@ -9049,8 +9112,8 @@ _CATEGORYPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=24449,
-  serialized_end=24704,
+  serialized_start=24593,
+  serialized_end=24848,
 )
 
 
@@ -9077,8 +9140,8 @@ _CHECKFORNOTIFICATIONSREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=24706,
-  serialized_end=24764,
+  serialized_start=24850,
+  serialized_end=24908,
 )
 
 
@@ -9098,8 +9161,8 @@ _CHECKFORNOTIFICATIONSRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=24766,
-  serialized_end=24802,
+  serialized_start=24910,
+  serialized_end=24946,
 )
 
 
@@ -9140,8 +9203,8 @@ _CHECKLICENSEREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=24804,
-  serialized_end=24887,
+  serialized_start=24948,
+  serialized_end=25031,
 )
 
 
@@ -9182,8 +9245,8 @@ _CHECKLICENSERESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=24889,
-  serialized_end=24977,
+  serialized_start=25033,
+  serialized_end=25121,
 )
 
 
@@ -9238,8 +9301,8 @@ _COMMENTSREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=24980,
-  serialized_end=25115,
+  serialized_start=25124,
+  serialized_end=25259,
 )
 
 
@@ -9280,8 +9343,8 @@ _COMMENTSRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=25118,
-  serialized_end=25250,
+  serialized_start=25262,
+  serialized_end=25394,
 )
 
 
@@ -9350,8 +9413,8 @@ _CONTENTSYNCREQUESTPROTO_ASSETINSTALLSTATE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=25456,
-  serialized_end=25621,
+  serialized_start=25600,
+  serialized_end=25765,
 )
 
 _CONTENTSYNCREQUESTPROTO_SYSTEMAPP = _descriptor.Descriptor(
@@ -9391,8 +9454,8 @@ _CONTENTSYNCREQUESTPROTO_SYSTEMAPP = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=25623,
-  serialized_end=25701,
+  serialized_start=25767,
+  serialized_end=25845,
 )
 
 _CONTENTSYNCREQUESTPROTO = _descriptor.Descriptor(
@@ -9439,8 +9502,8 @@ _CONTENTSYNCREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=25253,
-  serialized_end=25701,
+  serialized_start=25397,
+  serialized_end=25845,
 )
 
 
@@ -9467,8 +9530,8 @@ _CONTENTSYNCRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=25703,
-  serialized_end=25758,
+  serialized_start=25847,
+  serialized_end=25902,
 )
 
 
@@ -9502,8 +9565,8 @@ _DATAMESSAGEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=25760,
-  serialized_end=25828,
+  serialized_start=25904,
+  serialized_end=25972,
 )
 
 
@@ -9537,8 +9600,8 @@ _DOWNLOADINFOPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=25830,
-  serialized_end=25910,
+  serialized_start=25974,
+  serialized_end=26054,
 )
 
 
@@ -9586,8 +9649,8 @@ _EXTERNALASSETPROTO_PURCHASEINFORMATION = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=26451,
-  serialized_end=26578,
+  serialized_start=26595,
+  serialized_end=26722,
 )
 
 _EXTERNALASSETPROTO_EXTENDEDINFO_PACKAGEDEPENDENCY = _descriptor.Descriptor(
@@ -9620,8 +9683,8 @@ _EXTERNALASSETPROTO_EXTENDEDINFO_PACKAGEDEPENDENCY = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=27230,
-  serialized_end=27295,
+  serialized_start=27374,
+  serialized_end=27439,
 )
 
 _EXTERNALASSETPROTO_EXTENDEDINFO = _descriptor.Descriptor(
@@ -9794,8 +9857,8 @@ _EXTERNALASSETPROTO_EXTENDEDINFO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=26581,
-  serialized_end=27295,
+  serialized_start=26725,
+  serialized_end=27439,
 )
 
 _EXTERNALASSETPROTO = _descriptor.Descriptor(
@@ -9954,8 +10017,8 @@ _EXTERNALASSETPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=25913,
-  serialized_end=27295,
+  serialized_start=26057,
+  serialized_end=27439,
 )
 
 
@@ -9989,8 +10052,8 @@ _EXTERNALBADGEIMAGEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=27297,
-  serialized_end=27350,
+  serialized_start=27441,
+  serialized_end=27494,
 )
 
 
@@ -10038,8 +10101,8 @@ _EXTERNALBADGEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=27353,
-  serialized_end=27491,
+  serialized_start=27497,
+  serialized_end=27635,
 )
 
 
@@ -10150,8 +10213,8 @@ _EXTERNALCARRIERBILLINGINSTRUMENTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=27494,
-  serialized_end=27846,
+  serialized_start=27638,
+  serialized_end=27990,
 )
 
 
@@ -10206,8 +10269,8 @@ _EXTERNALCOMMENTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=27848,
-  serialized_end=27962,
+  serialized_start=27992,
+  serialized_end=28106,
 )
 
 
@@ -10318,8 +10381,8 @@ _EXTERNALCREDITCARD = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=27965,
-  serialized_end=28216,
+  serialized_start=28109,
+  serialized_end=28360,
 )
 
 
@@ -10374,8 +10437,8 @@ _EXTERNALPAYPALINSTRUMENTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=28219,
-  serialized_end=28400,
+  serialized_start=28363,
+  serialized_end=28544,
 )
 
 
@@ -10423,8 +10486,8 @@ _FILEMETADATAPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=28402,
-  serialized_end=28495,
+  serialized_start=28546,
+  serialized_end=28639,
 )
 
 
@@ -10451,8 +10514,8 @@ _GETADDRESSSNIPPETREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=28497,
-  serialized_end=28587,
+  serialized_start=28641,
+  serialized_end=28731,
 )
 
 
@@ -10479,8 +10542,8 @@ _GETADDRESSSNIPPETRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=28589,
-  serialized_end=28645,
+  serialized_start=28733,
+  serialized_end=28789,
 )
 
 
@@ -10514,8 +10577,8 @@ _GETASSETREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=28647,
-  serialized_end=28713,
+  serialized_start=28791,
+  serialized_end=28857,
 )
 
 
@@ -10633,8 +10696,8 @@ _GETASSETRESPONSEPROTO_INSTALLASSET = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=28845,
-  serialized_end=29190,
+  serialized_start=28989,
+  serialized_end=29334,
 )
 
 _GETASSETRESPONSEPROTO = _descriptor.Descriptor(
@@ -10667,8 +10730,8 @@ _GETASSETRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=28716,
-  serialized_end=29190,
+  serialized_start=28860,
+  serialized_end=29334,
 )
 
 
@@ -10688,8 +10751,8 @@ _GETCARRIERINFOREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=29192,
-  serialized_end=29220,
+  serialized_start=29336,
+  serialized_end=29364,
 )
 
 
@@ -10751,8 +10814,8 @@ _GETCARRIERINFORESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=29223,
-  serialized_end=29407,
+  serialized_start=29367,
+  serialized_end=29551,
 )
 
 
@@ -10779,8 +10842,8 @@ _GETCATEGORIESREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=29409,
-  serialized_end=29463,
+  serialized_start=29553,
+  serialized_end=29607,
 )
 
 
@@ -10807,8 +10870,8 @@ _GETCATEGORIESRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=29465,
-  serialized_end=29529,
+  serialized_start=29609,
+  serialized_end=29673,
 )
 
 
@@ -10877,8 +10940,8 @@ _GETIMAGEREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=29532,
-  serialized_end=29719,
+  serialized_start=29676,
+  serialized_end=29863,
 )
 
 
@@ -10912,8 +10975,8 @@ _GETIMAGERESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=29721,
-  serialized_end=29785,
+  serialized_start=29865,
+  serialized_end=29929,
 )
 
 
@@ -10982,8 +11045,8 @@ _GETMARKETMETADATAREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=29788,
-  serialized_end=30032,
+  serialized_start=29932,
+  serialized_end=30176,
 )
 
 
@@ -11066,8 +11129,8 @@ _GETMARKETMETADATARESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=30035,
-  serialized_end=30346,
+  serialized_start=30179,
+  serialized_end=30490,
 )
 
 
@@ -11094,8 +11157,8 @@ _GETSUBCATEGORIESREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=30348,
-  serialized_end=30397,
+  serialized_start=30492,
+  serialized_end=30541,
 )
 
 
@@ -11129,8 +11192,8 @@ _GETSUBCATEGORIESRESPONSEPROTO_SUBCATEGORY = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=30498,
-  serialized_end=30562,
+  serialized_start=30642,
+  serialized_end=30706,
 )
 
 _GETSUBCATEGORIESRESPONSEPROTO = _descriptor.Descriptor(
@@ -11156,8 +11219,8 @@ _GETSUBCATEGORIESRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=30400,
-  serialized_end=30562,
+  serialized_start=30544,
+  serialized_end=30706,
 )
 
 
@@ -11212,8 +11275,8 @@ _INAPPPURCHASEINFORMATIONREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=30565,
-  serialized_end=30741,
+  serialized_start=30709,
+  serialized_end=30885,
 )
 
 
@@ -11254,8 +11317,8 @@ _INAPPPURCHASEINFORMATIONRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=30744,
-  serialized_end=30931,
+  serialized_start=30888,
+  serialized_end=31075,
 )
 
 
@@ -11303,8 +11366,8 @@ _INAPPRESTORETRANSACTIONSREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=30934,
-  serialized_end=31086,
+  serialized_start=31078,
+  serialized_end=31230,
 )
 
 
@@ -11338,8 +11401,8 @@ _INAPPRESTORETRANSACTIONSRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=31088,
-  serialized_end=31215,
+  serialized_start=31232,
+  serialized_end=31359,
 )
 
 
@@ -11408,8 +11471,8 @@ _MODIFYCOMMENTREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=31218,
-  serialized_end=31404,
+  serialized_start=31362,
+  serialized_end=31548,
 )
 
 
@@ -11429,8 +11492,8 @@ _MODIFYCOMMENTRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=31406,
-  serialized_end=31434,
+  serialized_start=31550,
+  serialized_end=31578,
 )
 
 
@@ -11478,8 +11541,8 @@ _PAYPALCOUNTRYINFOPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=31436,
-  serialized_end=31554,
+  serialized_start=31580,
+  serialized_end=31698,
 )
 
 
@@ -11527,8 +11590,8 @@ _PAYPALCREATEACCOUNTREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=31556,
-  serialized_end=31677,
+  serialized_start=31700,
+  serialized_end=31821,
 )
 
 
@@ -11555,8 +11618,8 @@ _PAYPALCREATEACCOUNTRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=31679,
-  serialized_end=31739,
+  serialized_start=31823,
+  serialized_end=31883,
 )
 
 
@@ -11590,8 +11653,8 @@ _PAYPALCREDENTIALSPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=31741,
-  serialized_end=31810,
+  serialized_start=31885,
+  serialized_end=31954,
 )
 
 
@@ -11618,8 +11681,8 @@ _PAYPALMASSAGEADDRESSREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=31812,
-  serialized_end=31878,
+  serialized_start=31956,
+  serialized_end=32022,
 )
 
 
@@ -11646,8 +11709,8 @@ _PAYPALMASSAGEADDRESSRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=31880,
-  serialized_end=31947,
+  serialized_start=32024,
+  serialized_end=32091,
 )
 
 
@@ -11681,8 +11744,8 @@ _PAYPALPREAPPROVALCREDENTIALSREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=31949,
-  serialized_end=32043,
+  serialized_start=32093,
+  serialized_end=32187,
 )
 
 
@@ -11723,8 +11786,8 @@ _PAYPALPREAPPROVALCREDENTIALSRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32045,
-  serialized_end=32155,
+  serialized_start=32189,
+  serialized_end=32299,
 )
 
 
@@ -11758,8 +11821,8 @@ _PAYPALPREAPPROVALDETAILSREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32157,
-  serialized_end=32239,
+  serialized_start=32301,
+  serialized_end=32383,
 )
 
 
@@ -11793,8 +11856,8 @@ _PAYPALPREAPPROVALDETAILSRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32241,
-  serialized_end=32333,
+  serialized_start=32385,
+  serialized_end=32477,
 )
 
 
@@ -11814,8 +11877,8 @@ _PAYPALPREAPPROVALREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32335,
-  serialized_end=32366,
+  serialized_start=32479,
+  serialized_end=32510,
 )
 
 
@@ -11842,8 +11905,8 @@ _PAYPALPREAPPROVALRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32368,
-  serialized_end=32424,
+  serialized_start=32512,
+  serialized_end=32568,
 )
 
 
@@ -11877,8 +11940,8 @@ _PENDINGNOTIFICATIONSPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32426,
-  serialized_end=32519,
+  serialized_start=32570,
+  serialized_end=32663,
 )
 
 
@@ -11912,8 +11975,8 @@ _PREFETCHEDBUNDLEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32521,
-  serialized_end=32622,
+  serialized_start=32665,
+  serialized_end=32766,
 )
 
 
@@ -11989,8 +12052,8 @@ _PURCHASECARTINFOPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32625,
-  serialized_end=32813,
+  serialized_start=32769,
+  serialized_end=32957,
 )
 
 
@@ -12045,8 +12108,8 @@ _PURCHASEINFOPROTO_BILLINGINSTRUMENTS_BILLINGINSTRUMENT = _descriptor.Descriptor
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=33233,
-  serialized_end=33347,
+  serialized_start=33377,
+  serialized_end=33491,
 )
 
 _PURCHASEINFOPROTO_BILLINGINSTRUMENTS = _descriptor.Descriptor(
@@ -12079,8 +12142,8 @@ _PURCHASEINFOPROTO_BILLINGINSTRUMENTS = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=33091,
-  serialized_end=33347,
+  serialized_start=33235,
+  serialized_end=33491,
 )
 
 _PURCHASEINFOPROTO = _descriptor.Descriptor(
@@ -12155,8 +12218,8 @@ _PURCHASEINFOPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=32816,
-  serialized_end=33347,
+  serialized_start=32960,
+  serialized_end=33491,
 )
 
 
@@ -12190,8 +12253,8 @@ _PURCHASEMETADATAREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=33349,
-  serialized_end=33454,
+  serialized_start=33493,
+  serialized_end=33598,
 )
 
 
@@ -12225,8 +12288,8 @@ _PURCHASEMETADATARESPONSEPROTO_COUNTRIES_COUNTRY_INSTRUMENTADDRESSSPEC = _descri
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=33878,
-  serialized_end=33976,
+  serialized_start=34022,
+  serialized_end=34120,
 )
 
 _PURCHASEMETADATARESPONSEPROTO_COUNTRIES_COUNTRY = _descriptor.Descriptor(
@@ -12280,8 +12343,8 @@ _PURCHASEMETADATARESPONSEPROTO_COUNTRIES_COUNTRY = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=33633,
-  serialized_end=33976,
+  serialized_start=33777,
+  serialized_end=34120,
 )
 
 _PURCHASEMETADATARESPONSEPROTO_COUNTRIES = _descriptor.Descriptor(
@@ -12307,8 +12370,8 @@ _PURCHASEMETADATARESPONSEPROTO_COUNTRIES = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=33552,
-  serialized_end=33976,
+  serialized_start=33696,
+  serialized_end=34120,
 )
 
 _PURCHASEMETADATARESPONSEPROTO = _descriptor.Descriptor(
@@ -12334,8 +12397,8 @@ _PURCHASEMETADATARESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=33457,
-  serialized_end=33976,
+  serialized_start=33601,
+  serialized_end=34120,
 )
 
 
@@ -12453,8 +12516,8 @@ _PURCHASEORDERREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=33979,
-  serialized_end=34461,
+  serialized_start=34123,
+  serialized_end=34605,
 )
 
 
@@ -12502,8 +12565,8 @@ _PURCHASEORDERRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=34464,
-  serialized_end=34646,
+  serialized_start=34608,
+  serialized_end=34790,
 )
 
 
@@ -12551,8 +12614,8 @@ _PURCHASEPOSTREQUESTPROTO_BILLINGINSTRUMENTINFO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=34961,
-  serialized_end=35179,
+  serialized_start=35105,
+  serialized_end=35323,
 )
 
 _PURCHASEPOSTREQUESTPROTO = _descriptor.Descriptor(
@@ -12634,8 +12697,8 @@ _PURCHASEPOSTREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=34649,
-  serialized_end=35179,
+  serialized_start=34793,
+  serialized_end=35323,
 )
 
 
@@ -12711,8 +12774,8 @@ _PURCHASEPOSTRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35182,
-  serialized_end=35480,
+  serialized_start=35326,
+  serialized_end=35624,
 )
 
 
@@ -12753,8 +12816,8 @@ _PURCHASEPRODUCTREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35482,
-  serialized_end=35595,
+  serialized_start=35626,
+  serialized_end=35739,
 )
 
 
@@ -12802,8 +12865,8 @@ _PURCHASEPRODUCTRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35597,
-  serialized_end=35709,
+  serialized_start=35741,
+  serialized_end=35853,
 )
 
 
@@ -12837,8 +12900,8 @@ _PURCHASERESULTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35711,
-  serialized_end=35779,
+  serialized_start=35855,
+  serialized_end=35923,
 )
 
 
@@ -12879,8 +12942,8 @@ _QUERYSUGGESTIONPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35781,
-  serialized_end=35868,
+  serialized_start=35925,
+  serialized_end=36012,
 )
 
 
@@ -12914,8 +12977,8 @@ _QUERYSUGGESTIONREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35870,
-  serialized_end=35935,
+  serialized_start=36014,
+  serialized_end=36079,
 )
 
 
@@ -12949,8 +13012,8 @@ _QUERYSUGGESTIONRESPONSEPROTO_SUGGESTION = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36106,
-  serialized_end=36210,
+  serialized_start=36250,
+  serialized_end=36354,
 )
 
 _QUERYSUGGESTIONRESPONSEPROTO = _descriptor.Descriptor(
@@ -12990,8 +13053,8 @@ _QUERYSUGGESTIONRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=35938,
-  serialized_end=36210,
+  serialized_start=36082,
+  serialized_end=36354,
 )
 
 
@@ -13032,8 +13095,8 @@ _RATECOMMENTREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36212,
-  serialized_end=36296,
+  serialized_start=36356,
+  serialized_end=36440,
 )
 
 
@@ -13053,8 +13116,8 @@ _RATECOMMENTRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36298,
-  serialized_end=36324,
+  serialized_start=36442,
+  serialized_end=36468,
 )
 
 
@@ -13081,8 +13144,8 @@ _RECONSTRUCTDATABASEREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36326,
-  serialized_end=36388,
+  serialized_start=36470,
+  serialized_end=36532,
 )
 
 
@@ -13109,8 +13172,8 @@ _RECONSTRUCTDATABASERESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36390,
-  serialized_end=36462,
+  serialized_start=36534,
+  serialized_end=36606,
 )
 
 
@@ -13137,8 +13200,8 @@ _REFUNDREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36464,
-  serialized_end=36501,
+  serialized_start=36608,
+  serialized_end=36645,
 )
 
 
@@ -13179,8 +13242,8 @@ _REFUNDRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36503,
-  serialized_end=36598,
+  serialized_start=36647,
+  serialized_end=36742,
 )
 
 
@@ -13207,8 +13270,8 @@ _REMOVEASSETREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36600,
-  serialized_end=36642,
+  serialized_start=36744,
+  serialized_end=36786,
 )
 
 
@@ -13319,8 +13382,8 @@ _REQUESTPROPERTIESPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36645,
-  serialized_end=36978,
+  serialized_start=36789,
+  serialized_end=37122,
 )
 
 
@@ -13578,8 +13641,8 @@ _REQUESTPROTO_REQUEST = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=37090,
-  serialized_end=39219,
+  serialized_start=37234,
+  serialized_end=39363,
 )
 
 _REQUESTPROTO = _descriptor.Descriptor(
@@ -13612,8 +13675,8 @@ _REQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=36981,
-  serialized_end=39219,
+  serialized_start=37125,
+  serialized_end=39363,
 )
 
 
@@ -13640,8 +13703,8 @@ _REQUESTSPECIFICPROPERTIESPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=39221,
-  serialized_end=39274,
+  serialized_start=39365,
+  serialized_end=39418,
 )
 
 
@@ -13710,8 +13773,8 @@ _RESPONSEPROPERTIESPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=39277,
-  serialized_end=39467,
+  serialized_start=39421,
+  serialized_end=39611,
 )
 
 
@@ -13969,8 +14032,8 @@ _RESPONSEPROTO_RESPONSE = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=39589,
-  serialized_end=41765,
+  serialized_start=39733,
+  serialized_end=41909,
 )
 
 _RESPONSEPROTO = _descriptor.Descriptor(
@@ -14003,8 +14066,8 @@ _RESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=39470,
-  serialized_end=41765,
+  serialized_start=39614,
+  serialized_end=41909,
 )
 
 
@@ -14045,8 +14108,8 @@ _RESTOREAPPLICATIONSREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=41768,
-  serialized_end=41902,
+  serialized_start=41912,
+  serialized_end=42046,
 )
 
 
@@ -14073,8 +14136,8 @@ _RESTOREAPPLICATIONSRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=41904,
-  serialized_end=41977,
+  serialized_start=42048,
+  serialized_end=42121,
 )
 
 
@@ -14101,8 +14164,8 @@ _RISKHEADERINFOPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=41979,
-  serialized_end=42026,
+  serialized_start=42123,
+  serialized_end=42170,
 )
 
 
@@ -14143,8 +14206,8 @@ _SIGNATUREHASHPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=42028,
-  serialized_end=42104,
+  serialized_start=42172,
+  serialized_end=42248,
 )
 
 
@@ -14178,8 +14241,8 @@ _SIGNEDDATAPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=42106,
-  serialized_end=42162,
+  serialized_start=42250,
+  serialized_end=42306,
 )
 
 
@@ -14437,8 +14500,8 @@ _SINGLEREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=42165,
-  serialized_end=44308,
+  serialized_start=42309,
+  serialized_end=44452,
 )
 
 
@@ -14689,8 +14752,8 @@ _SINGLERESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=44311,
-  serialized_end=46451,
+  serialized_start=44455,
+  serialized_end=46595,
 )
 
 
@@ -14731,8 +14794,8 @@ _STATUSBARNOTIFICATIONPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=46453,
-  serialized_end=46544,
+  serialized_start=46597,
+  serialized_end=46688,
 )
 
 
@@ -14766,8 +14829,8 @@ _UNINSTALLREASONREQUESTPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=46546,
-  serialized_end=46608,
+  serialized_start=46690,
+  serialized_end=46752,
 )
 
 
@@ -14787,8 +14850,8 @@ _UNINSTALLREASONRESPONSEPROTO = _descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=46610,
-  serialized_end=46640,
+  serialized_start=46754,
+  serialized_end=46784,
 )
 
 _ANDROIDAPPDELIVERYDATA.fields_by_name['additionalFile'].message_type = _APPFILEMETADATA
@@ -15012,6 +15075,8 @@ _RESPONSEWRAPPER.fields_by_name['commands'].message_type = _SERVERCOMMANDS
 _RESPONSEWRAPPER.fields_by_name['preFetch'].message_type = _PREFETCH
 _RESPONSEWRAPPER.fields_by_name['notification'].message_type = _NOTIFICATION
 _GETREVIEWSRESPONSE.fields_by_name['review'].message_type = _REVIEW
+_REVIEW.fields_by_name['author'].message_type = _GOOGLEUSER
+_GOOGLEUSER.fields_by_name['image'].message_type = _IMAGE
 _REVIEWRESPONSE.fields_by_name['getResponse'].message_type = _GETREVIEWSRESPONSE
 _REVOKERESPONSE.fields_by_name['libraryUpdate'].message_type = _LIBRARYUPDATE
 _SEARCHRESPONSE.fields_by_name['bucket'].message_type = _BUCKET
@@ -15379,6 +15444,7 @@ DESCRIPTOR.message_types_by_name['ResponseWrapper'] = _RESPONSEWRAPPER
 DESCRIPTOR.message_types_by_name['ServerCommands'] = _SERVERCOMMANDS
 DESCRIPTOR.message_types_by_name['GetReviewsResponse'] = _GETREVIEWSRESPONSE
 DESCRIPTOR.message_types_by_name['Review'] = _REVIEW
+DESCRIPTOR.message_types_by_name['GoogleUser'] = _GOOGLEUSER
 DESCRIPTOR.message_types_by_name['ReviewResponse'] = _REVIEWRESPONSE
 DESCRIPTOR.message_types_by_name['RevokeResponse'] = _REVOKERESPONSE
 DESCRIPTOR.message_types_by_name['RelatedSearch'] = _RELATEDSEARCH
@@ -16317,6 +16383,12 @@ class Review(_message.Message):
   DESCRIPTOR = _REVIEW
 
   # @@protoc_insertion_point(class_scope:Review)
+
+class GoogleUser(_message.Message):
+  __metaclass__ = _reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _GOOGLEUSER
+
+  # @@protoc_insertion_point(class_scope:GoogleUser)
 
 class ReviewResponse(_message.Message):
   __metaclass__ = _reflection.GeneratedProtocolMessageType

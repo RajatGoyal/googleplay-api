@@ -147,7 +147,7 @@ class GooglePlayAPI(object):
                                     "X-DFE-Device-Id": self.androidId,
                                     "X-DFE-Client-Id": "am-android-google",
                                     #"X-DFE-Logging-Id": self.loggingId2, # Deprecated?
-                                    "User-Agent": "Android-Finsky/3.7.13 (api=3,versionCode=8013013,sdk=16,device=crespo,hardware=herring,product=soju)",
+                                    "User-Agent": "Android-Finsky/5.4.12 (api=3,versionCode=80341200,sdk=17,device=tf101,hardware=ventana,product=US_epad,platformVersionRelease=4.2.1,model=Transformer,isWideScreen=0)",
                                     "X-DFE-SmallestScreenWidthDp": "320",
                                     "X-DFE-Filter-Level": "3",
                                     "Accept-Encoding": "",
