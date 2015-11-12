@@ -8,4 +8,3 @@
 # ignore downloaded apps
 *.apk
 
-config.py
