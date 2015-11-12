@@ -1,16 +1,18 @@
 #!/usr/bin/python
 
+import base64
+import gzip
+import pprint
+import StringIO
 import requests
+
 from google.protobuf import descriptor
 from google.protobuf.internal.containers import RepeatedCompositeFieldContainer
 from google.protobuf import text_format
-from google.protobuf.message import Message
+from google.protobuf.message import Message, DecodeError
 
 import googleplay_pb2
-from ThinkGamingCom import settings
-
-
-# import config
+import config
 
 class LoginError(Exception):
     def __init__(self, value):
@@ -47,9 +49,9 @@ class GooglePlayAPI(object):
     def __init__(self, androidId=None, lang=None, debug=False): # you must use a device-associated androidId value
         self.preFetch = {}
         if androidId == None:
-            androidId = settings.ANDROID_ID
+            androidId = config.ANDROID_ID
         if lang == None:
-            lang = settings.LANG
+            lang = config.LANG
         self.androidId = androidId
         self.lang = lang
         self.debug = debug
@@ -154,9 +156,11 @@ class GooglePlayAPI(object):
                                     "X-DFE-Client-Id": "am-android-google",
                                     #"X-DFE-Logging-Id": self.loggingId2, # Deprecated?
                                     # "User-Agent": "Android-Finsky/4.4.3 (api=3,versionCode=8016014,sdk=22,device=GT-I9300,hardware=aries,product=GT-I9300)",
-                                    "User-Agent": "Android-Finsky/4.4.3 (api=3,versionCode=8016014,sdk=22,device=hammerhead,hardware=hammerhead,product=hammerhead)",
+                                    # "User-Agent": "Android-Finsky/4.4.3 (api=3,versionCode=8016014,sdk=22,device=hammerhead,hardware=hammerhead,product=hammerhead)",
                                     # "User-Agent": "Android-Finsky/3.7.13 (api=3,versionCode=8013013,sdk=22,device=crespo,hardware=herring,product=soju)",
-                                    "X-DFE-SmallestScreenWidthDp": "335",
+                                    # "X-DFE-SmallestScreenWidthDp": "335",
+                                    "User-Agent": "Android-Finsky/5.4.12 (api=3,versionCode=80341200,sdk=17,device=tf101,hardware=ventana,product=US_epad,platformVersionRelease=4.2.1,model=Transformer,isWideScreen=0)",
+                                    "X-DFE-SmallestScreenWidthDp": "320",
                                     "X-DFE-Filter-Level": "3",
                                     "Accept-Encoding": "",
                                     "Host": "android.clients.google.com"}
@@ -259,6 +263,15 @@ class GooglePlayAPI(object):
             path += "&dfil=1"
         message = self.executeRequestApi2(path)
         return message.payload.reviewResponse
+
+    def recommend(self, packageName, nb_results=None, offset=None):
+        path = "rec?c=3&doc=%s&rt=1" % (packageName,)
+        if (nb_results is not None):
+            path += "&n=%d" % int(nb_results)
+        if (offset is not None):
+            path += "&o=%d" % int(offset)
+        message = self.executeRequestApi2(path)
+        return message.payload.listResponse
     
     def download(self, packageName, versionCode, offerType=1):
         """Download an app and return its raw data (APK file).

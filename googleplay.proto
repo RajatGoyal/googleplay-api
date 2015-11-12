@@ -743,7 +743,7 @@ message DocV2 {
   optional string backendUrl = 19;
   optional string purchaseDetailsUrl = 20;
   optional bool detailsReusable = 21;
-  optional string subtitle = 22;
+  optional string promoText = 27;
 }
 message EncryptedSubscriberInfo {
   optional string data = 1;
@@ -963,18 +963,26 @@ message GetReviewsResponse {
   optional int64 matchingCount = 2;
 }
 message Review {
-  optional string authorName = 1;
-  optional string url = 2;
-  optional string source = 3;
   optional string documentVersion = 4;
   optional int64 timestampMsec = 5;
   optional int32 starRating = 6;
   optional string title = 7;
   optional string comment = 8;
   optional string commentId = 9;
+  optional GoogleUser author = 33; // https://github.com/egirault/googleplay-api/issues/44
   optional string deviceName = 19;
   optional string replyText = 29;
   optional int64 replyTimestampMsec = 30;
+}
+message GoogleUser {
+  optional string docId = 1;
+  optional string userId = 2;
+  optional int32 unknown1 = 3;
+  optional int32 unknown2 = 4;
+  optional string name = 5;
+  optional Image image = 10;
+  optional string playStoreUrl = 16;
+  optional string googlePlusUrl = 19;
 }
 message ReviewResponse {
   optional GetReviewsResponse getResponse = 1;
