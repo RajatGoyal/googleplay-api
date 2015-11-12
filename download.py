@@ -7,7 +7,7 @@ import sys
 from pprint import pprint
 
 from config import *
-from googleplay import GooglePlayAPI
+from googleplay_api.googleplay import GooglePlayAPI
 from helpers import sizeof_fmt
 
 if (len(sys.argv) < 2):

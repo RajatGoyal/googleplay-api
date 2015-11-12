@@ -9,7 +9,7 @@ from pprint import pprint
 from google.protobuf import text_format
 
 from config import *
-from googleplay import GooglePlayAPI
+from googleplay_api.googleplay import GooglePlayAPI
 
 api = GooglePlayAPI(ANDROID_ID)
 api.login(GOOGLE_LOGIN, GOOGLE_PASSWORD, AUTH_TOKEN)
